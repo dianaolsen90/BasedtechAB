@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "deploy:vercel": "npx vercel@latest deploy --prod",
-    "process-avatar": "node scripts/process-avatar-transparent.mjs"
+    "process-avatar": "node scripts/process-avatar-transparent.mjs",
+    "process-logo": "node scripts/process-logo-transparent.mjs"
   },
   "dependencies": {
     "next": "^15.1.0",

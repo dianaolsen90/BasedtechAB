@@ -30,9 +30,9 @@ export function SiteFooter() {
               <Image
                 src="/Loga-basedtech.png"
                 alt="BASEDtech Sweden AB logotyp"
-                width={280}
-                height={90}
-                className="h-[90px] w-auto rounded-[12px] mix-blend-luminosity"
+                width={360}
+                height={126}
+                className="h-[120px] w-auto max-w-full"
               />
             </Link>
             <p className="mt-6 max-w-[320px] font-h text-[1.1rem] font-medium leading-[1.6] text-[rgba(238,247,246,0.5)]">

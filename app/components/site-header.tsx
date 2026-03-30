@@ -119,15 +119,15 @@ export function SiteHeader() {
   const linkActive = "nav-active !text-based-cyan";
 
   return (
-    <header className="sticky top-0 z-50 min-h-[84px] w-full border-b border-[rgba(44,228,212,0.12)] bg-[#082220]">
-      <div className="mx-auto flex h-[84px] max-w-container items-center justify-between px-8">
+    <header className="sticky top-0 z-50 min-h-[96px] w-full border-b border-[rgba(44,228,212,0.12)] bg-[#082220]">
+      <div className="mx-auto flex min-h-[96px] max-w-container items-center justify-between px-8 py-2">
         <Link href="/" className="group flex shrink-0 items-center">
           <Image
             src="/Loga-basedtech.png"
             alt="BASEDtech Sweden AB, logotyp med pingvin"
-            width={200}
-            height={72}
-            className="h-[72px] w-auto rounded-[10px]"
+            width={320}
+            height={112}
+            className="h-[96px] w-auto max-w-[min(52vw,320px)]"
             priority
           />
         </Link>

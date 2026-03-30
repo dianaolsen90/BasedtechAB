@@ -580,12 +580,12 @@ export default function HomePage() {
                 </div>
               </article>
             </div>
-            <div className="mx-auto mt-16 flex max-w-[160px] justify-center opacity-90">
+            <div className="mx-auto mt-16 flex max-w-[280px] justify-center opacity-90">
               <Image
                 src="/Loga-basedtech.png"
                 alt="BASEDtech Sweden AB logotyp"
-                width={160}
-                height={48}
+                width={280}
+                height={84}
                 className="h-auto w-full object-contain"
               />
             </div>
