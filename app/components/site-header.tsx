@@ -98,7 +98,7 @@ export function SiteHeader() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`group flex items-center gap-2 rounded-lg border border-[rgba(44,228,212,0.45)] px-3 py-2 text-sm font-medium text-based-cyan transition-colors hover:bg-[rgba(44,228,212,0.08)] hover:text-[#EEF7F6] ${
+                  className={`group flex items-center gap-2 rounded-lg border border-[rgba(44,228,212,0.45)] px-3 py-2 font-b text-sm font-medium text-based-cyan transition-colors hover:bg-[rgba(44,228,212,0.08)] hover:text-[#EEF7F6] ${
                     isActive ? "!text-based-cyan" : ""
                   }`}
                 >
@@ -113,7 +113,7 @@ export function SiteHeader() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`nav-link-underline group flex items-center gap-2 pb-1 text-sm font-medium text-[rgba(238,247,246,0.75)] transition-colors hover:text-[#EEF7F6] ${
+                className={`nav-link-underline group flex items-center gap-2 pb-1 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] transition-colors hover:text-[#EEF7F6] ${
                   isActive ? "nav-active !text-based-cyan" : ""
                 }`}
               >
@@ -149,8 +149,8 @@ export function SiteHeader() {
                 onClick={close}
                 className={
                   item.cta
-                    ? "flex items-center gap-2 rounded-lg border border-[rgba(44,228,212,0.45)] px-3 py-3 text-based-cyan"
-                    : `flex items-center gap-2 py-3 text-[rgba(238,247,246,0.75)] hover:text-[#EEF7F6] ${
+                    ? "flex items-center gap-2 rounded-lg border border-[rgba(44,228,212,0.45)] px-3 py-3 font-b text-sm font-medium text-based-cyan"
+                    : `flex items-center gap-2 py-3 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] hover:text-[#EEF7F6] ${
                         active === item.id ? "text-based-cyan" : ""
                       }`
                 }

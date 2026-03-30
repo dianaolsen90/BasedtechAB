@@ -9,11 +9,17 @@ html {
 :root {
   --based-border: rgba(15, 158, 142, 0.18);
   --based-border-hover: rgba(15, 158, 142, 0.4);
+  --font-h: "Barlow Condensed", sans-serif;
+  --font-b: "Barlow", sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-based-page font-dm font-light text-based-body antialiased;
+    @apply bg-based-page text-based-body antialiased;
+    font-family: var(--font-b);
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.8;
   }
 }
 

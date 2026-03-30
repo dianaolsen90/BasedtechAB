@@ -51,7 +51,7 @@ export default function HomePage() {
           <div className="relative z-10 mx-auto grid w-full max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-16">
             <div className="order-2 flex flex-col items-center text-center nav:order-1 nav:items-start nav:text-left">
               <div
-                className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(15,158,142,0.4)] bg-[rgba(15,158,142,0.1)] px-5 py-2 text-[0.7rem] font-medium uppercase tracking-wider text-based-heading"
+                className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(15,158,142,0.4)] bg-[rgba(15,158,142,0.1)] px-5 py-2 font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-based-heading"
               >
                 <span
                   className="h-2 w-2 shrink-0 rounded-full bg-based-cyan motion-safe:animate-badge-pulse"
@@ -59,12 +59,12 @@ export default function HomePage() {
                 />
                 Smart ekonomistyrning
               </div>
-              <h1 className="hero-fade-2 font-syne text-[clamp(2.6rem,5vw,4.2rem)] font-extrabold leading-[1.06] text-based-heading">
+              <h1 className="hero-fade-2 font-h text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-none tracking-[0.01em] text-based-heading">
                 Ekonomin på plats.
                 <br />
                 <span className="text-based-cyan">Tiden tillbaka.</span>
               </h1>
-              <p className="hero-fade-3 mt-6 max-w-xl text-[1.05rem] font-light leading-[1.8] text-based-body">
+              <p className="hero-fade-3 mt-6 max-w-xl font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                 Vi tror inte att bokföring är till för revisorn eller
                 Skatteverket. Den är till för att mäta och utveckla din
                 verksamhet. Med automagi frigör vi din tid och ger dig verktyg
@@ -73,14 +73,14 @@ export default function HomePage() {
               <div className="hero-fade-4 mt-8 flex flex-wrap items-center justify-center gap-3 nav:justify-start">
                 <a
                   href="#kontakt"
-                  className="inline-flex items-center gap-2 rounded-lg bg-based-cyan px-7 py-[0.85rem] text-sm font-semibold text-based-heading shadow-sm transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+                  className="inline-flex items-center gap-2 rounded-lg bg-based-cyan px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading shadow-sm transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
                 >
                   <IconPhone className="shrink-0" />
                   Boka kostnadsfri analys
                 </a>
                 <a
                   href="#tjanster"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[rgba(10,39,36,0.25)] bg-transparent px-7 py-[0.85rem] text-sm font-semibold text-based-heading transition hover:-translate-y-0.5 hover:border-based-cyan hover:text-based-cyan"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[rgba(10,39,36,0.25)] bg-transparent px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:border-based-cyan hover:text-based-cyan"
                 >
                   Se vad vi gör
                   <IconArrowRight className="shrink-0 transition-transform group-hover:translate-x-0.5" />
@@ -96,10 +96,12 @@ export default function HomePage() {
                     key={s.n}
                     className="border-l-2 border-based-cyan pl-4 text-left"
                   >
-                    <p className="font-syne text-[1.6rem] font-bold text-based-cyan">
+                    <p className="font-h text-[1.6rem] font-bold tracking-[0.01em] text-based-cyan">
                       {s.n}
                     </p>
-                    <p className="mt-1 text-sm text-based-body">{s.l}</p>
+                    <p className="mt-1 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
+                      {s.l}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -139,14 +141,14 @@ export default function HomePage() {
         >
           <div className="mx-auto grid max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-[5rem]">
             <div>
-              <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
+              <p className="mb-3 font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
                 Om oss
               </p>
-              <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+              <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
                 Vi brinner för{" "}
                 <span className="text-based-cyan">smart ekonomi</span>
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-based-body">
+              <p className="mt-6 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                 På BASEDtech Sweden AB hjälper vi ekonomiavdelningar och
                 redovisningsansvariga att automatisera och effektivisera
                 bokföringen. Med över 20 års erfarenhet i byråvärlden vet vi
@@ -176,10 +178,10 @@ export default function HomePage() {
                     style={borderStyle}
                   >
                     <Icon className="text-based-cyan" />
-                    <h3 className="mt-3 font-syne text-lg font-bold text-based-heading">
+                    <h3 className="mt-3 font-h text-lg font-bold tracking-[0.01em] text-based-heading">
                       {t}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-based-body">
+                    <p className="mt-2 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                       {b}
                     </p>
                   </div>
@@ -191,15 +193,15 @@ export default function HomePage() {
               style={borderStyle}
             >
               <p
-                className="pointer-events-none font-syne text-[5rem] font-extrabold leading-none text-based-cyan/[0.18]"
+                className="pointer-events-none font-h text-[5rem] font-extrabold leading-none tracking-[0.01em] text-based-cyan/[0.18]"
                 aria-hidden
               >
                 20
               </p>
-              <p className="relative z-10 -mt-4 font-syne text-xl font-bold text-based-heading">
+              <p className="relative z-10 -mt-4 font-h text-xl font-bold tracking-[0.01em] text-based-heading">
                 År i byråvärlden
               </p>
-              <p className="relative z-10 mt-4 text-sm leading-relaxed text-based-body">
+              <p className="relative z-10 mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                 Boka en kostnadsfri och förutsättningslös analys så ser vi hur
                 vi kan frigöra tid i er ekonomihantering.
               </p>
@@ -209,7 +211,7 @@ export default function HomePage() {
               />
               <a
                 href="#kontakt"
-                className="relative z-10 inline-flex w-full items-center justify-center rounded-lg bg-based-cyan py-3 text-sm font-semibold text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+                className="relative z-10 inline-flex w-full items-center justify-center rounded-lg bg-based-cyan py-3 font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
               >
                 Kom igång idag
               </a>
@@ -221,7 +223,7 @@ export default function HomePage() {
           className="reveal scroll-mt-[84px] bg-based-section py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
         >
           <div className="mx-auto max-w-container text-center">
-            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
               En sund bokföring ska inte kosta skjortan
             </h2>
           </div>
@@ -255,7 +257,7 @@ export default function HomePage() {
                   key={c.num}
                   className="service-card-glow relative overflow-hidden rounded-[14px] border border-based-white bg-based-white p-8 text-left shadow-card-tjanst transition-all duration-300 hover:-translate-y-[4px] hover:[border-color:rgba(15,158,142,0.4)]"
                 >
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-based-cyan">
+                  <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-based-cyan">
                     {c.num}
                   </p>
                   <div
@@ -264,13 +266,13 @@ export default function HomePage() {
                   >
                     <CardIcon className="h-7 w-7" />
                   </div>
-                  <h3 className="mt-5 font-syne text-xl font-bold text-based-heading">
+                  <h3 className="mt-5 font-h text-xl font-bold tracking-[0.01em] text-based-heading">
                     {c.title}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-based-cyan">
+                  <p className="mt-1 font-b text-sm font-light text-based-cyan">
                     {c.sub}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-based-body">
+                  <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                     {c.body}
                   </p>
                 </article>
@@ -283,10 +285,10 @@ export default function HomePage() {
           className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
         >
           <div className="mx-auto max-w-container">
-            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
               Marknadens vassaste verktyg
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-based-body">
+            <p className="mt-4 max-w-2xl font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
               Vi samarbetar med leverantörer av svenskutvecklade, molnbaserade
               och GDPR-säkrade program. Koppla på det du behöver, a la carte.
             </p>
@@ -326,17 +328,17 @@ export default function HomePage() {
                     className="inline-block rounded-[10px] border bg-[rgba(15,158,142,0.1)] px-3 py-1.5"
                     style={borderStyle}
                   >
-                    <span className="text-xs font-bold uppercase tracking-wide text-based-cyan">
+                    <span className="font-h text-xs font-semibold uppercase tracking-[0.1em] text-based-cyan">
                       {p.badge}
                     </span>
                   </div>
-                  <p className="mt-3 text-xs font-medium uppercase tracking-wider text-based-body">
+                  <p className="mt-3 font-h text-xs font-semibold uppercase tracking-[0.14em] text-based-body">
                     {p.tag}
                   </p>
-                  <h3 className="mt-1 font-syne text-lg font-bold text-based-heading">
+                  <h3 className="mt-1 font-h text-lg font-bold tracking-[0.01em] text-based-heading">
                     {p.name}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-based-body">
+                  <p className="mt-3 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                     {p.text}
                   </p>
                 </article>
@@ -349,10 +351,10 @@ export default function HomePage() {
           className="reveal scroll-mt-[84px] bg-based-section py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
         >
           <div className="mx-auto max-w-container text-center">
-            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
               Personerna bakom automagin
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-based-body">
+            <p className="mx-auto mt-4 max-w-2xl font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
               Vi hjälper att implementera tjänsterna och utbildar er personal.
               Teknik i all ära, men support är alltid personligt.
             </p>
@@ -378,17 +380,17 @@ export default function HomePage() {
                 style={borderStyle}
               >
                 <div
-                  className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full border-2 border-based-cyan bg-[rgba(15,158,142,0.1)] font-syne text-lg font-bold text-based-cyan"
+                  className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full border-2 border-based-cyan bg-[rgba(15,158,142,0.1)] font-h text-lg font-bold tracking-[0.01em] text-based-cyan"
                 >
                   {m.inits}
                 </div>
-                <h3 className="mt-5 font-syne text-lg font-bold text-based-heading">
+                <h3 className="mt-5 font-h text-lg font-bold tracking-[0.01em] text-based-heading">
                   {m.name}
                 </h3>
-                <p className="mt-1 text-[0.8rem] font-semibold uppercase tracking-wider text-based-cyan">
+                <p className="mt-1 font-h text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
                   {m.role}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-based-body">
+                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
                   {m.bio}
                 </p>
               </article>
@@ -399,7 +401,7 @@ export default function HomePage() {
               className="rounded-[14px] border bg-[rgba(15,158,142,0.1)] px-8 py-6 text-center"
               style={borderStyle}
             >
-              <p className="font-syne text-lg font-semibold text-based-heading">
+              <p className="font-h text-lg font-semibold tracking-[0.01em] text-based-heading">
                 Vi finns med dig{" "}
                 <span className="text-based-cyan">hela vägen</span> på
                 effektiviseringsresan.
@@ -423,17 +425,17 @@ export default function HomePage() {
             aria-hidden
           />
           <div className="relative z-10 mx-auto max-w-contact text-center">
-            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
               Ta ett snack.{" "}
               <span className="text-based-cyan">Det kostar ingenting.</span>
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-based-body">
+            <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
               Vi tar gärna ett förutsättningslöst samtal och ser om det finns
               något vi kan göra för att underlätta din ekonomihantering.
             </p>
             <a
               href="mailto:david.olsen@basedtech.se"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-based-cyan px-8 py-3 text-sm font-semibold text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-based-cyan px-8 py-3 font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
             >
               Skicka ett mail
             </a>
@@ -443,34 +445,34 @@ export default function HomePage() {
             >
               <div className="grid grid-cols-1 gap-8 nav:grid-cols-3 nav:text-center">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-based-cyan">
+                  <p className="font-h text-xs font-bold uppercase tracking-[0.14em] text-based-cyan">
                     Telefon
                   </p>
                   <a
                     href="tel:+46733017339"
-                    className="mt-2 block text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
+                    className="mt-2 block font-b text-[1.05rem] font-light leading-[1.8] text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
                   >
                     073-301 73 39
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-based-cyan">
+                  <p className="font-h text-xs font-bold uppercase tracking-[0.14em] text-based-cyan">
                     E-post
                   </p>
                   <a
                     href="mailto:david.olsen@basedtech.se"
-                    className="mt-2 block break-all text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
+                    className="mt-2 block break-all font-b text-[1.05rem] font-light leading-[1.8] text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
                   >
                     david.olsen@basedtech.se
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-based-cyan">
+                  <p className="font-h text-xs font-bold uppercase tracking-[0.14em] text-based-cyan">
                     Analys
                   </p>
                   <a
                     href="mailto:david.olsen@basedtech.se"
-                    className="mt-2 block text-sm text-based-body underline-offset-2 hover:text-based-cyan hover:underline"
+                    className="mt-2 block font-b text-[1.05rem] font-light leading-[1.8] text-based-body underline-offset-2 hover:text-based-cyan hover:underline"
                   >
                     Kostnadsfri och förutsättningslös
                   </a>

@@ -16,8 +16,8 @@ const config: Config = {
         "based-hero-start": "#E6F5F3",
       },
       fontFamily: {
-        syne: ["var(--font-syne)", "system-ui", "sans-serif"],
-        dm: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        h: ["var(--font-h)", "sans-serif"],
+        b: ["var(--font-b)", "sans-serif"],
       },
       screens: {
         nav: "700px",
