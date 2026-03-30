@@ -1,0 +1,486 @@
+import Image from "next/image";
+import {
+  IconArrowRight,
+  IconClock,
+  IconDocumentLarge,
+  IconGroup,
+  IconPhone,
+  IconPulse,
+  IconShield,
+  IconStar,
+} from "@/app/components/icons";
+import { ScrollRevealInit } from "@/app/components/scroll-reveal-init";
+import { SiteFooter } from "@/app/components/site-footer";
+import { SiteHeader } from "@/app/components/site-header";
+
+const borderStyle = { borderColor: "var(--based-border)" } as const;
+
+export default function HomePage() {
+  return (
+    <>
+      <ScrollRevealInit />
+      <SiteHeader />
+      <main>
+        <section
+          className="relative flex min-h-screen flex-col justify-center overflow-hidden py-20 pl-8 pr-8 pt-32 pb-[5rem] nav:flex-row nav:items-center"
+          style={{
+            background:
+              "linear-gradient(160deg, #E6F5F3 0%, #F4FAFA 60%, #EEF7F6 100%)",
+          }}
+          aria-label="Introduktion"
+        >
+          <div
+            className="pointer-events-none absolute inset-0 opacity-100 [mask-image:radial-gradient(ellipse_80%_70%_at_50%_40%,black_20%,transparent_75%)]"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(15,158,142,0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(15,158,142,0.07) 1px, transparent 1px)
+              `,
+              backgroundSize: "64px 64px",
+            }}
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute left-1/2 top-0 h-[min(55vh,480px)] w-[min(100%,900px)] -translate-x-1/2 opacity-40"
+            style={{
+              background:
+                "radial-gradient(ellipse at center top, rgba(15,158,142,0.22) 0%, transparent 65%)",
+            }}
+            aria-hidden
+          />
+          <div className="relative z-10 mx-auto grid w-full max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-16">
+            <div className="order-2 flex flex-col items-center text-center nav:order-1 nav:items-start nav:text-left">
+              <div
+                className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(15,158,142,0.4)] bg-[rgba(15,158,142,0.1)] px-5 py-2 text-[0.7rem] font-medium uppercase tracking-wider text-based-heading"
+              >
+                <span
+                  className="h-2 w-2 shrink-0 rounded-full bg-based-cyan motion-safe:animate-badge-pulse"
+                  aria-hidden
+                />
+                Smart ekonomistyrning
+              </div>
+              <h1 className="hero-fade-2 font-syne text-[clamp(2.6rem,5vw,4.2rem)] font-extrabold leading-[1.06] text-based-heading">
+                Ekonomin på plats.
+                <br />
+                <span className="text-based-cyan">Tiden tillbaka.</span>
+              </h1>
+              <p className="hero-fade-3 mt-6 max-w-xl text-[1.05rem] font-light leading-[1.8] text-based-body">
+                Vi tror inte att bokföring är till för revisorn eller
+                Skatteverket. Den är till för att mäta och utveckla din
+                verksamhet. Med automagi frigör vi din tid och ger dig verktyg
+                för proaktivt ekonomiarbete.
+              </p>
+              <div className="hero-fade-4 mt-8 flex flex-wrap items-center justify-center gap-3 nav:justify-start">
+                <a
+                  href="#kontakt"
+                  className="inline-flex items-center gap-2 rounded-lg bg-based-cyan px-7 py-[0.85rem] text-sm font-semibold text-based-heading shadow-sm transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+                >
+                  <IconPhone className="shrink-0" />
+                  Boka kostnadsfri analys
+                </a>
+                <a
+                  href="#tjanster"
+                  className="group inline-flex items-center gap-2 rounded-lg border border-[rgba(10,39,36,0.25)] bg-transparent px-7 py-[0.85rem] text-sm font-semibold text-based-heading transition hover:-translate-y-0.5 hover:border-based-cyan hover:text-based-cyan"
+                >
+                  Se vad vi gör
+                  <IconArrowRight className="shrink-0 transition-transform group-hover:translate-x-0.5" />
+                </a>
+              </div>
+              <div className="hero-fade-5 mt-12 flex flex-col gap-10 min-[600px]:flex-row min-[600px]:gap-[2.5rem]">
+                {[
+                  { n: "20+", l: "Års erfarenhet" },
+                  { n: "100%", l: "Personlig service" },
+                  { n: "0 kr", l: "Kostnad för analys" },
+                ].map((s) => (
+                  <div
+                    key={s.n}
+                    className="border-l-2 border-based-cyan pl-4 text-left"
+                  >
+                    <p className="font-syne text-[1.6rem] font-bold text-based-cyan">
+                      {s.n}
+                    </p>
+                    <p className="mt-1 text-sm text-based-body">{s.l}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="order-1 flex justify-center nav:order-2 nav:justify-end">
+              <div className="relative flex h-[420px] w-full max-w-[480px] items-center justify-center">
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(15,158,142,0.2)] motion-safe:animate-spin-20"
+                  aria-hidden
+                >
+                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-based-cyan" />
+                </div>
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(15,158,142,0.2)] motion-safe:animate-spin-28-rev"
+                  aria-hidden
+                >
+                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-based-cyan" />
+                </div>
+                <Image
+                  src="/Loga-basedtech.png"
+                  alt="BASEDtech-maskot: pingvin med hörlurar och kretskort"
+                  width={400}
+                  height={400}
+                  className="relative z-10 max-w-[400px] rounded-2xl motion-safe:animate-float"
+                  style={{
+                    filter: "drop-shadow(0 24px 60px rgba(15,158,142,0.2))",
+                  }}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="om-oss"
+          className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:py-16 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
+        >
+          <div className="mx-auto grid max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-[5rem]">
+            <div>
+              <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
+                Om oss
+              </p>
+              <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+                Vi brinner för{" "}
+                <span className="text-based-cyan">smart ekonomi</span>
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-based-body">
+                På BASEDtech Sweden AB hjälper vi ekonomiavdelningar och
+                redovisningsansvariga att automatisera och effektivisera
+                bokföringen. Med över 20 års erfarenhet i byråvärlden vet vi
+                exakt var tidstjuvarna gömmer sig.
+              </p>
+              <div className="mt-8 flex flex-col gap-4">
+                {[
+                  {
+                    Icon: IconShield,
+                    t: "Korrekt grund att stå på",
+                    b: "Vi säkerställer att bokföringen stämmer innan vi sätter automagi på resten.",
+                  },
+                  {
+                    Icon: IconClock,
+                    t: "Din tid är värdefull",
+                    b: "Vi eliminerar tidstjuvar och manuella moment så din tid går till analys och strategi.",
+                  },
+                  {
+                    Icon: IconGroup,
+                    t: "Alltid personligt",
+                    b: "Teknik i all ära. När det gäller support och rådgivning är det alltid en riktig människa du pratar med.",
+                  },
+                ].map(({ Icon, t, b }) => (
+                  <div
+                    key={t}
+                    className="rounded-[10px] border bg-based-section p-5"
+                    style={borderStyle}
+                  >
+                    <Icon className="text-based-cyan" />
+                    <h3 className="mt-3 font-syne text-lg font-bold text-based-heading">
+                      {t}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-based-body">
+                      {b}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div
+              className="relative overflow-hidden rounded-2xl border bg-based-section p-10"
+              style={borderStyle}
+            >
+              <p
+                className="pointer-events-none font-syne text-[5rem] font-extrabold leading-none text-based-cyan/[0.18]"
+                aria-hidden
+              >
+                20
+              </p>
+              <p className="relative z-10 -mt-4 font-syne text-xl font-bold text-based-heading">
+                År i byråvärlden
+              </p>
+              <p className="relative z-10 mt-4 text-sm leading-relaxed text-based-body">
+                Boka en kostnadsfri och förutsättningslös analys så ser vi hur
+                vi kan frigöra tid i er ekonomihantering.
+              </p>
+              <div
+                className="relative z-10 my-8 border-t"
+                style={{ borderColor: "var(--based-border)" }}
+              />
+              <a
+                href="#kontakt"
+                className="relative z-10 inline-flex w-full items-center justify-center rounded-lg bg-based-cyan py-3 text-sm font-semibold text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+              >
+                Kom igång idag
+              </a>
+            </div>
+          </div>
+        </section>
+        <section
+          id="tjanster"
+          className="reveal scroll-mt-[84px] bg-based-section py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
+        >
+          <div className="mx-auto max-w-container text-center">
+            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+              En sund bokföring ska inte kosta skjortan
+            </h2>
+          </div>
+          <div className="mx-auto mt-14 grid max-w-container grid-cols-1 gap-8 nav:grid-cols-3">
+            {[
+              {
+                num: "01",
+                Icon: IconPulse,
+                title: "Vi städar",
+                sub: "Avstämningar och kvalitetssäkring",
+                body: "Allt börjar med en korrekt grund att stå på. Vi granskar och justerar din bokföring tills den stämmer. Sedan är vi redo för nästa steg.",
+              },
+              {
+                num: "02",
+                Icon: IconDocumentLarge,
+                title: "Automagi",
+                sub: "Automatiserad bokföring",
+                body: "Vi implementerar moderna verktyg för automation av dina ekonomiprocesser. Fokus skiftar från manuellt arbete till renodlad ekonomisk analys.",
+              },
+              {
+                num: "03",
+                Icon: IconStar,
+                title: "Skräddarsytt",
+                sub: "Anpassade lösningar",
+                body: "Det finns alltid moment utanför bokföringen som driver tid i ekonomihanteringen. Från specialrapporter till anpassade listor. Vad behöver du?",
+              },
+            ].map((c) => {
+              const CardIcon = c.Icon;
+              return (
+                <article
+                  key={c.num}
+                  className="service-card-glow relative overflow-hidden rounded-[14px] border border-based-white bg-based-white p-8 text-left shadow-card-tjanst transition-all duration-300 hover:-translate-y-[4px] hover:[border-color:rgba(15,158,142,0.4)]"
+                >
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-based-cyan">
+                    {c.num}
+                  </p>
+                  <div
+                    className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl border bg-[rgba(15,158,142,0.1)] text-based-cyan"
+                    style={borderStyle}
+                  >
+                    <CardIcon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mt-5 font-syne text-xl font-bold text-based-heading">
+                    {c.title}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-based-cyan">
+                    {c.sub}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-based-body">
+                    {c.body}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+        <section
+          id="produkter"
+          className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
+        >
+          <div className="mx-auto max-w-container">
+            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+              Marknadens vassaste verktyg
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-based-body">
+              Vi samarbetar med leverantörer av svenskutvecklade, molnbaserade
+              och GDPR-säkrade program. Koppla på det du behöver, a la carte.
+            </p>
+            <div className="mt-12 grid grid-cols-1 gap-8 nav:grid-cols-2">
+              {[
+                {
+                  badge: "REDA",
+                  tag: "Smart fakturahantering",
+                  name: "REDA",
+                  text: "Kombinerar smart AI-tolkning med egna kontrollregler. Sluta lägga tid på fakturor utan fel. REDA sorterar det åt dig.",
+                },
+                {
+                  badge: "AI",
+                  tag: "Digital ekonomiassistent",
+                  name: "Lerry.ai",
+                  text: "En AI-assistent som säkerställer samtliga transaktioner enligt Skatteverkets regler. Analys och budget på nolltid.",
+                },
+                {
+                  badge: "MYNT",
+                  tag: "Enkelt med kortköp",
+                  name: "Mynt",
+                  text: "VISA-kort med tillhörande app. Foto på kvittot direkt vid köpet, in i bokföringen på sekunden. Kopplas till Google Pay och Apple Pay.",
+                },
+                {
+                  badge: "FLD",
+                  tag: "Projektredovisning",
+                  name: "Fieldly",
+                  text: "Hjälper bygg- och installationsföretag att hantera projektflöden effektivt. Kopplas enkelt till ditt affärssystem.",
+                },
+              ].map((p) => (
+                <article
+                  key={p.name}
+                  className="rounded-[14px] border bg-based-section p-6 transition-all duration-300 hover:-translate-y-[3px] hover:[border-color:rgba(15,158,142,0.4)]"
+                  style={borderStyle}
+                >
+                  <div
+                    className="inline-block rounded-[10px] border bg-[rgba(15,158,142,0.1)] px-3 py-1.5"
+                    style={borderStyle}
+                  >
+                    <span className="text-xs font-bold uppercase tracking-wide text-based-cyan">
+                      {p.badge}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-xs font-medium uppercase tracking-wider text-based-body">
+                    {p.tag}
+                  </p>
+                  <h3 className="mt-1 font-syne text-lg font-bold text-based-heading">
+                    {p.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-based-body">
+                    {p.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section
+          id="team"
+          className="reveal scroll-mt-[84px] bg-based-section py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
+        >
+          <div className="mx-auto max-w-container text-center">
+            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+              Personerna bakom automagin
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-based-body">
+              Vi hjälper att implementera tjänsterna och utbildar er personal.
+              Teknik i all ära, men support är alltid personligt.
+            </p>
+          </div>
+          <div className="mx-auto mt-12 grid max-w-container grid-cols-1 gap-8 nav:grid-cols-2">
+            {[
+              {
+                inits: "DO",
+                name: "David Olsen",
+                role: "Grundare och rådgivare",
+                bio: "20 år i byråvärlden har gett David en skarp blick för vad som faktiskt kostar tid och pengar. Han pratar rakt och levererar konkret.",
+              },
+              {
+                inits: "JA",
+                name: "Johan Adamsson",
+                role: "Partner och implementerare",
+                bio: "Johan är den som sätter verktygen på plats och ser till att de fungerar i din vardag. Utbildar teamet tills det sitter.",
+              },
+            ].map((m) => (
+              <article
+                key={m.inits}
+                className="rounded-2xl border bg-based-white p-8 text-center shadow-card-team transition-all duration-300 hover:-translate-y-1 hover:[border-color:rgba(15,158,142,0.4)]"
+                style={borderStyle}
+              >
+                <div
+                  className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full border-2 border-based-cyan bg-[rgba(15,158,142,0.1)] font-syne text-lg font-bold text-based-cyan"
+                >
+                  {m.inits}
+                </div>
+                <h3 className="mt-5 font-syne text-lg font-bold text-based-heading">
+                  {m.name}
+                </h3>
+                <p className="mt-1 text-[0.8rem] font-semibold uppercase tracking-wider text-based-cyan">
+                  {m.role}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-based-body">
+                  {m.bio}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mx-auto mt-12 max-w-container">
+            <div
+              className="rounded-[14px] border bg-[rgba(15,158,142,0.1)] px-8 py-6 text-center"
+              style={borderStyle}
+            >
+              <p className="font-syne text-lg font-semibold text-based-heading">
+                Vi finns med dig{" "}
+                <span className="text-based-cyan">hela vägen</span> på
+                effektiviseringsresan.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          id="kontakt"
+          className="reveal relative scroll-mt-[84px] overflow-hidden bg-based-white py-16 pl-8 pr-8 max-[600px]:py-16 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
+        >
+          <div
+            className="pointer-events-none absolute inset-0 opacity-100"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(15,158,142,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(15,158,142,0.05) 1px, transparent 1px)
+              `,
+              backgroundSize: "56px 56px",
+            }}
+            aria-hidden
+          />
+          <div className="relative z-10 mx-auto max-w-contact text-center">
+            <h2 className="font-syne text-3xl font-bold text-based-heading sm:text-4xl">
+              Ta ett snack.{" "}
+              <span className="text-based-cyan">Det kostar ingenting.</span>
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-based-body">
+              Vi tar gärna ett förutsättningslöst samtal och ser om det finns
+              något vi kan göra för att underlätta din ekonomihantering.
+            </p>
+            <a
+              href="mailto:david.olsen@basedtech.se"
+              className="mt-8 inline-flex items-center justify-center rounded-lg bg-based-cyan px-8 py-3 text-sm font-semibold text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+            >
+              Skicka ett mail
+            </a>
+            <div
+              className="mx-auto mt-12 rounded-2xl border bg-based-section p-10 text-left"
+              style={borderStyle}
+            >
+              <div className="grid grid-cols-1 gap-8 nav:grid-cols-3 nav:text-center">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-based-cyan">
+                    Telefon
+                  </p>
+                  <a
+                    href="tel:+46733017339"
+                    className="mt-2 block text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
+                  >
+                    073-301 73 39
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-based-cyan">
+                    E-post
+                  </p>
+                  <a
+                    href="mailto:david.olsen@basedtech.se"
+                    className="mt-2 block break-all text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
+                  >
+                    david.olsen@basedtech.se
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-based-cyan">
+                    Analys
+                  </p>
+                  <a
+                    href="mailto:david.olsen@basedtech.se"
+                    className="mt-2 block text-sm text-based-body underline-offset-2 hover:text-based-cyan hover:underline"
+                  >
+                    Kostnadsfri och förutsättningslös
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
+  );
+}

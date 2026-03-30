@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --based-border: rgba(15, 158, 142, 0.18);
+  --based-border-hover: rgba(15, 158, 142, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-based-page font-dm font-light text-based-body antialiased;
+  }
+}
+
+@keyframes fadeUpHero {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-1 {
+  opacity: 0;
+  animation: fadeUpHero 0.6s ease-out forwards;
+}
+
+.hero-fade-2 {
+  opacity: 0;
+  animation: fadeUpHero 0.7s ease-out 0.1s forwards;
+}
+
+.hero-fade-3 {
+  opacity: 0;
+  animation: fadeUpHero 0.7s ease-out 0.2s forwards;
+}
+
+.hero-fade-4 {
+  opacity: 0;
+  animation: fadeUpHero 0.7s ease-out 0.3s forwards;
+}
+
+.hero-fade-5 {
+  opacity: 0;
+  animation: fadeUpHero 0.7s ease-out 0.45s forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0f9e8e;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline.nav-active::after {
+  transform: scaleX(1);
+}
+
+.service-card-glow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #0f9e8e,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card-glow:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-fade-1,
+  .hero-fade-2,
+  .hero-fade-3,
+  .hero-fade-4,
+  .hero-fade-5 {
+    animation: none;
+    opacity: 1;
+  }
+}
