@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   IconArrowRight,
+  IconCheckSmall,
   IconClock,
   IconGroup,
-  IconPhone,
+  IconPhone14,
   IconShield,
+  IconZap,
 } from "@/app/components/icons";
 import { HomeTjansterSection } from "@/app/components/home-tjanster";
 import { ScrollRevealInit } from "@/app/components/scroll-reveal-init";
@@ -29,11 +31,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <section
-          className="relative flex min-h-screen flex-col justify-center overflow-hidden py-20 pl-8 pr-8 pt-32 pb-[5rem] nav:flex-row nav:items-center"
-          style={{
-            background:
-              "linear-gradient(160deg, #E6F5F3 0%, #F4FAFA 60%, #EEF7F6 100%)",
-          }}
+          className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#082220] px-8 pb-24 pt-28 max-[600px]:px-6 max-[600px]:pb-16 max-[600px]:pt-24"
           aria-label="Introduktion"
         >
           <div className="aurora-wrap" aria-hidden>
@@ -42,105 +40,174 @@ export default function HomePage() {
             <div className="aurora-band aurora-3" />
             <div className="aurora-band aurora-4" />
           </div>
-          <div
-            className="pointer-events-none absolute inset-0 z-[1] opacity-100 [mask-image:radial-gradient(ellipse_80%_70%_at_50%_40%,black_20%,transparent_75%)]"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(15,158,142,0.07) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(15,158,142,0.07) 1px, transparent 1px)
-              `,
-              backgroundSize: "64px 64px",
-            }}
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 z-[1] h-[min(55vh,480px)] w-[min(100%,900px)] -translate-x-1/2 opacity-40"
-            style={{
-              background:
-                "radial-gradient(ellipse at center top, rgba(15,158,142,0.22) 0%, transparent 65%)",
-            }}
-            aria-hidden
-          />
-          <div className="relative z-[1] mx-auto grid w-full max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-16">
-            <div className="order-2 flex flex-col items-center text-center nav:order-1 nav:items-start nav:text-left">
-              <div
-                className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(15,158,142,0.4)] bg-[rgba(15,158,142,0.1)] px-5 py-2 font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-based-heading"
-              >
+          <div className="hero-grid-cyan" aria-hidden />
+          <div className="relative z-[2] mx-auto flex w-full max-w-[1160px] flex-col items-stretch gap-12 min-[900px]:grid min-[900px]:grid-cols-[minmax(0,55%)_minmax(0,45%)] min-[900px]:items-center min-[900px]:gap-16">
+            <div className="order-2 flex flex-col items-center text-center min-[900px]:order-1 min-[900px]:items-start min-[900px]:text-left">
+              <div className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(44,228,212,0.4)] bg-[rgba(44,228,212,0.1)] px-[1.1rem] py-[0.35rem] font-h text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-[#2CE4D4]">
                 <span
-                  className="h-2 w-2 shrink-0 rounded-full bg-based-cyan motion-safe:animate-badge-pulse"
+                  className="h-2 w-2 shrink-0 rounded-full bg-[#22c55e] motion-safe:animate-[pulse_2s_ease-in-out_infinite]"
                   aria-hidden
                 />
-                Smart ekonomistyrning
+                20 år i byråvärlden
               </div>
-              <h1 className="hero-fade-2 font-h text-[clamp(3rem,6vw,5.5rem)] font-extrabold leading-none tracking-[0.01em] text-based-heading">
-                Ekonomin på plats.
+              <h1 className="hero-fade-2 mb-6 font-h text-[clamp(3.2rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.01em] text-[#EEF7F6]">
+                Sluta betala
                 <br />
-                <span className="text-based-cyan">Tiden tillbaka.</span>
+                för tidstjuvar.
+                <br />
+                Börja köra
+                <br />
+                <span className="text-[#2CE4D4]">automagi.</span>
               </h1>
-              <p className="hero-fade-3 mt-6 max-w-xl font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-                Vi tror inte att bokföring är till för revisorn eller
-                Skatteverket. Den är till för att mäta och utveckla din
-                verksamhet. Med automagi frigör vi din tid och ger dig verktyg
-                för proaktivt ekonomiarbete.
+              <p className="hero-fade-3 mb-3 max-w-[500px] font-b text-[1.05rem] font-light leading-[1.85] text-[rgba(238,247,246,0.7)]">
+                Varje vecka lägger svenska SME-bolag i snitt 8 timmar på manuell
+                bokföring. Det är 416 timmar om året. Timmar du aldrig får
+                tillbaka.
               </p>
-              <div className="hero-fade-4 mt-8 flex flex-wrap items-center justify-center gap-3 nav:justify-start">
-                <Link
-                  href="/kontakt"
-                  className="inline-flex items-center gap-2 rounded-lg bg-based-cyan px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading shadow-sm transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+              <p className="hero-fade-3 max-w-[500px] font-b text-[1.05rem] font-normal leading-[1.85] text-[#EEF7F6]">
+                Vi tar hand om det. Du fokuserar på att växa.
+              </p>
+              <div className="hero-fade-4 mt-6 mb-8 flex items-center justify-center gap-2.5 min-[900px]:justify-start">
+                <span
+                  className="h-2 w-2 shrink-0 rounded-full bg-[rgba(255,80,80,0.8)] motion-safe:animate-[pulse_2s_ease-in-out_infinite]"
+                  aria-hidden
+                />
+                <p className="font-h text-[0.85rem] font-semibold text-[rgba(238,247,246,0.6)]">
+                  Varje dag utan automagi kostar dig tid och pengar.
+                </p>
+              </div>
+              <div className="hero-fade-5 flex flex-wrap items-center justify-center gap-4 min-[900px]:justify-start">
+                <a
+                  href="tel:0733017339"
+                  className="inline-flex items-center gap-2 rounded-[10px] bg-[#0F9E8E] px-8 py-4 font-h text-base font-bold text-[#082220] shadow-[0_20px_40px_rgba(44,228,212,0.25)] transition-all duration-[250ms] hover:-translate-y-[3px] hover:bg-[#2CE4D4]"
                 >
-                  <IconPhone className="shrink-0" />
-                  Boka kostnadsfri analys
-                </Link>
+                  <IconPhone14 className="h-5 w-5 shrink-0" />
+                  Ring David nu: 073-301 73 39
+                </a>
                 <Link
                   href="/#tjanster"
-                  className="group inline-flex items-center gap-2 rounded-lg border border-[rgba(10,39,36,0.25)] bg-transparent px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:border-based-cyan hover:text-based-cyan"
+                  className="group inline-flex items-center gap-2 rounded-[10px] border border-[rgba(44,228,212,0.35)] bg-transparent px-8 py-4 font-h text-[0.95rem] font-semibold text-[rgba(238,247,246,0.8)] transition-colors hover:border-[#2CE4D4] hover:text-[#EEF7F6]"
                 >
-                  Se vad vi gör
-                  <IconArrowRight className="shrink-0 transition-transform group-hover:translate-x-0.5" />
+                  <IconArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-0.5" />
+                  Se hur det fungerar
                 </Link>
               </div>
-              <div className="hero-fade-5 mt-12 flex flex-col gap-10 min-[600px]:flex-row min-[600px]:gap-[2.5rem]">
+              <div className="hero-fade-6 mt-10 flex flex-wrap items-center justify-center gap-6 min-[900px]:justify-start">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex items-center pl-2">
+                    <Image
+                      src="/Bilder/adamprofil.jpg"
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 rounded-full border-2 border-[#082220] object-cover"
+                    />
+                    <Image
+                      src="/Bilder/davidolsenprofilbild.jpg"
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="-ml-3.5 h-10 w-10 rounded-full border-2 border-[#082220] object-cover"
+                    />
+                  </div>
+                  <div className="text-center min-[900px]:text-left">
+                    <p className="font-h text-[0.875rem] font-semibold text-[#EEF7F6]">
+                      David och Johan
+                    </p>
+                    <p className="font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
+                      Svarar inom 24 timmar
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="hidden h-9 w-px shrink-0 bg-[rgba(44,228,212,0.2)] min-[900px]:block"
+                  aria-hidden
+                />
+                <div className="text-center min-[900px]:text-left">
+                  <p className="font-h text-[0.875rem] font-semibold text-[#EEF7F6]">
+                    Kostnadsfri analys
+                  </p>
+                  <p className="font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
+                    Inga bindningar
+                  </p>
+                </div>
+              </div>
+              <div className="hero-fade-7 mt-12 flex flex-col items-center gap-6 border-t border-[rgba(44,228,212,0.12)] pt-10 max-[600px]:gap-6 min-[900px]:flex-row min-[900px]:items-stretch min-[900px]:gap-10">
                 {[
-                  { n: "20+", l: "Års erfarenhet" },
-                  { n: "100%", l: "Personlig service" },
+                  { n: "416h", l: "Sparad tid per år" },
+                  { n: "94%", l: "Färre bokföringsfel" },
                   { n: "0 kr", l: "Kostnad för analys" },
                 ].map((s) => (
                   <div
                     key={s.n}
-                    className="border-l-2 border-based-cyan pl-4 text-left"
+                    className="w-full max-w-[220px] border-l-2 border-[rgba(44,228,212,0.4)] pl-4 text-center min-[900px]:max-w-none min-[900px]:text-left"
                   >
-                    <p className="font-h text-[1.6rem] font-bold tracking-[0.01em] text-based-cyan">
+                    <p className="font-h text-[1.8rem] font-extrabold text-[#2CE4D4]">
                       {s.n}
                     </p>
-                    <p className="mt-1 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
+                    <p className="mt-1 font-b text-[0.8rem] font-light text-[rgba(238,247,246,0.5)]">
                       {s.l}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="order-1 flex justify-center nav:order-2 nav:justify-end">
-              <div className="relative flex h-[420px] w-full max-w-[480px] items-center justify-center">
+            <div className="order-1 flex min-h-[320px] items-center justify-center min-[900px]:order-2 min-[900px]:min-h-[480px]">
+              <div className="relative flex w-full max-w-[260px] items-center justify-center min-[900px]:max-w-none">
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(15,158,142,0.2)] motion-safe:animate-spin-20"
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full min-[900px]:h-[400px] min-[900px]:w-[400px]"
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(44,228,212,0.10) 0%, transparent 65%)",
+                  }}
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[247px] w-[247px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(44,228,212,0.15)] motion-safe:animate-spin-22 min-[900px]:h-[380px] min-[900px]:w-[380px]"
                   aria-hidden
                 >
-                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-based-cyan" />
+                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2CE4D4]" />
                 </div>
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(15,158,142,0.2)] motion-safe:animate-spin-28-rev"
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[325px] w-[325px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(44,228,212,0.08)] motion-safe:animate-spin-30-rev min-[900px]:h-[500px] min-[900px]:w-[500px]"
                   aria-hidden
                 >
-                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-based-cyan" />
+                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2CE4D4]" />
+                </div>
+                <div className="hero-float-badge-1 absolute right-0 top-[15%] z-20 hidden max-w-[220px] rounded-xl border border-[rgba(44,228,212,0.35)] bg-[rgba(44,228,212,0.12)] px-5 py-3.5 backdrop-blur-[10px] min-[900px]:block">
+                  <div className="flex items-start gap-3">
+                    <IconZap className="h-5 w-5 shrink-0 text-[#2CE4D4]" />
+                    <div>
+                      <p className="font-h text-[0.85rem] font-bold text-[#EEF7F6]">
+                        Automagi aktiverad
+                      </p>
+                      <p className="mt-1 font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
+                        8h sparad denna veckan
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="hero-float-badge-2 absolute bottom-[20%] left-0 z-20 hidden max-w-[220px] rounded-xl border border-[rgba(44,228,212,0.35)] bg-[rgba(44,228,212,0.12)] px-5 py-3.5 backdrop-blur-[10px] min-[900px]:block">
+                  <div className="flex items-start gap-3">
+                    <IconCheckSmall className="h-5 w-5 shrink-0 text-[#2CE4D4]" />
+                    <div>
+                      <p className="font-h text-[0.85rem] font-bold text-[#EEF7F6]">
+                        Bokföring: Klar
+                      </p>
+                      <p className="mt-1 font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
+                        47 fakturor hanterade idag
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <Image
-                  src="/Loga-basedtech.png"
-                  alt="BASEDtech-maskot: pingvin med hörlurar och kretskort"
-                  width={400}
-                  height={400}
-                  className="relative z-10 max-w-[400px] rounded-2xl motion-safe:animate-float"
+                  src="/Bilder/avatar.png"
+                  alt="Larry, BASEDtechs pingvinmaskot"
+                  width={460}
+                  height={460}
+                  className="relative z-10 w-full max-w-[260px] rounded-[20px] motion-safe:animate-float min-[900px]:max-w-[460px]"
                   style={{
-                    filter: "drop-shadow(0 24px 60px rgba(15,158,142,0.2))",
+                    filter: "drop-shadow(0 30px 80px rgba(44,228,212,0.25))",
                   }}
                   priority
                 />
@@ -351,7 +418,7 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[500px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-5 lg:row-span-2 lg:h-[500px] lg:min-h-0 ${bentoHover}`}
               >
-                <div className="relative h-[240px] w-full shrink-0 lg:h-[65%] lg:min-h-[200px]">
+                <div className="relative h-[260px] w-full shrink-0 overflow-hidden rounded-t-[12px] lg:h-auto lg:min-h-0 lg:basis-[55%] lg:shrink-0 lg:grow-0">
                   <Image
                     src="/Bilder/The Analyst.png"
                     alt="Larry som analytiker som följer KPIer och ekonomiska trender i realtid"
@@ -359,9 +426,14 @@ export default function HomePage() {
                     priority
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover object-top"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      maxHeight: 260,
+                    }}
                   />
                 </div>
-                <div className="flex flex-1 flex-col px-8 pb-8 pt-8">
+                <div className="flex min-h-0 flex-1 flex-col px-8 pb-8 pt-8 lg:basis-[45%] lg:shrink-0 lg:grow-0">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     THE ANALYST
                   </p>
@@ -377,13 +449,18 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-1 ${bentoHover}`}
               >
-                <div className="relative h-[144px] w-full shrink-0 lg:h-[60%] lg:min-h-[144px]">
+                <div className="relative h-[200px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
                   <Image
                     src="/Bilder/The Automator.png"
                     alt="Larry som automatiserar fakturor, kvitton och avstämningar"
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover object-top"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      maxHeight: 220,
+                    }}
                   />
                 </div>
                 <div className="flex flex-1 flex-col px-6 pb-6 pt-6">
@@ -401,13 +478,18 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.3)] bg-[rgba(44,228,212,0.08)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-1 ${bentoHover}`}
               >
-                <div className="relative h-[156px] w-full shrink-0 lg:h-[65%] lg:min-h-[156px]">
+                <div className="relative h-[180px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
                   <Image
                     src="/Bilder/The problem solver.png"
                     alt="Larry som problemlösare som tar sig an utmaningar stora som små"
                     fill
                     sizes="(max-width: 1024px) 100vw, 25vw"
-                    className="object-cover"
+                    className="object-cover object-top"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      maxHeight: 220,
+                    }}
                   />
                 </div>
                 <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
@@ -425,13 +507,18 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-2 ${bentoHover}`}
               >
-                <div className="relative h-[144px] w-full shrink-0 lg:h-[60%] lg:min-h-[144px]">
+                <div className="relative h-[200px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
                   <Image
                     src="/Bilder/The Advisor.png"
                     alt="Larry som rådgivare som alltid är redo för ett samtal"
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover object-top"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      maxHeight: 220,
+                    }}
                   />
                 </div>
                 <div className="flex flex-1 flex-col px-6 pb-6 pt-6">
@@ -449,13 +536,18 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.2)] bg-[rgba(44,228,212,0.05)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-2 ${bentoHover}`}
               >
-                <div className="relative h-[156px] w-full shrink-0 lg:h-[65%] lg:min-h-[156px]">
+                <div className="relative h-[180px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
                   <Image
                     src="/Bilder/The tech wizard.png"
                     alt="Larry som teknikexpert som förenklar det komplexa"
                     fill
                     sizes="(max-width: 1024px) 100vw, 25vw"
-                    className="object-cover"
+                    className="object-cover object-top"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      maxHeight: 220,
+                    }}
                   />
                 </div>
                 <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
@@ -474,15 +566,16 @@ export default function HomePage() {
                 className={`group rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] p-12 max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-12 lg:row-start-3 ${bentoHover}`}
               >
                 <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12">
-                  <div className="relative mx-auto w-full max-w-[400px]">
+                  <div className="relative mx-auto w-full max-w-[380px] overflow-hidden rounded-2xl">
                     <Image
                       src="/Bilder/The Team Player.png"
                       alt="Larry som lagspelare tillsammans med BASEDtech-teamet"
-                      width={400}
-                      height={400}
-                      sizes="(max-width: 1024px) 100vw, 400px"
-                      className="w-full rounded-2xl object-cover"
+                      width={380}
+                      height={320}
+                      sizes="(max-width: 1024px) 100vw, 380px"
+                      className="h-auto max-h-[320px] w-full object-cover object-top"
                       style={{
+                        objectPosition: "center top",
                         filter:
                           "drop-shadow(0 20px 40px rgba(44,228,212,0.15))",
                       }}

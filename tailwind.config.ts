@@ -45,6 +45,8 @@ const config: Config = {
         "badge-pulse": "badgePulse 2.2s ease-in-out infinite",
         "spin-20": "spinRing 20s linear infinite",
         "spin-28-rev": "spinRing 28s linear infinite reverse",
+        "spin-22": "spinRing 22s linear infinite",
+        "spin-30-rev": "spinRing 30s linear infinite reverse",
       },
       boxShadow: {
         "card-tjanst": "0 2px 12px rgba(15,158,142,0.06)",

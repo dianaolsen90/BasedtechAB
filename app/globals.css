@@ -51,12 +51,54 @@ html {
 
 .hero-fade-4 {
   opacity: 0;
-  animation: fadeUpHero 0.7s ease-out 0.3s forwards;
+  animation: fadeUpHero 0.7s ease-out 0.25s forwards;
 }
 
 .hero-fade-5 {
   opacity: 0;
-  animation: fadeUpHero 0.7s ease-out 0.45s forwards;
+  animation: fadeUpHero 0.7s ease-out 0.3s forwards;
+}
+
+.hero-fade-6 {
+  opacity: 0;
+  animation: fadeUpHero 0.7s ease-out 0.4s forwards;
+}
+
+.hero-fade-7 {
+  opacity: 0;
+  animation: fadeUpHero 0.7s ease-out 0.5s forwards;
+}
+
+.hero-float-badge-1 {
+  opacity: 0;
+  animation: fadeUpHero 0.8s ease-out 0.6s both;
+}
+
+.hero-float-badge-2 {
+  opacity: 0;
+  animation: fadeUpHero 0.8s ease-out 0.75s both;
+}
+
+.hero-grid-cyan {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+  background-image:
+    linear-gradient(rgba(44, 228, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 228, 212, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 40%,
+    black 20%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 40%,
+    black 20%,
+    transparent 100%
+  );
 }
 
 .reveal {
@@ -370,7 +412,11 @@ html {
   .hero-fade-2,
   .hero-fade-3,
   .hero-fade-4,
-  .hero-fade-5 {
+  .hero-fade-5,
+  .hero-fade-6,
+  .hero-fade-7,
+  .hero-float-badge-1,
+  .hero-float-badge-2 {
     animation: none;
     opacity: 1;
   }
