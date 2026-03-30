@@ -24,6 +24,13 @@ export const metadata: Metadata = {
 const bentoHover =
   "transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1 hover:scale-[1.01] hover:border-[rgba(44,228,212,0.45)]";
 
+const larryPhotoBackdrop =
+  "pointer-events-none absolute inset-0 bg-gradient-to-br from-[rgba(44,228,212,0.14)] via-[#0c3430] to-[#051916]";
+const larryPhotoFadeToCard =
+  "pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[32%] min-h-[3rem] bg-gradient-to-t from-[rgba(8,34,32,0.98)] via-[rgba(8,34,32,0.5)] to-transparent";
+const larryPhotoImgClass =
+  "object-cover object-[center_28%] saturate-[1.08] contrast-[1.03] transition-transform duration-[480ms] ease-out group-hover:scale-[1.035]";
+
 export default function HomePage() {
   return (
     <>
@@ -420,21 +427,23 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 gap-6 min-[700px]:max-lg:grid-cols-2 lg:grid-cols-12 lg:gap-6">
               <article
-                className={`group relative flex min-h-[400px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-5 lg:row-span-2 lg:h-[420px] lg:min-h-0 ${bentoHover}`}
+                className={`group relative flex min-h-[380px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-5 lg:row-span-2 lg:h-[460px] lg:min-h-0 ${bentoHover}`}
               >
-                <div className="relative flex h-[200px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-4 pt-4 lg:h-auto lg:min-h-0 lg:basis-[42%] lg:shrink-0 lg:grow-0 lg:px-5 lg:pt-5">
-                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                <div className="relative w-full shrink-0 overflow-hidden rounded-t-[20px] border-b border-[rgba(44,228,212,0.12)] lg:min-h-0 lg:flex-[1_1_54%]">
+                  <div className={larryPhotoBackdrop} aria-hidden />
+                  <div className="relative aspect-[4/3] w-full lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
                     <Image
                       src="/Bilder/The Analyst.png"
                       alt="Larry som analytiker som följer KPIer och ekonomiska trender i realtid"
                       fill
                       priority
                       sizes="(max-width: 1024px) 100vw, 42vw"
-                      className="object-contain object-top"
+                      className={larryPhotoImgClass}
                     />
                   </div>
+                  <div className={larryPhotoFadeToCard} aria-hidden />
                 </div>
-                <div className="flex min-h-0 flex-1 flex-col px-8 pb-8 pt-6 lg:basis-[58%] lg:shrink-0 lg:grow-0">
+                <div className="relative z-[2] flex min-h-0 flex-1 flex-col px-8 pb-8 pt-7 lg:flex-[1_1_46%] lg:justify-center">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     THE ANALYST
                   </p>
@@ -448,20 +457,22 @@ export default function HomePage() {
                 </div>
               </article>
               <article
-                className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-1 ${bentoHover}`}
+                className={`group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-1 ${bentoHover}`}
               >
-                <div className="relative flex h-[148px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
-                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                <div className="relative w-full shrink-0 overflow-hidden rounded-t-[20px] border-b border-[rgba(44,228,212,0.1)]">
+                  <div className={larryPhotoBackdrop} aria-hidden />
+                  <div className="relative aspect-[5/4] w-full min-[500px]:aspect-[16/11]">
                     <Image
                       src="/Bilder/The Automator.png"
                       alt="Larry som automatiserar fakturor, kvitton och avstämningar"
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-contain object-top"
+                      className={larryPhotoImgClass}
                     />
                   </div>
+                  <div className={larryPhotoFadeToCard} aria-hidden />
                 </div>
-                <div className="flex flex-1 flex-col px-6 pb-6 pt-6">
+                <div className="relative z-[2] flex flex-1 flex-col px-6 pb-6 pt-6">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     THE AUTOMATOR
                   </p>
@@ -474,20 +485,22 @@ export default function HomePage() {
                 </div>
               </article>
               <article
-                className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.3)] bg-[rgba(44,228,212,0.08)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-1 ${bentoHover}`}
+                className={`group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.3)] bg-[rgba(44,228,212,0.08)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-1 ${bentoHover}`}
               >
-                <div className="relative flex h-[128px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
-                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                <div className="relative w-full shrink-0 overflow-hidden rounded-t-[20px] border-b border-[rgba(44,228,212,0.1)]">
+                  <div className={larryPhotoBackdrop} aria-hidden />
+                  <div className="relative aspect-[5/4] w-full">
                     <Image
                       src="/Bilder/The problem solver.png"
                       alt="Larry som problemlösare som tar sig an utmaningar stora som små"
                       fill
                       sizes="(max-width: 1024px) 100vw, 25vw"
-                      className="object-contain object-top"
+                      className={larryPhotoImgClass}
                     />
                   </div>
+                  <div className={larryPhotoFadeToCard} aria-hidden />
                 </div>
-                <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
+                <div className="relative z-[2] flex flex-1 flex-col px-5 pb-5 pt-5">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     PROBLEM SOLVER
                   </p>
@@ -500,20 +513,22 @@ export default function HomePage() {
                 </div>
               </article>
               <article
-                className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-2 ${bentoHover}`}
+                className={`group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-2 ${bentoHover}`}
               >
-                <div className="relative flex h-[148px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
-                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                <div className="relative w-full shrink-0 overflow-hidden rounded-t-[20px] border-b border-[rgba(44,228,212,0.1)]">
+                  <div className={larryPhotoBackdrop} aria-hidden />
+                  <div className="relative aspect-[5/4] w-full min-[500px]:aspect-[16/11]">
                     <Image
                       src="/Bilder/The Advisor.png"
                       alt="Larry som rådgivare som alltid är redo för ett samtal"
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-contain object-top"
+                      className={larryPhotoImgClass}
                     />
                   </div>
+                  <div className={larryPhotoFadeToCard} aria-hidden />
                 </div>
-                <div className="flex flex-1 flex-col px-6 pb-6 pt-6">
+                <div className="relative z-[2] flex flex-1 flex-col px-6 pb-6 pt-6">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     THE ADVISOR
                   </p>
@@ -526,20 +541,22 @@ export default function HomePage() {
                 </div>
               </article>
               <article
-                className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.2)] bg-[rgba(44,228,212,0.05)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-2 ${bentoHover}`}
+                className={`group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.2)] bg-[rgba(44,228,212,0.05)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-2 ${bentoHover}`}
               >
-                <div className="relative flex h-[128px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
-                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                <div className="relative w-full shrink-0 overflow-hidden rounded-t-[20px] border-b border-[rgba(44,228,212,0.1)]">
+                  <div className={larryPhotoBackdrop} aria-hidden />
+                  <div className="relative aspect-[5/4] w-full">
                     <Image
                       src="/Bilder/The tech wizard.png"
                       alt="Larry som teknikexpert som förenklar det komplexa"
                       fill
                       sizes="(max-width: 1024px) 100vw, 25vw"
-                      className="object-contain object-top"
+                      className={larryPhotoImgClass}
                     />
                   </div>
+                  <div className={larryPhotoFadeToCard} aria-hidden />
                 </div>
-                <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
+                <div className="relative z-[2] flex flex-1 flex-col px-5 pb-5 pt-5">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     TECH WIZARD
                   </p>
@@ -555,20 +572,29 @@ export default function HomePage() {
                 className={`group rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] p-12 max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-12 lg:row-start-3 ${bentoHover}`}
               >
                 <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12">
-                  <div className="relative mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl">
-                    <Image
-                      src="/Bilder/The Team Player.png"
-                      alt="Larry som lagspelare tillsammans med BASEDtech-teamet"
-                      width={280}
-                      height={236}
-                      sizes="(max-width: 1024px) 100vw, 280px"
-                      className="h-auto max-h-[236px] w-full object-contain object-top"
+                  <div className="relative mx-auto w-full max-w-[400px]">
+                    <div
+                      className="overflow-hidden rounded-[22px] shadow-[0_28px_56px_rgba(0,0,0,0.35)] ring-1 ring-[rgba(44,228,212,0.18)]"
                       style={{
-                        objectPosition: "center top",
-                        filter:
-                          "drop-shadow(0 20px 40px rgba(44,228,212,0.15))",
+                        background:
+                          "linear-gradient(145deg, rgba(44,228,212,0.2) 0%, rgba(8,34,32,0.95) 42%, #051916 100%)",
                       }}
-                    />
+                    >
+                      <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[20px]">
+                        <div className={larryPhotoBackdrop} aria-hidden />
+                        <Image
+                          src="/Bilder/The Team Player.png"
+                          alt="Larry som lagspelare tillsammans med BASEDtech-teamet"
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 400px"
+                          className={`${larryPhotoImgClass} object-[center_30%]`}
+                        />
+                        <div
+                          className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[28%] bg-gradient-to-t from-[rgba(8,34,32,0.85)] to-transparent"
+                          aria-hidden
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div>
                     <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
