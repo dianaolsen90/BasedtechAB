@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   IconArrowRight,
   IconClock,
@@ -29,8 +30,14 @@ export default function HomePage() {
           }}
           aria-label="Introduktion"
         >
+          <div className="aurora-wrap" aria-hidden>
+            <div className="aurora-band aurora-1" />
+            <div className="aurora-band aurora-2" />
+            <div className="aurora-band aurora-3" />
+            <div className="aurora-band aurora-4" />
+          </div>
           <div
-            className="pointer-events-none absolute inset-0 opacity-100 [mask-image:radial-gradient(ellipse_80%_70%_at_50%_40%,black_20%,transparent_75%)]"
+            className="pointer-events-none absolute inset-0 z-[1] opacity-100 [mask-image:radial-gradient(ellipse_80%_70%_at_50%_40%,black_20%,transparent_75%)]"
             style={{
               backgroundImage: `
                 linear-gradient(to right, rgba(15,158,142,0.07) 1px, transparent 1px),
@@ -41,14 +48,14 @@ export default function HomePage() {
             aria-hidden
           />
           <div
-            className="pointer-events-none absolute left-1/2 top-0 h-[min(55vh,480px)] w-[min(100%,900px)] -translate-x-1/2 opacity-40"
+            className="pointer-events-none absolute left-1/2 top-0 z-[1] h-[min(55vh,480px)] w-[min(100%,900px)] -translate-x-1/2 opacity-40"
             style={{
               background:
                 "radial-gradient(ellipse at center top, rgba(15,158,142,0.22) 0%, transparent 65%)",
             }}
             aria-hidden
           />
-          <div className="relative z-10 mx-auto grid w-full max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-16">
+          <div className="relative z-[1] mx-auto grid w-full max-w-container grid-cols-1 gap-12 nav:grid-cols-2 nav:items-center nav:gap-16">
             <div className="order-2 flex flex-col items-center text-center nav:order-1 nav:items-start nav:text-left">
               <div
                 className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(15,158,142,0.4)] bg-[rgba(15,158,142,0.1)] px-5 py-2 font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-based-heading"
@@ -71,13 +78,13 @@ export default function HomePage() {
                 för proaktivt ekonomiarbete.
               </p>
               <div className="hero-fade-4 mt-8 flex flex-wrap items-center justify-center gap-3 nav:justify-start">
-                <a
-                  href="#kontakt"
+                <Link
+                  href="/kontakt"
                   className="inline-flex items-center gap-2 rounded-lg bg-based-cyan px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading shadow-sm transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
                 >
                   <IconPhone className="shrink-0" />
                   Boka kostnadsfri analys
-                </a>
+                </Link>
                 <a
                   href="#tjanster"
                   className="group inline-flex items-center gap-2 rounded-lg border border-[rgba(10,39,36,0.25)] bg-transparent px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:border-based-cyan hover:text-based-cyan"
@@ -209,12 +216,12 @@ export default function HomePage() {
                 className="relative z-10 my-8 border-t"
                 style={{ borderColor: "var(--based-border)" }}
               />
-              <a
-                href="#kontakt"
+              <Link
+                href="/kontakt"
                 className="relative z-10 inline-flex w-full items-center justify-center rounded-lg bg-based-cyan py-3 font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
               >
                 Kom igång idag
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -410,75 +417,22 @@ export default function HomePage() {
           </div>
         </section>
         <section
-          id="kontakt"
-          className="reveal relative scroll-mt-[84px] overflow-hidden bg-based-white py-16 pl-8 pr-8 max-[600px]:py-16 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
+          id="vill-du-veta-mer"
+          className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:py-16 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
         >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-100"
-            style={{
-              backgroundImage: `
-                linear-gradient(to right, rgba(15,158,142,0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(15,158,142,0.05) 1px, transparent 1px)
-              `,
-              backgroundSize: "56px 56px",
-            }}
-            aria-hidden
-          />
-          <div className="relative z-10 mx-auto max-w-contact text-center">
+          <div className="mx-auto max-w-contact text-center">
             <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
-              Ta ett snack.{" "}
-              <span className="text-based-cyan">Det kostar ingenting.</span>
+              Vill du veta mer?
             </h2>
             <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-              Vi tar gärna ett förutsättningslöst samtal och ser om det finns
-              något vi kan göra för att underlätta din ekonomihantering.
+              Vi tar gärna ett samtal om hur vi kan hjälpa dig.
             </p>
-            <a
-              href="mailto:david.olsen@basedtech.se"
+            <Link
+              href="/kontakt"
               className="mt-8 inline-flex items-center justify-center rounded-lg bg-based-cyan px-8 py-3 font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
             >
-              Skicka ett mail
-            </a>
-            <div
-              className="mx-auto mt-12 rounded-2xl border bg-based-section p-10 text-left"
-              style={borderStyle}
-            >
-              <div className="grid grid-cols-1 gap-8 nav:grid-cols-3 nav:text-center">
-                <div>
-                  <p className="font-h text-xs font-bold uppercase tracking-[0.14em] text-based-cyan">
-                    Telefon
-                  </p>
-                  <a
-                    href="tel:+46733017339"
-                    className="mt-2 block font-b text-[1.05rem] font-light leading-[1.8] text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
-                  >
-                    073-301 73 39
-                  </a>
-                </div>
-                <div>
-                  <p className="font-h text-xs font-bold uppercase tracking-[0.14em] text-based-cyan">
-                    E-post
-                  </p>
-                  <a
-                    href="mailto:david.olsen@basedtech.se"
-                    className="mt-2 block break-all font-b text-[1.05rem] font-light leading-[1.8] text-based-heading underline-offset-2 hover:text-based-cyan hover:underline"
-                  >
-                    david.olsen@basedtech.se
-                  </a>
-                </div>
-                <div>
-                  <p className="font-h text-xs font-bold uppercase tracking-[0.14em] text-based-cyan">
-                    Analys
-                  </p>
-                  <a
-                    href="mailto:david.olsen@basedtech.se"
-                    className="mt-2 block font-b text-[1.05rem] font-light leading-[1.8] text-based-body underline-offset-2 hover:text-based-cyan hover:underline"
-                  >
-                    Kostnadsfri och förutsättningslös
-                  </a>
-                </div>
-              </div>
-            </div>
+              Träffa teamet
+            </Link>
           </div>
         </section>
       </main>
