@@ -1,0 +1,18 @@
+---
+description: Efter kodändringar, pusha till GitHub så Vercel deployar automatiskt
+alwaysApply: true
+---
+
+# Vercel: automatisk deploy
+
+När du har slutfört **meningsfulla kodändringar** som användaren vill ha i produktion:
+
+1. Kör `git status` och inkludera relevanta filer med `git add` (inte slumpmässiga eller hemliga filer).
+2. Committa med ett kort, beskrivande meddelande på engelska eller svenska.
+3. Kör `git push origin main` (eller aktuell branch om användaren arbetar i en feature-branch som deployar via PR).
+
+**Varför:** Vercel deployar automatiskt när repot är kopplat under **Project → Settings → Git** i Vercel. Deploy sker via push till GitHub, inte med ett separat "push till Vercel"-kommando.
+
+Om `git push` misslyckas (auth, nätverk, konflikt), rapportera felet och föreslå nästa steg. Kör inte push om användaren uttryckligen bett om endast lokala ändringar.
+
+För manuell deploy utan Git: `npm run deploy:vercel` (kräver inloggad Vercel CLI lokalt).
