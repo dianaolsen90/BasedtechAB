@@ -20,14 +20,14 @@ const serviceCards = [
     title: "Vi städar",
     subtitle: "Avstämningar och kvalitetssäkring",
     body:
-      "Felaktig bokföring är som ett läckande rör. Ju längre du väntar desto dyrare blir det. Vi går igenom allt, hittar felen och säkerställer att du har en korrekt grund att bygga vidare på. Sedan är vi redo för nästa steg.",
+      "Fel i bokföringen blir nästan alltid dyrare över tid. Vi går igenom nuläget, hittar felen och ser till att du har en korrekt grund att stå på. När grunden är rätt kan vi automatisera resten på ett tryggt sätt.",
     steps: [
       "Genomgång av befintlig bokföring",
       "Identifiering av fel och avvikelser",
       "Korrekt grund på plats",
     ],
     fomo:
-      "Fel i bokföringen kostar svenska SME-bolag i snitt 45 000 kr per år. Hur mycket kostar det dig?",
+      "När grunden är rätt blir rapporter, moms och bokslut betydligt enklare.",
     badges: ["Korrekt", "Snabbt", "Tryggt"],
   },
   {
@@ -37,14 +37,14 @@ const serviceCards = [
     title: "Automagi",
     subtitle: "Automatiserad bokföring",
     body:
-      "Din tid är din mest värdefulla resurs. Varje faktura du hanterar manuellt, varje kvitto du letar efter och varje rapport du sätter ihop för hand tar timmar varje vecka. Timmar du aldrig får tillbaka. Vi automatiserar alltihop så du kan fokusera på det som faktiskt driver din verksamhet framåt.",
+      "De flesta tidstjuvar i bokföringen är återkommande. Vi sätter upp automation som tar hand om flödena och bygger kontroller som minskar fel. Du får en process som faktiskt håller, månad efter månad.",
     steps: [
       "Kartläggning av dina ekonomiflöden",
       "Implementation av rätt automationsverktyg",
       "Du kör på full automagi",
     ],
     fomo:
-      "Dina konkurrenter som redan kör automation hinner med 3 gånger mer analys under samma tid. Hur länge väntar du?",
+      "Målet är enkelt: mindre manuellt jobb och bättre beslutsunderlag.",
     badges: ["8h sparad per vecka", "AI-drivet", "Realtid"],
   },
   {
@@ -54,14 +54,14 @@ const serviceCards = [
     title: "Skräddarsytt",
     subtitle: "Anpassade lösningar",
     body:
-      "Varje verksamhet är unik. Det som funkar för ett bolag funkar inte nödvändigtvis för ett annat. Vi lyssnar, förstår och bygger lösningar som passar exakt din verksamhet. Inga generiska paket och ingen one-size-fits-all. Bara lösningar som faktiskt funkar för dig.",
+      "Det som fungerar i ett bolag fungerar inte alltid i ett annat. Vi börjar med att förstå hur ni jobbar och bygger en lösning som passar era flöden. Skräddarsytt efter ditt behov, utan onödigt krångel.",
     steps: [
       "Djupdykning i din verksamhet",
       "Skräddarsydd lösning tas fram",
       "Löpande support och optimering",
     ],
     fomo:
-      "Bolag som skräddarsyr sina ekonomiprocesser växer 2 gånger snabbare än de som kör generiska lösningar.",
+      "Du får en lösning som är lätt att äga och enkel att bygga vidare på.",
     badges: ["Unikt för dig", "Flexibelt", "Skalbart"],
   },
 ] as const;
@@ -123,18 +123,18 @@ export function HomeTjansterSection() {
               />
             </div>
             <h2 className="font-h text-[clamp(3rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-[0.01em] text-[#EEF7F6]">
-              Medan andra bolag
+              En bokföring som fungerar
               <br />
-              slösar timmar varje vecka
+              ska ge dig kontroll,
               <br />
-              kör dina konkurrenter på
+              inte mer att göra.
               <br />
-              <span className="text-[#2CE4D4]">automagi.</span>
+              <span className="text-[#2CE4D4]">Här börjar automagi.</span>
             </h2>
             <p className="mx-auto mt-6 max-w-[600px] font-b text-[1.1rem] font-light leading-[1.8] text-[rgba(238,247,246,0.7)]">
-              Varje timme du lägger på manuell bokföring är en timme dina
-              konkurrenter investerar i att växa. Vi tar hand om det åt dig så du
-              kan fokusera på det som faktiskt spelar roll.
+              Vi säkrar rätt grund, hittar felkällor och tar bort tidstjuvarna.
+              Sedan automatiserar vi det som går att automatisera, med personlig
+              service hela vägen.
             </p>
           </div>
           <div

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy:vercel": "npx vercel@latest deploy --prod"
+    "deploy:vercel": "npx vercel@latest deploy --prod",
+    "process-avatar": "node scripts/process-avatar-transparent.mjs"
   },
   "dependencies": {
     "next": "^15.1.0",
@@ -14,6 +15,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "sharp": "^0.33.5",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

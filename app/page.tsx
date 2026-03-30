@@ -13,9 +13,9 @@ import { SiteFooter } from "@/app/components/site-footer";
 import { SiteHeader } from "@/app/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Tjänster | BASEDtech Sweden AB",
+  title: "BASEDtech Sweden AB",
   description:
-    "Automatisera din bokföring med BASEDtech. Vi erbjuder avstämningar, automagi och skräddarsydda lösningar. Kostnadsfri analys inom 48 timmar.",
+    "Automagi för din ekonomi. Vi säkrar rätt grund i bokföringen och automatiserar resten, med personlig service.",
 };
 
 const bentoHover =
@@ -64,12 +64,12 @@ export default function HomePage() {
                 <span className="text-[#2CE4D4]">automagi.</span>
               </h1>
               <p className="hero-fade-3 mb-3 max-w-[500px] font-b text-[1.05rem] font-light leading-[1.85] text-[rgba(238,247,246,0.7)]">
-                Varje vecka lägger svenska SME-bolag i snitt 8 timmar på manuell
-                bokföring. Det är 416 timmar om året. Timmar du aldrig får
-                tillbaka.
+                Varje vecka går timmar åt till manuella moment i bokföringen.
+                Ofta handlar det om samma saker: kvitton, avstämningar och
+                fakturor som tar tid från det som faktiskt driver bolaget.
               </p>
               <p className="hero-fade-3 max-w-[500px] font-b text-[1.05rem] font-normal leading-[1.85] text-[#EEF7F6]">
-                Vi tar hand om det. Du fokuserar på att växa.
+                Vi tar hand om det. Du får tiden tillbaka.
               </p>
               <div className="hero-fade-4 mt-10 flex w-full max-w-[420px] flex-col gap-5 text-center min-[900px]:text-left">
                 <div className="flex flex-wrap items-center justify-center gap-4 min-[900px]:justify-start">
@@ -137,19 +137,14 @@ export default function HomePage() {
                   <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2CE4D4]" />
                 </div>
                 <div className="relative z-10 mx-auto w-full max-w-[260px] motion-safe:animate-float min-[900px]:max-w-[460px]">
-                  <div
-                    className="overflow-hidden rounded-[20px] shadow-[0_30px_80px_rgba(44,228,212,0.22)]"
-                    style={{ isolation: "isolate" }}
-                  >
-                    <Image
-                      src="/Bilder/avatar.png"
-                      alt="Larry, BASEDtechs pingvinmaskot"
-                      width={460}
-                      height={460}
-                      className="h-auto w-full mix-blend-multiply"
-                      priority
-                    />
-                  </div>
+                  <Image
+                    src="/Bilder/avatar.png"
+                    alt="Larry, BASEDtechs pingvinmaskot"
+                    width={460}
+                    height={460}
+                    className="h-auto w-full drop-shadow-[0_30px_80px_rgba(44,228,212,0.22)]"
+                    priority
+                  />
                 </div>
               </div>
             </div>
