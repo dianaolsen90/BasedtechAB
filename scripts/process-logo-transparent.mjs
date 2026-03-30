@@ -5,14 +5,10 @@ import { pngBufferToTransparentPng } from "./png-remove-white.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
-const src = path.join(root, "Bilder", "Loga-basedtech.png.png");
-const outPublic = path.join(root, "public", "Loga-basedtech.png");
-const outBilder = path.join(root, "Bilder", "Loga-basedtech.png");
+const src = path.join(root, "Bilder", "Basedtechlogo.png");
+const outPublic = path.join(root, "public", "loggan", "basedtechlogo.png");
 
 const buf = await readFile(src);
 const outBuf = await pngBufferToTransparentPng(buf);
 await writeFile(outPublic, outBuf);
-await writeFile(outBilder, outBuf);
-console.log(
-  "Wrote transparent logo to public/Loga-basedtech.png and Bilder/Loga-basedtech.png",
-);
+console.log("Wrote transparent logo to public/loggan/basedtechlogo.png");
