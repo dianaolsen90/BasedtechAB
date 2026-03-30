@@ -31,7 +31,7 @@ export function SiteFooter() {
               className="inline-flex max-w-full rounded-2xl border border-[rgba(125,212,240,0.12)] bg-[#060F1C] px-5 py-4 transition-opacity hover:opacity-95"
             >
               <Image
-                src="/Bilder/logo-basedtech.png"
+                src="/Bilder/Loga-basedtech.png"
                 alt="BASEDtech Sweden AB logotyp"
                 width={420}
                 height={147}
