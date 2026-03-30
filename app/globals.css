@@ -325,6 +325,37 @@ html {
   }
 }
 
+.om-oss-hex {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 21px,
+      rgba(44, 228, 212, 0.04) 21px,
+      rgba(44, 228, 212, 0.04) 22px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      transparent,
+      transparent 21px,
+      rgba(44, 228, 212, 0.04) 21px,
+      rgba(44, 228, 212, 0.04) 22px
+    ),
+    repeating-linear-gradient(
+      120deg,
+      transparent,
+      transparent 21px,
+      rgba(44, 228, 212, 0.04) 21px,
+      rgba(44, 228, 212, 0.04) 22px
+    );
+  background-size: 38px 66px;
+  opacity: 0.9;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
