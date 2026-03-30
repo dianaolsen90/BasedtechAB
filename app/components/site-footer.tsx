@@ -2,10 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
+  { href: "/", label: "Hem" },
   { href: "#om-oss", label: "Om oss" },
   { href: "#tjanster", label: "Tjänster" },
-  { href: "#produkter", label: "Produkter" },
-  { href: "#team", label: "Team" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -37,7 +36,11 @@ export function SiteFooter() {
             <ul className="space-y-2 font-b text-sm font-normal">
               {links.map((l) => {
                 const href =
-                  l.href.startsWith("#") ? `/${l.href}` : l.href;
+                  l.href === "/"
+                    ? "/"
+                    : l.href.startsWith("#")
+                      ? `/${l.href}`
+                      : l.href;
                 return (
                   <li key={l.href + l.label}>
                     <Link

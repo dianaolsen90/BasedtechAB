@@ -6,20 +6,20 @@ import type { ReactNode } from "react";
 import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
-  IconBox,
   IconClose,
   IconDocument,
-  IconGroup,
+  IconHome,
   IconMenu,
   IconPerson,
   IconPhone,
 } from "./icons";
 
-const SECTION_IDS = ["om-oss", "tjanster", "produkter", "team"] as const;
+const SECTION_IDS = ["om-oss", "tjanster"] as const;
 
 type SectionId = (typeof SECTION_IDS)[number];
 
 type NavItem =
+  | { kind: "home"; href: "/"; label: string; icon: ReactNode }
   | {
       kind: "section";
       href: string;
@@ -27,57 +27,46 @@ type NavItem =
       sectionId: SectionId;
       icon: ReactNode;
     }
-  | {
-      kind: "page";
-      href: "/kontakt";
-      label: string;
-      icon: ReactNode;
-      cta?: boolean;
-    };
+  | { kind: "kontakt"; href: "/kontakt"; label: string; icon: ReactNode }
+  | { kind: "mailto"; href: string; label: string; icon: ReactNode };
 
 const items: NavItem[] = [
+  { kind: "home", href: "/", label: "Hem", icon: <IconHome /> },
   {
     kind: "section",
-    href: "#om-oss",
+    href: "/#om-oss",
     label: "Om oss",
     sectionId: "om-oss",
-    icon: <IconPerson />,
+    icon: <IconPerson className="h-[14px] w-[14px] shrink-0" />,
   },
   {
     kind: "section",
-    href: "#tjanster",
+    href: "/#tjanster",
     label: "Tjänster",
     sectionId: "tjanster",
-    icon: <IconDocument />,
+    icon: <IconDocument className="h-[14px] w-[14px] shrink-0" />,
   },
   {
-    kind: "section",
-    href: "#produkter",
-    label: "Produkter",
-    sectionId: "produkter",
-    icon: <IconBox />,
-  },
-  {
-    kind: "section",
-    href: "#team",
-    label: "Team",
-    sectionId: "team",
-    icon: <IconGroup />,
-  },
-  {
-    kind: "page",
+    kind: "kontakt",
     href: "/kontakt",
     label: "Kontakt",
-    icon: <IconPerson />,
+    icon: <IconPerson className="h-[14px] w-[14px] shrink-0" />,
   },
   {
-    kind: "page",
-    href: "/kontakt",
+    kind: "mailto",
+    href: "mailto:david.olsen@basedtech.se",
     label: "Ta ett snack",
-    icon: <IconPhone />,
-    cta: true,
+    icon: <IconPhone className="h-[14px] w-[14px] shrink-0" />,
   },
 ];
+
+function NavIconWrap({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-flex shrink-0 opacity-[0.65] transition-opacity group-hover:opacity-100">
+      {children}
+    </span>
+  );
+}
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -107,10 +96,19 @@ export function SiteHeader() {
   }, [pathname]);
 
   function isActive(item: NavItem): boolean {
-    if (item.kind === "page") return pathname === item.href;
-    if (pathname !== "/") return false;
-    return scrollSection === item.sectionId;
+    if (item.kind === "home")
+      return pathname === "/" && scrollSection === "";
+    if (item.kind === "section") {
+      if (pathname !== "/") return false;
+      return scrollSection === item.sectionId;
+    }
+    if (item.kind === "kontakt") return pathname === "/kontakt";
+    return false;
   }
+
+  const linkBase =
+    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] transition-colors hover:text-[#EEF7F6]";
+  const linkActive = "nav-active !text-based-cyan";
 
   return (
     <header className="sticky top-0 z-50 min-h-[84px] w-full border-b border-[rgba(44,228,212,0.12)] bg-[#082220]">
@@ -126,46 +124,45 @@ export function SiteHeader() {
           />
         </Link>
         <nav
-          className="hidden items-center gap-[1.4rem] nav:flex"
+          className="hidden items-center gap-6 nav:flex"
           aria-label="Huvudmeny"
         >
           {items.map((item) => {
             const active = isActive(item);
-            const iconWrap = (
-              <span className="opacity-[0.65] transition-opacity group-hover:opacity-100">
-                {item.icon}
-              </span>
-            );
-            if (item.kind === "page" && item.cta) {
+            if (item.kind === "mailto") {
               return (
-                <Link
+                <a
                   key={item.label}
-                  href="/kontakt"
-                  className={`group flex items-center gap-2 rounded-lg border border-[rgba(44,228,212,0.45)] bg-[#082220] px-3 py-2 font-b text-sm font-medium text-based-cyan transition-colors hover:text-[#EEF7F6] ${
-                    active ? "!text-based-cyan" : ""
-                  }`}
+                  href={item.href}
+                  className="group inline-flex items-center gap-1.5 rounded-[6px] border border-[rgba(44,228,212,0.45)] bg-[#082220] px-3 py-2 font-b text-sm font-medium text-based-cyan transition-colors hover:text-[#EEF7F6]"
                 >
-                  {iconWrap}
+                  <NavIconWrap>{item.icon}</NavIconWrap>
+                  {item.label}
+                </a>
+              );
+            }
+            const cls = `${linkBase} ${active ? linkActive : ""}`;
+            if (item.kind === "home") {
+              return (
+                <Link key={item.label} href={item.href} className={cls}>
+                  <NavIconWrap>{item.icon}</NavIconWrap>
                   {item.label}
                 </Link>
               );
             }
-            const linkClass = `nav-link-underline group flex items-center gap-2 pb-1 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] transition-colors hover:text-[#EEF7F6] ${
-              active ? "nav-active !text-based-cyan" : ""
-            }`;
-            if (item.kind === "page") {
+            if (item.kind === "kontakt") {
               return (
-                <Link key={item.label} href={item.href} className={linkClass}>
-                  {iconWrap}
+                <Link key={item.label} href={item.href} className={cls}>
+                  <NavIconWrap>{item.icon}</NavIconWrap>
                   {item.label}
                 </Link>
               );
             }
             return (
-              <a key={item.sectionId} href={item.href} className={linkClass}>
-                {iconWrap}
+              <Link key={item.sectionId} href={item.href} className={cls}>
+                <NavIconWrap>{item.icon}</NavIconWrap>
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -188,28 +185,42 @@ export function SiteHeader() {
           <nav className="flex flex-col gap-2" aria-label="Mobilmeny">
             {items.map((item) => {
               const active = isActive(item);
-              if (item.kind === "page" && item.cta) {
+              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] hover:text-[#EEF7F6] ${
+                active ? "text-based-cyan" : ""
+              }`;
+              if (item.kind === "mailto") {
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={close}
+                    className="inline-flex items-center gap-1.5 rounded-[6px] border border-[rgba(44,228,212,0.45)] px-3 py-3 font-b text-sm font-medium text-based-cyan"
+                  >
+                    <span className="opacity-[0.65]">{item.icon}</span>
+                    {item.label}
+                  </a>
+                );
+              }
+              if (item.kind === "home") {
                 return (
                   <Link
                     key={item.label}
-                    href="/kontakt"
+                    href={item.href}
                     onClick={close}
-                    className="flex items-center gap-2 rounded-lg border border-[rgba(44,228,212,0.45)] px-3 py-3 font-b text-sm font-medium text-based-cyan"
+                    className={`py-3 ${rowClass}`}
                   >
                     <span className="opacity-[0.65]">{item.icon}</span>
                     {item.label}
                   </Link>
                 );
               }
-              if (item.kind === "page") {
+              if (item.kind === "kontakt") {
                 return (
                   <Link
                     key={item.label}
                     href={item.href}
                     onClick={close}
-                    className={`flex items-center gap-2 py-3 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] hover:text-[#EEF7F6] ${
-                      active ? "text-based-cyan" : ""
-                    }`}
+                    className={`py-3 ${rowClass}`}
                   >
                     <span className="opacity-[0.65]">{item.icon}</span>
                     {item.label}
@@ -217,17 +228,15 @@ export function SiteHeader() {
                 );
               }
               return (
-                <a
+                <Link
                   key={item.sectionId}
                   href={item.href}
                   onClick={close}
-                  className={`flex items-center gap-2 py-3 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] hover:text-[#EEF7F6] ${
-                    active ? "text-based-cyan" : ""
-                  }`}
+                  className={`py-3 ${rowClass}`}
                 >
                   <span className="opacity-[0.65]">{item.icon}</span>
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>

@@ -85,13 +85,13 @@ export default function HomePage() {
                   <IconPhone className="shrink-0" />
                   Boka kostnadsfri analys
                 </Link>
-                <a
-                  href="#tjanster"
+                <Link
+                  href="/#tjanster"
                   className="group inline-flex items-center gap-2 rounded-lg border border-[rgba(10,39,36,0.25)] bg-transparent px-7 py-[0.85rem] font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:border-based-cyan hover:text-based-cyan"
                 >
                   Se vad vi gör
                   <IconArrowRight className="shrink-0 transition-transform group-hover:translate-x-0.5" />
-                </a>
+                </Link>
               </div>
               <div className="hero-fade-5 mt-12 flex flex-col gap-10 min-[600px]:flex-row min-[600px]:gap-[2.5rem]">
                 {[
@@ -286,20 +286,20 @@ export default function HomePage() {
               );
             })}
           </div>
-        </section>
-        <section
-          id="produkter"
-          className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
-        >
-          <div className="mx-auto max-w-container">
-            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
-              Marknadens vassaste verktyg
-            </h2>
-            <p className="mt-4 max-w-2xl font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-              Vi samarbetar med leverantörer av svenskutvecklade, molnbaserade
-              och GDPR-säkrade program. Koppla på det du behöver, a la carte.
+          <div
+            className="mx-auto mt-20 w-full max-w-container border-t pt-16"
+            style={{ borderColor: "var(--based-border)" }}
+          >
+            <h3 className="text-center font-h text-[clamp(1.5rem,2.5vw,2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading nav:text-left">
+              Verktyg vi jobbar med
+            </h3>
+            <p className="mx-auto mt-4 max-w-3xl text-center font-b text-[1.05rem] font-light leading-[1.8] text-based-body nav:mx-0 nav:text-left">
+              I våra uppdrag använder vi utvalda svenskutvecklade, molnbaserade
+              och GDPR-säkrade plattformar. Vi kopplar på det som passar er
+              vardag, från fakturaflöden till kort och projekt, så att automagin
+              får rätt understöd.
             </p>
-            <div className="mt-12 grid grid-cols-1 gap-8 nav:grid-cols-2">
+            <div className="mt-10 grid grid-cols-1 gap-8 nav:grid-cols-2">
               {[
                 {
                   badge: "REDA",
@@ -328,7 +328,7 @@ export default function HomePage() {
               ].map((p) => (
                 <article
                   key={p.name}
-                  className="rounded-[14px] border bg-based-section p-6 transition-all duration-300 hover:-translate-y-[3px] hover:[border-color:rgba(15,158,142,0.4)]"
+                  className="rounded-[14px] border bg-based-white p-6 transition-all duration-300 hover:-translate-y-[3px] hover:[border-color:rgba(15,158,142,0.4)]"
                   style={borderStyle}
                 >
                   <div
@@ -354,70 +354,7 @@ export default function HomePage() {
           </div>
         </section>
         <section
-          id="team"
-          className="reveal scroll-mt-[84px] bg-based-section py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
-        >
-          <div className="mx-auto max-w-container text-center">
-            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
-              Personerna bakom automagin
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-              Vi hjälper att implementera tjänsterna och utbildar er personal.
-              Teknik i all ära, men support är alltid personligt.
-            </p>
-          </div>
-          <div className="mx-auto mt-12 grid max-w-container grid-cols-1 gap-8 nav:grid-cols-2">
-            {[
-              {
-                inits: "DO",
-                name: "David Olsen",
-                role: "Grundare och rådgivare",
-                bio: "20 år i byråvärlden har gett David en skarp blick för vad som faktiskt kostar tid och pengar. Han pratar rakt och levererar konkret.",
-              },
-              {
-                inits: "JA",
-                name: "Johan Adamsson",
-                role: "Partner och implementerare",
-                bio: "Johan är den som sätter verktygen på plats och ser till att de fungerar i din vardag. Utbildar teamet tills det sitter.",
-              },
-            ].map((m) => (
-              <article
-                key={m.inits}
-                className="rounded-2xl border bg-based-white p-8 text-center shadow-card-team transition-all duration-300 hover:-translate-y-1 hover:[border-color:rgba(15,158,142,0.4)]"
-                style={borderStyle}
-              >
-                <div
-                  className="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full border-2 border-based-cyan bg-[rgba(15,158,142,0.1)] font-h text-lg font-bold tracking-[0.01em] text-based-cyan"
-                >
-                  {m.inits}
-                </div>
-                <h3 className="mt-5 font-h text-lg font-bold tracking-[0.01em] text-based-heading">
-                  {m.name}
-                </h3>
-                <p className="mt-1 font-h text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
-                  {m.role}
-                </p>
-                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-                  {m.bio}
-                </p>
-              </article>
-            ))}
-          </div>
-          <div className="mx-auto mt-12 max-w-container">
-            <div
-              className="rounded-[14px] border bg-[rgba(15,158,142,0.1)] px-8 py-6 text-center"
-              style={borderStyle}
-            >
-              <p className="font-h text-lg font-semibold tracking-[0.01em] text-based-heading">
-                Vi finns med dig{" "}
-                <span className="text-based-cyan">hela vägen</span> på
-                effektiviseringsresan.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section
-          id="vill-du-veta-mer"
+          id="cta"
           className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:py-16 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
         >
           <div className="mx-auto max-w-contact text-center">
