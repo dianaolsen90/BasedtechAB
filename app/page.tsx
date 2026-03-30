@@ -38,7 +38,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <section
-          className="relative overflow-x-hidden bg-polar-night px-8 pb-20 pt-28 max-md:px-6 max-md:pb-16 max-md:pt-24"
+          className="relative overflow-x-hidden bg-polar-night px-8 pb-14 pt-12 max-md:px-6 max-md:pb-12 max-md:pt-10"
           aria-label="Introduktion"
         >
           <div
@@ -66,7 +66,7 @@ export default function HomePage() {
             aria-hidden
           />
           <div className="hero-grid-cyan" aria-hidden />
-          <div className="relative z-[2] mx-auto grid min-h-[90vh] w-full max-w-[1160px] grid-cols-1 gap-14 md:grid-cols-2 md:grid-rows-1 md:gap-x-10 md:gap-y-0">
+          <div className="relative z-[2] mx-auto grid min-h-[min(78vh,720px)] w-full max-w-[1160px] grid-cols-1 gap-10 md:grid-cols-2 md:grid-rows-1 md:gap-x-10 md:gap-y-0 md:min-h-[min(82vh,760px)]">
             <div className="flex min-h-0 flex-col justify-center text-center md:text-left">
               <div className="hero-fade-1 mb-6 inline-flex items-center gap-2 self-center rounded-[20px] border border-[rgba(45,224,165,0.3)] bg-[rgba(45,224,165,0.1)] px-[1.1rem] py-[0.35rem] font-h text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-aurora-teal md:self-start">
                 <span
@@ -90,7 +90,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="relative flex min-h-0 flex-col items-center justify-center md:min-h-[90vh] md:items-center md:justify-center md:pr-[40px]">
+            <div className="relative flex min-h-0 flex-col items-center justify-center md:min-h-[min(75vh,680px)] md:items-center md:justify-center md:pr-[40px]">
               <div
                 className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[min(90vw,420px)] w-[min(90vw,420px)] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full md:h-[min(36vw,520px)] md:w-[min(36vw,520px)]"
                 style={{

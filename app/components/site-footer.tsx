@@ -23,29 +23,29 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t-[0.5px] border-[rgba(125,212,240,0.08)] bg-[#060F1C]">
-      <div className="mx-auto max-w-[1160px] px-8 pb-10 pt-20">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20 lg:items-start">
+      <div className="mx-auto max-w-[1160px] px-8 pb-6 pt-10">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12 lg:items-start">
           <div>
             <Link
               href="/"
-              className="inline-flex max-w-full rounded-2xl border border-[rgba(125,212,240,0.12)] bg-[#060F1C] px-5 py-4 transition-opacity hover:opacity-95"
+              className="inline-flex max-w-full rounded-xl border border-[rgba(125,212,240,0.12)] bg-[#060F1C] px-3 py-2.5 transition-opacity hover:opacity-95"
             >
               <Image
                 src="/Bilder/Loga-basedtech.png"
                 alt="BASEDtech Sweden AB logotyp"
-                width={420}
-                height={147}
-                className="h-[148px] w-auto max-w-full object-contain object-left md:h-[160px]"
+                width={360}
+                height={126}
+                className="h-[96px] w-auto max-w-full object-contain object-left md:h-[104px]"
               />
             </Link>
-            <p className="mt-6 max-w-[320px] font-h text-[1.1rem] font-medium leading-[1.6] text-[rgba(180,215,235,0.35)]">
+            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[rgba(180,215,235,0.35)]">
               Smart ekonomistyrning.
               <br />
               Personlig service, alltid.
             </p>
-            <div className="mt-10">
+            <div className="mt-6">
               <p className={sectionLabelClass}>Kontakt</p>
-              <div className="mt-6 flex items-center gap-2.5">
+              <div className="mt-4 flex items-center gap-2.5">
                 <span className="inline-flex shrink-0 text-aurora-teal" aria-hidden>
                   <IconPhone14 className="h-[14px] w-[14px]" />
                 </span>
@@ -68,7 +68,7 @@ export function SiteFooter() {
                 Svarar inom 24 timmar
               </p>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 href="https://www.linkedin.com/company/basedtech-sweden-ab/"
                 target="_blank"
@@ -111,7 +111,7 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <div className="mt-16 flex flex-col items-center gap-4 border-t border-[rgba(125,212,240,0.08)] pt-8 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[rgba(125,212,240,0.08)] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
           <span className="text-center font-b text-[0.8rem] font-light text-[rgba(180,215,235,0.35)] min-[600px]:text-left">
             {year} BASEDtech Sweden AB
           </span>
