@@ -58,11 +58,6 @@ html {
   animation: fadeUpHero 0.7s ease-out 0.2s forwards;
 }
 
-.hero-fade-cta {
-  opacity: 0;
-  animation: fadeUpHero 0.7s ease-out 0.22s forwards;
-}
-
 .hero-fade-4 {
   opacity: 0;
   animation: fadeUpHero 0.7s ease-out 0.3s forwards;
@@ -425,7 +420,6 @@ html {
   .hero-fade-1,
   .hero-fade-2,
   .hero-fade-3,
-  .hero-fade-cta,
   .hero-fade-4,
   .hero-fade-5,
   .hero-fade-6,

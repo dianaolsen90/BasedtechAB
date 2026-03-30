@@ -88,56 +88,6 @@ export default function HomePage() {
                   Vi tar hand om det. Du får tiden tillbaka.
                 </p>
               </div>
-              <div className="hero-fade-cta mt-8 self-center md:self-start">
-                <Link
-                  href="/kontakt"
-                  className="inline-flex rounded-[24px] bg-aurora-teal px-8 py-4 font-h text-base font-extrabold text-polar-night transition hover:bg-based-cyan-bright"
-                >
-                  Boka kostnadsfri analys
-                </Link>
-              </div>
-              <div className="hero-fade-4 mt-12 flex w-full max-w-[420px] flex-col gap-5 self-center text-center md:self-start md:text-left">
-                <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-                  <div className="flex items-center pl-2">
-                    <Image
-                      src="/Bilder/adamprofil.jpg"
-                      alt=""
-                      width={40}
-                      height={40}
-                      className="h-10 w-10 rounded-full border-2 border-[rgba(125,212,240,0.2)] object-cover"
-                    />
-                    <Image
-                      src="/Bilder/davidolsenprofilbild.jpg"
-                      alt=""
-                      width={40}
-                      height={40}
-                      className="-ml-3.5 h-10 w-10 rounded-full border-2 border-[rgba(125,212,240,0.2)] object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-h text-[0.875rem] font-semibold text-snow-white">
-                      David och Johan
-                    </p>
-                    <p className="font-b text-[0.75rem] font-light text-based-muted">
-                      Svarar inom 24 timmar
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 border-t border-[rgba(125,212,240,0.15)] pt-5">
-                  <a
-                    href="tel:0733017339"
-                    className="font-b text-[0.95rem] font-normal text-based-body transition-colors hover:text-aurora-teal"
-                  >
-                    073-301 73 39
-                  </a>
-                  <a
-                    href="mailto:david.olsen@basedtech.se"
-                    className="font-b text-[0.9rem] font-light text-based-muted transition-colors hover:text-aurora-teal"
-                  >
-                    david.olsen@basedtech.se
-                  </a>
-                </div>
-              </div>
             </div>
             <div className="relative flex min-h-0 flex-col items-center justify-center md:min-h-[90vh] md:items-center md:justify-center md:pr-[40px]">
               <div
