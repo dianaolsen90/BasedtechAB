@@ -49,7 +49,9 @@ function chromaAt(data, i) {
 /**
  * Removes flat / gray / dark backgrounds typical of logo PNGs (not white-only).
  * — Flood from edges through low-chroma pixels (achromatic background).
- * — Second pass: remaining low-chroma “holes” with mid luminance (gray areas inside letters).
+ * — Second pass: remaining low-chroma “holes” (gray areas inside letters, etc.).
+ * — Edge peel: remove dark / low-chroma fringes next to transparency (halos).
+ * — Trim: crop away empty transparent margins.
  */
 export async function pngBufferToTransparentLogo(inputBuffer) {
   const { data, info } = await sharp(inputBuffer).ensureAlpha().raw().toBuffer({
@@ -57,7 +59,7 @@ export async function pngBufferToTransparentLogo(inputBuffer) {
   });
   const w = info.width;
   const h = info.height;
-  const CH = 8;
+  const CH = 11;
   const marked = new Uint8Array(w * h);
   const q = [];
   function push(x, y) {
@@ -105,7 +107,7 @@ export async function pngBufferToTransparentLogo(inputBuffer) {
     const g = data[i + 1];
     const b = data[i + 2];
     const avg = (r + g + b) / 3;
-    if (avg >= 30 && avg <= 198) marked[k] = 2;
+    if (avg >= 18 && avg <= 218) marked[k] = 2;
   }
   for (let k = 0; k < w * h; k++) {
     if (marked[k] === 1 || marked[k] === 2) {
@@ -113,7 +115,45 @@ export async function pngBufferToTransparentLogo(inputBuffer) {
       data[i + 3] = 0;
     }
   }
-  return sharp(data, {
+  const maxPeelRounds = 6;
+  const chromaPeel = 11;
+  const avgPeel = 52;
+  for (let round = 0; round < maxPeelRounds; round++) {
+    const prev = new Uint8Array(data);
+    let changed = false;
+    for (let k = 0; k < w * h; k++) {
+      const i = k * 4;
+      if (prev[i + 3] === 0) continue;
+      if (chromaAt(prev, i) > chromaPeel) continue;
+      const avg = (prev[i] + prev[i + 1] + prev[i + 2]) / 3;
+      if (avg > avgPeel) continue;
+      const x = k % w;
+      const y = (k / w) | 0;
+      let nearTransparent = false;
+      const neigh = [
+        [x - 1, y],
+        [x + 1, y],
+        [x, y - 1],
+        [x, y + 1],
+      ];
+      for (const [nx, ny] of neigh) {
+        if (nx < 0 || ny < 0 || nx >= w || ny >= h) {
+          nearTransparent = true;
+          break;
+        }
+        if (prev[(ny * w + nx) * 4 + 3] === 0) {
+          nearTransparent = true;
+          break;
+        }
+      }
+      if (nearTransparent) {
+        data[i + 3] = 0;
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+  const pngBuf = await sharp(data, {
     raw: {
       width: w,
       height: h,
@@ -122,4 +162,5 @@ export async function pngBufferToTransparentLogo(inputBuffer) {
   })
     .png({ compressionLevel: 9 })
     .toBuffer();
+  return sharp(pngBuf).trim({ threshold: 0 }).png({ compressionLevel: 9 }).toBuffer();
 }

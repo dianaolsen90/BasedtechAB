@@ -119,18 +119,18 @@ export function SiteHeader() {
   const linkActive = "nav-active !text-aurora-teal";
 
   return (
-    <header className="sticky top-0 z-50 min-h-[96px] w-full border-b-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.72)] shadow-[0_1px_0_rgba(0,0,0,0.2)] backdrop-blur-[14px]">
-      <div className="mx-auto flex min-h-[96px] max-w-container items-center justify-between px-8 py-2">
+    <header className="sticky top-0 z-50 min-h-[140px] w-full border-b-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.72)] shadow-[0_1px_0_rgba(0,0,0,0.2)] backdrop-blur-[14px]">
+      <div className="mx-auto flex min-h-[140px] max-w-container items-center justify-between px-8 py-2">
         <Link
           href="/"
-          className="group inline-flex shrink-0 items-center rounded-xl border border-[rgba(125,212,240,0.12)] bg-[rgba(8,18,32,0.72)] px-2.5 py-2 backdrop-blur-[14px] transition-opacity hover:opacity-95"
+          className="group inline-flex shrink-0 items-center transition-opacity hover:opacity-95"
         >
           <Image
             src="/loggan/basedtechlogo.png"
             alt="BASEDtech Sweden AB logotyp"
-            width={240}
-            height={84}
-            className="h-[52px] w-auto max-w-[min(44vw,220px)] object-contain object-left sm:h-[56px]"
+            width={900}
+            height={565}
+            className="h-[104px] w-auto max-w-[min(88vw,440px)] object-contain object-left sm:h-[112px]"
             priority
           />
         </Link>
