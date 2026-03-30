@@ -35,7 +35,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <section
-          className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#082220] px-8 pb-24 pt-28 max-[600px]:px-6 max-[600px]:pb-16 max-[600px]:pt-24"
+          className="relative overflow-x-hidden bg-[#082220] px-8 pb-16 pt-28 max-md:px-6 max-md:pb-12 max-md:pt-24"
           aria-label="Introduktion"
         >
           <div className="aurora-wrap" aria-hidden>
@@ -45,34 +45,31 @@ export default function HomePage() {
             <div className="aurora-band aurora-4" />
           </div>
           <div className="hero-grid-cyan" aria-hidden />
-          <div className="relative z-[2] mx-auto flex w-full max-w-[1160px] flex-col items-stretch gap-12 min-[900px]:grid min-[900px]:grid-cols-[minmax(0,55%)_minmax(0,45%)] min-[900px]:items-center min-[900px]:gap-16">
-            <div className="order-2 flex flex-col items-center text-center min-[900px]:order-1 min-[900px]:items-start min-[900px]:text-left">
-              <div className="hero-fade-1 mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(44,228,212,0.4)] bg-[rgba(44,228,212,0.1)] px-[1.1rem] py-[0.35rem] font-h text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-[#2CE4D4]">
+          <div className="relative z-[2] mx-auto grid min-h-[90vh] w-full max-w-[1160px] grid-cols-1 gap-12 md:grid-cols-2 md:grid-rows-1 md:gap-x-8 md:gap-y-0">
+            <div className="flex min-h-0 flex-col justify-center text-center md:text-left">
+              <div className="hero-fade-1 mb-6 inline-flex items-center gap-2 self-center rounded-full border border-[rgba(44,228,212,0.4)] bg-[rgba(44,228,212,0.1)] px-[1.1rem] py-[0.35rem] font-h text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-[#2CE4D4] md:self-start">
                 <span
                   className="h-2 w-2 shrink-0 rounded-full bg-[#22c55e] motion-safe:animate-[pulse_2s_ease-in-out_infinite]"
                   aria-hidden
                 />
-                20 år i byråvärlden
+                20 ÅR I BYRÅVÄRLDEN
               </div>
-              <h1 className="hero-fade-2 mb-6 font-h text-[clamp(3.2rem,6vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.01em] text-[#EEF7F6]">
-                Sluta betala
-                <br />
-                för tidstjuvar.
-                <br />
-                Börja köra
-                <br />
+              <h1 className="hero-fade-2 mb-6 max-w-[34ch] font-h text-[clamp(2.2rem,4.2vw,3.75rem)] font-extrabold leading-[1.12] tracking-[-0.01em] text-[#EEF7F6] md:max-w-none">
+                Sluta betala för tidstjuvar. Börja köra{" "}
                 <span className="text-[#2CE4D4]">automagi.</span>
               </h1>
-              <p className="hero-fade-3 mb-3 max-w-[500px] font-b text-[1.05rem] font-light leading-[1.85] text-[rgba(238,247,246,0.7)]">
-                Varje vecka går timmar åt till manuella moment i bokföringen.
-                Ofta handlar det om samma saker: kvitton, avstämningar och
-                fakturor som tar tid från det som faktiskt driver bolaget.
-              </p>
-              <p className="hero-fade-3 max-w-[500px] font-b text-[1.05rem] font-normal leading-[1.85] text-[#EEF7F6]">
-                Vi tar hand om det. Du får tiden tillbaka.
-              </p>
-              <div className="hero-fade-4 mt-10 flex w-full max-w-[420px] flex-col gap-5 text-center min-[900px]:text-left">
-                <div className="flex flex-wrap items-center justify-center gap-4 min-[900px]:justify-start">
+              <div className="hero-fade-3 max-w-[500px] space-y-4 self-center md:self-start">
+                <p className="font-b text-[1.05rem] font-light leading-[1.85] text-[rgba(238,247,246,0.7)]">
+                  Varje vecka går timmar åt till manuella moment i bokföringen.
+                  Ofta handlar det om samma saker: kvitton, avstämningar och
+                  fakturor som tar tid från det som faktiskt driver bolaget.
+                </p>
+                <p className="font-b text-[1.05rem] font-normal leading-[1.85] text-[#EEF7F6]">
+                  Vi tar hand om det. Du får tiden tillbaka.
+                </p>
+              </div>
+              <div className="hero-fade-4 mt-10 flex w-full max-w-[420px] flex-col gap-5 self-center text-center md:self-start md:text-left">
+                <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
                   <div className="flex items-center pl-2">
                     <Image
                       src="/Bilder/adamprofil.jpg"
@@ -114,38 +111,25 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="order-1 flex min-h-[320px] items-center justify-center min-[900px]:order-2 min-[900px]:min-h-[480px]">
-              <div className="relative flex w-full max-w-[260px] items-center justify-center min-[900px]:max-w-none">
-                <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full min-[900px]:h-[400px] min-[900px]:w-[400px]"
-                  style={{
-                    background:
-                      "radial-gradient(circle, rgba(44,228,212,0.10) 0%, transparent 65%)",
-                  }}
-                  aria-hidden
+            <div className="relative flex min-h-0 flex-col items-center justify-center md:min-h-[90vh] md:items-center md:justify-center md:pr-[40px]">
+              <div
+                className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[min(90vw,420px)] w-[min(90vw,420px)] max-w-full -translate-x-1/2 -translate-y-1/2 rounded-full md:h-[min(36vw,520px)] md:w-[min(36vw,520px)]"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(44,228,212,0.10) 0%, transparent 65%)",
+                }}
+                aria-hidden
+              />
+              <div className="relative z-[1] mx-auto w-full max-w-[280px] motion-safe:animate-float md:max-w-[min(100%,520px)]">
+                <Image
+                  src="/Bilder/avatar.png"
+                  alt="Larry, BASEDtechs pingvinmaskot"
+                  width={520}
+                  height={520}
+                  className="h-auto w-full max-h-[min(72vh,520px)] object-contain object-center drop-shadow-[0_30px_80px_rgba(44,228,212,0.22)]"
+                  priority
+                  sizes="(max-width: 768px) 280px, 520px"
                 />
-                <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[247px] w-[247px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(44,228,212,0.15)] motion-safe:animate-spin-22 min-[900px]:h-[380px] min-[900px]:w-[380px]"
-                  aria-hidden
-                >
-                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2CE4D4]" />
-                </div>
-                <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[325px] w-[325px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(44,228,212,0.08)] motion-safe:animate-spin-30-rev min-[900px]:h-[500px] min-[900px]:w-[500px]"
-                  aria-hidden
-                >
-                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2CE4D4]" />
-                </div>
-                <div className="relative z-10 mx-auto w-full max-w-[260px] motion-safe:animate-float min-[900px]:max-w-[460px]">
-                  <Image
-                    src="/Bilder/avatar.png"
-                    alt="Larry, BASEDtechs pingvinmaskot"
-                    width={460}
-                    height={460}
-                    className="h-auto w-full drop-shadow-[0_30px_80px_rgba(44,228,212,0.22)]"
-                    priority
-                  />
-                </div>
               </div>
             </div>
           </div>
