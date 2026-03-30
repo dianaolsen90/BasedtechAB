@@ -26,13 +26,16 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1160px] px-8 pb-10 pt-20">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20 lg:items-start">
           <div>
-            <Link href="/" className="inline-block">
+            <Link
+              href="/"
+              className="inline-flex max-w-full rounded-2xl border border-[rgba(125,212,240,0.12)] bg-[#060F1C] px-5 py-4 transition-opacity hover:opacity-95"
+            >
               <Image
-                src="/Loga-basedtech.png"
+                src="/Bilder/logo-basedtech.png"
                 alt="BASEDtech Sweden AB logotyp"
-                width={360}
-                height={126}
-                className="h-[120px] w-auto max-w-full brightness-0 invert opacity-90"
+                width={420}
+                height={147}
+                className="h-[148px] w-auto max-w-full object-contain object-left md:h-[160px]"
               />
             </Link>
             <p className="mt-6 max-w-[320px] font-h text-[1.1rem] font-medium leading-[1.6] text-[rgba(180,215,235,0.35)]">

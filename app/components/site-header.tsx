@@ -121,13 +121,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 min-h-[96px] w-full border-b-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.72)] shadow-[0_1px_0_rgba(0,0,0,0.2)] backdrop-blur-[14px]">
       <div className="mx-auto flex min-h-[96px] max-w-container items-center justify-between px-8 py-2">
-        <Link href="/" className="group flex shrink-0 items-center">
+        <Link
+          href="/"
+          className="group inline-flex shrink-0 items-center rounded-xl border border-[rgba(125,212,240,0.12)] bg-[rgba(8,18,32,0.72)] px-2.5 py-2 backdrop-blur-[14px] transition-opacity hover:opacity-95"
+        >
           <Image
-            src="/Loga-basedtech.png"
+            src="/Bilder/logo-basedtech.png"
             alt="BASEDtech Sweden AB, logotyp med pingvin"
-            width={320}
-            height={112}
-            className="h-[96px] w-auto max-w-[min(52vw,320px)] brightness-0 invert"
+            width={280}
+            height={98}
+            className="h-[64px] w-auto max-w-[min(48vw,260px)] object-contain object-left"
             priority
           />
         </Link>
