@@ -1,10 +1,10 @@
 import { IconBroom, IconCheckSmall, IconStar, IconZap } from "@/app/components/icons";
 
 const tHover =
-  "transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 hover:border-[rgba(44,228,212,0.5)] hover:shadow-[0_40px_80px_rgba(44,228,212,0.08)]";
+  "transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 hover:border-[rgba(45,224,165,0.45)] hover:shadow-[0_24px_48px_rgba(26,61,53,0.08)]";
 
 const toolHover =
-  "transition-all duration-[350ms] hover:-translate-y-[5px] hover:border-[rgba(44,228,212,0.45)] hover:bg-[rgba(44,228,212,0.04)]";
+  "transition-all duration-[350ms] hover:-translate-y-[5px] hover:border-[rgba(45,224,165,0.35)] hover:bg-[rgba(45,224,165,0.04)]";
 
 const urgencyStats = [
   "Sparar i snitt 8 timmar per vecka",
@@ -15,7 +15,7 @@ const urgencyStats = [
 const serviceCards = [
   {
     num: "01",
-    topBg: "bg-[rgba(44,228,212,0.06)]",
+    topBg: "bg-[rgba(45,224,165,0.1)]",
     Icon: IconBroom,
     title: "Vi städar",
     subtitle: "Avstämningar och kvalitetssäkring",
@@ -32,7 +32,7 @@ const serviceCards = [
   },
   {
     num: "02",
-    topBg: "bg-[rgba(44,228,212,0.08)]",
+    topBg: "bg-[rgba(125,212,240,0.18)]",
     Icon: IconZap,
     title: "Automagi",
     subtitle: "Automatiserad bokföring",
@@ -49,7 +49,7 @@ const serviceCards = [
   },
   {
     num: "03",
-    topBg: "bg-[rgba(44,228,212,0.06)]",
+    topBg: "bg-[rgba(240,237,248,0.65)]",
     Icon: IconStar,
     title: "Skräddarsytt",
     subtitle: "Anpassade lösningar",
@@ -100,48 +100,43 @@ const tools = [
 export function HomeTjansterSection() {
   return (
     <section id="tjanster" className="reveal scroll-mt-[84px]">
-      <div className="relative overflow-hidden bg-[#082220] px-8 py-32">
-        <div className="aurora-wrap" aria-hidden>
-          <div className="aurora-band aurora-1" />
-          <div className="aurora-band aurora-2" />
-          <div className="aurora-band aurora-3" />
-          <div className="aurora-band aurora-4" />
-        </div>
+      <div className="relative overflow-hidden bg-based-mist px-8 py-36">
+        <div className="pointer-events-none absolute right-0 top-0 h-[min(60vw,480px)] w-[min(60vw,480px)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(45,224,165,0.14)_0%,rgba(125,212,240,0.1)_45%,transparent_70%)]" aria-hidden />
         <div className="relative z-[1] mx-auto max-w-container">
-          <div className="mb-12 text-center">
-            <div className="mb-6 flex items-center justify-center gap-3">
+          <div className="mb-16 text-center">
+            <div className="mb-8 flex items-center justify-center gap-3">
               <span
-                className="h-px w-10 max-w-[3rem] bg-[#0F9E8E] opacity-70 sm:w-14"
+                className="h-px w-10 max-w-[3rem] bg-based-cyan opacity-70 sm:w-14"
                 aria-hidden
               />
-              <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0F9E8E]">
+              <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
                 TJÄNSTER
               </p>
               <span
-                className="h-px w-10 max-w-[3rem] bg-[#0F9E8E] opacity-70 sm:w-14"
+                className="h-px w-10 max-w-[3rem] bg-based-cyan opacity-70 sm:w-14"
                 aria-hidden
               />
             </div>
-            <h2 className="font-h text-[clamp(3rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-[0.01em] text-[#EEF7F6]">
+            <h2 className="font-h text-[clamp(3rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-[0.01em] text-based-heading">
               En bokföring som fungerar
               <br />
               ska ge dig kontroll,
               <br />
               inte mer att göra.
               <br />
-              <span className="text-[#2CE4D4]">Här börjar automagi.</span>
+              <span className="text-based-cyan">Här börjar automagi.</span>
             </h2>
-            <p className="mx-auto mt-6 max-w-[600px] font-b text-[1.1rem] font-light leading-[1.8] text-[rgba(238,247,246,0.7)]">
+            <p className="mx-auto mt-8 max-w-[600px] font-b text-[1.1rem] font-light leading-[1.8] text-based-body">
               Vi säkrar rätt grund, hittar felkällor och tar bort tidstjuvarna.
               Sedan automatiserar vi det som går att automatisera, med personlig
               service hela vägen.
             </p>
           </div>
           <div
-            className="my-12 flex w-full flex-wrap items-center justify-center gap-x-16 gap-y-6 border-y border-[rgba(44,228,212,0.2)] px-8 py-6 max-lg:max-w-none max-lg:overflow-x-auto max-lg:flex-nowrap max-lg:justify-start max-lg:gap-10 max-lg:px-4"
+            className="my-14 flex w-full flex-wrap items-center justify-center gap-x-16 gap-y-6 border-y border-[rgba(26,61,53,0.1)] px-8 py-8 max-lg:max-w-none max-lg:overflow-x-auto max-lg:flex-nowrap max-lg:justify-start max-lg:gap-10 max-lg:px-4"
             style={{
               background:
-                "linear-gradient(90deg, rgba(44,228,212,0.05), rgba(44,228,212,0.12), rgba(44,228,212,0.05))",
+                "linear-gradient(90deg, rgba(45,224,165,0.06), rgba(125,212,240,0.1), rgba(240,237,248,0.35))",
             }}
           >
             {urgencyStats.map((label) => (
@@ -150,61 +145,61 @@ export function HomeTjansterSection() {
                 className="flex min-w-[min(100%,280px)] shrink-0 items-center gap-3 max-lg:min-w-[260px]"
               >
                 <span
-                  className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#22c55e] shadow-[0_0_12px_rgba(34,197,94,0.6)] motion-safe:animate-[pulse_2s_ease-in-out_infinite]"
+                  className="h-2.5 w-2.5 shrink-0 rounded-full bg-based-cyan shadow-[0_0_12px_rgba(45,224,165,0.45)] motion-safe:animate-[pulse_2s_ease-in-out_infinite]"
                   aria-hidden
                 />
-                <p className="font-h text-base font-semibold text-[#EEF7F6]">
+                <p className="font-h text-base font-semibold text-based-heading">
                   {label}
                 </p>
               </div>
             ))}
           </div>
-          <div className="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div className="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-3">
             {serviceCards.map((c) => {
               const CardIcon = c.Icon;
               return (
                 <article
                   key={c.num}
-                  className={`relative flex min-h-[600px] flex-col overflow-hidden rounded-[24px] border border-[rgba(44,228,212,0.2)] bg-[rgba(255,255,255,0.03)] ${tHover}`}
+                  className={`relative flex min-h-[600px] flex-col overflow-hidden rounded-[24px] border border-[rgba(26,61,53,0.12)] bg-based-white shadow-card-tjanst ${tHover}`}
                 >
                   <div
                     className={`relative min-h-[200px] px-10 pb-10 pt-10 ${c.topBg}`}
                   >
                     <span
-                      className="pointer-events-none absolute right-6 top-4 font-h text-[8rem] font-extrabold leading-none text-[rgba(44,228,212,0.08)]"
+                      className="pointer-events-none absolute right-6 top-4 font-h text-[8rem] font-extrabold leading-none text-[rgba(45,224,165,0.12)]"
                       aria-hidden
                     >
                       {c.num}
                     </span>
                     <div className="relative z-[1]">
-                      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[14px] border border-[rgba(44,228,212,0.3)] bg-[rgba(44,228,212,0.1)]">
-                        <CardIcon className="h-7 w-7 text-[#2CE4D4]" />
+                      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[14px] border border-[rgba(26,61,53,0.12)] bg-based-white/80">
+                        <CardIcon className="h-7 w-7 text-based-cyan" />
                       </div>
-                      <h3 className="font-h text-[2.2rem] font-extrabold leading-tight text-[#EEF7F6]">
+                      <h3 className="font-h text-[2.2rem] font-extrabold leading-tight text-based-heading">
                         {c.title}
                       </h3>
-                      <p className="mt-2 font-h text-base font-medium text-[#0F9E8E]">
+                      <p className="mt-2 font-h text-base font-medium text-based-muted">
                         {c.subtitle}
                       </p>
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col px-10 pb-10 pt-2">
-                    <p className="font-b text-base font-light leading-[1.85] text-[rgba(238,247,246,0.7)]">
+                    <p className="font-b text-base font-light leading-[1.85] text-based-body">
                       {c.body}
                     </p>
                     <ul className="mt-6 space-y-3">
                       {c.steps.map((s) => (
                         <li
                           key={s}
-                          className="flex items-start gap-3 font-b text-[0.9rem] font-normal leading-relaxed text-[rgba(238,247,246,0.7)]"
+                          className="flex items-start gap-3 font-b text-[0.9rem] font-normal leading-relaxed text-based-body"
                         >
-                          <IconCheckSmall className="mt-0.5 h-4 w-4 shrink-0 text-[#2CE4D4]" />
+                          <IconCheckSmall className="mt-0.5 h-4 w-4 shrink-0 text-based-cyan" />
                           {s}
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-8 rounded-r-lg border-l-[3px] border-[rgba(255,100,100,0.4)] bg-[rgba(255,100,100,0.06)] py-4 pl-5 pr-4">
-                      <p className="font-b text-[0.875rem] font-light italic leading-relaxed text-[rgba(238,247,246,0.55)]">
+                    <div className="mt-8 rounded-r-lg border-l-[3px] border-[rgba(255,100,100,0.35)] bg-[rgba(255,100,100,0.06)] py-4 pl-5 pr-4">
+                      <p className="font-b text-[0.875rem] font-light italic leading-relaxed text-based-muted">
                         {c.fomo}
                       </p>
                     </div>
@@ -212,7 +207,7 @@ export function HomeTjansterSection() {
                       {c.badges.map((b) => (
                         <span
                           key={b}
-                          className="inline-flex rounded-full border border-[rgba(44,228,212,0.2)] bg-[rgba(44,228,212,0.08)] px-3.5 py-1 font-h text-[0.75rem] font-medium text-[#2CE4D4]"
+                          className="inline-flex rounded-full border border-[rgba(26,61,53,0.1)] bg-based-mist px-3.5 py-1 font-h text-[0.75rem] font-medium text-based-cyan"
                         >
                           {b}
                         </span>
@@ -225,45 +220,45 @@ export function HomeTjansterSection() {
           </div>
         </div>
       </div>
-      <div className="bg-[#0D2B28] px-8 py-24">
+      <div className="bg-based-white px-8 py-32">
         <div className="mx-auto max-w-container">
-          <div className="mb-14 text-center">
-            <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0F9E8E]">
+          <div className="mb-16 text-center">
+            <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-based-cyan">
               VERKTYGEN VI SVÄR VID
             </p>
-            <h2 className="mt-4 font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] text-[#EEF7F6]">
+            <h2 className="mt-6 font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] text-based-heading">
               Handplockade verktyg.
               <br />
-              <span className="text-[#2CE4D4]">
+              <span className="text-based-ice">
                 Testade av oss. Godkända för dig.
               </span>
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl font-b text-base font-light leading-[1.8] text-[rgba(238,247,246,0.65)]">
+            <p className="mx-auto mt-8 max-w-2xl font-b text-base font-light leading-[1.8] text-based-body">
               Vi testar allt och behåller bara det bästa. Sedan kopplar vi ihop
               det så det faktiskt fungerar i din vardag.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {tools.map((t) => (
               <article
                 key={t.name}
-                className={`rounded-2xl border border-[rgba(44,228,212,0.15)] bg-[rgba(255,255,255,0.03)] p-10 ${toolHover}`}
+                className={`rounded-2xl border border-[rgba(26,61,53,0.1)] bg-based-mist p-10 shadow-card-tjanst ${toolHover}`}
               >
-                <span className="mb-6 inline-block rounded-lg border border-[rgba(44,228,212,0.3)] bg-[rgba(44,228,212,0.1)] px-4 py-2 font-h text-[0.9rem] font-bold text-[#2CE4D4]">
+                <span className="mb-6 inline-block rounded-lg border border-[rgba(26,61,53,0.1)] bg-based-white px-4 py-2 font-h text-[0.9rem] font-bold text-based-cyan">
                   {t.badge}
                 </span>
-                <p className="font-h text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[#0F9E8E]">
+                <p className="font-h text-[0.7rem] font-medium uppercase tracking-[0.1em] text-based-muted">
                   {t.cat}
                 </p>
-                <h3 className="mt-2 font-h text-[1.8rem] font-extrabold text-[#EEF7F6]">
+                <h3 className="mt-2 font-h text-[1.8rem] font-extrabold text-based-heading">
                   {t.name}
                 </h3>
-                <p className="mt-4 font-b text-[0.9rem] font-light leading-[1.75] text-[rgba(238,247,246,0.65)]">
+                <p className="mt-4 font-b text-[0.9rem] font-light leading-[1.75] text-based-body">
                   {t.text}
                 </p>
-                <div className="mt-6 flex items-center gap-2 border-t border-[rgba(44,228,212,0.12)] pt-6">
-                  <IconZap className="h-4 w-4 shrink-0 text-[#2CE4D4]" />
-                  <p className="font-b text-[0.85rem] font-normal text-[rgba(238,247,246,0.5)]">
+                <div className="mt-6 flex items-center gap-2 border-t border-[rgba(26,61,53,0.1)] pt-6">
+                  <IconZap className="h-4 w-4 shrink-0 text-based-ice" />
+                  <p className="font-b text-[0.85rem] font-normal text-based-muted">
                     {t.usp}
                   </p>
                 </div>

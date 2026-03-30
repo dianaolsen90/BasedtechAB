@@ -17,12 +17,12 @@ const contactLinkClass =
   "font-b text-[0.95rem] font-normal text-[rgba(238,247,246,0.7)] no-underline transition-colors duration-200 hover:text-[#EEF7F6]";
 
 const sectionLabelClass =
-  "font-h text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#0F9E8E]";
+  "font-h text-[0.7rem] font-bold uppercase tracking-[0.14em] text-based-cyan";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-[rgba(44,228,212,0.12)] bg-[#082220]">
+    <footer className="border-t border-[rgba(45,224,165,0.2)] bg-based-footer">
       <div className="mx-auto max-w-[1160px] px-8 pb-10 pt-20">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20 lg:items-start">
           <div>
@@ -43,7 +43,7 @@ export function SiteFooter() {
             <div className="mt-10">
               <p className={sectionLabelClass}>Kontakt</p>
               <div className="mt-6 flex items-center gap-2.5">
-                <span className="inline-flex shrink-0 text-[#2CE4D4]" aria-hidden>
+                <span className="inline-flex shrink-0 text-based-cyan" aria-hidden>
                   <IconPhone14 className="h-[14px] w-[14px]" />
                 </span>
                 <a href="tel:0733017339" className={contactLinkClass}>
@@ -51,7 +51,7 @@ export function SiteFooter() {
                 </a>
               </div>
               <div className="mt-4 flex items-center gap-2.5">
-                <span className="inline-flex shrink-0 text-[#2CE4D4]" aria-hidden>
+                <span className="inline-flex shrink-0 text-based-cyan" aria-hidden>
                   <IconMail14 className="h-[14px] w-[14px]" />
                 </span>
                 <a
@@ -70,7 +70,7 @@ export function SiteFooter() {
                 href="https://www.linkedin.com/company/basedtech-sweden-ab/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-[rgba(44,228,212,0.2)] bg-[rgba(44,228,212,0.06)] p-2.5 text-[#2CE4D4] transition-colors duration-200 hover:border-[rgba(44,228,212,0.45)] hover:bg-[rgba(44,228,212,0.1)] hover:text-[#EEF7F6]"
+                className="inline-flex items-center justify-center rounded-lg border border-[rgba(45,224,165,0.35)] bg-[rgba(45,224,165,0.1)] p-2.5 text-based-cyan transition-colors duration-200 hover:border-[rgba(125,212,240,0.5)] hover:bg-[rgba(45,224,165,0.18)] hover:text-white"
                 aria-label="BASEDtech på LinkedIn"
               >
                 <svg
@@ -108,7 +108,7 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <div className="mt-16 flex flex-col items-center gap-4 border-t border-[rgba(44,228,212,0.08)] pt-8 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
+        <div className="mt-16 flex flex-col items-center gap-4 border-t border-[rgba(45,224,165,0.12)] pt-8 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
           <span className="text-center font-b text-[0.8rem] font-light text-[rgba(238,247,246,0.3)] min-[600px]:text-left">
             {year} BASEDtech Sweden AB
           </span>

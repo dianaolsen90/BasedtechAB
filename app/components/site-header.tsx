@@ -115,11 +115,11 @@ export function SiteHeader() {
   }
 
   const linkBase =
-    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] transition-colors hover:text-[#EEF7F6]";
+    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-based-heading/80 transition-colors hover:text-based-heading";
   const linkActive = "nav-active !text-based-cyan";
 
   return (
-    <header className="sticky top-0 z-50 min-h-[96px] w-full border-b border-[rgba(44,228,212,0.12)] bg-[#082220]">
+    <header className="sticky top-0 z-50 min-h-[96px] w-full border-b border-[rgba(26,61,53,0.08)] bg-white/85 shadow-[0_1px_0_rgba(26,61,53,0.04)] backdrop-blur-[12px]">
       <div className="mx-auto flex min-h-[96px] max-w-container items-center justify-between px-8 py-2">
         <Link href="/" className="group flex shrink-0 items-center">
           <Image
@@ -142,7 +142,7 @@ export function SiteHeader() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group inline-flex items-center gap-1.5 rounded-[6px] border border-[rgba(44,228,212,0.45)] bg-[#082220] px-3 py-2 font-b text-sm font-medium text-based-cyan transition-colors hover:text-[#EEF7F6]"
+                  className="group inline-flex items-center gap-1.5 rounded-[8px] bg-based-cyan px-4 py-2.5 font-b text-sm font-semibold text-based-heading shadow-sm transition hover:bg-based-cyan-bright"
                 >
                   <NavIconWrap>{item.icon}</NavIconWrap>
                   {item.label}
@@ -176,7 +176,7 @@ export function SiteHeader() {
         </nav>
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#082220] text-[#EEF7F6] transition-opacity hover:opacity-90 nav:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg border border-[rgba(26,61,53,0.1)] bg-based-mist text-based-heading transition-opacity hover:opacity-90 nav:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Stäng meny" : "Öppna meny"}
@@ -188,12 +188,12 @@ export function SiteHeader() {
       {open ? (
         <div
           id="mobile-menu"
-          className="border-t border-[rgba(44,228,212,0.12)] bg-[#082220] px-8 py-4 nav:hidden"
+          className="border-t border-[rgba(26,61,53,0.08)] bg-white/95 px-8 py-4 backdrop-blur-md nav:hidden"
         >
           <nav className="flex flex-col gap-2" aria-label="Mobilmeny">
             {items.map((item) => {
               const active = isActive(item);
-              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-[rgba(238,247,246,0.75)] hover:text-[#EEF7F6] ${
+              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-based-heading/80 hover:text-based-heading ${
                 active ? "text-based-cyan" : ""
               }`;
               if (item.kind === "mailto") {
@@ -202,7 +202,7 @@ export function SiteHeader() {
                     key={item.label}
                     href={item.href}
                     onClick={close}
-                    className="inline-flex items-center gap-1.5 rounded-[6px] border border-[rgba(44,228,212,0.45)] px-3 py-3 font-b text-sm font-medium text-based-cyan"
+                    className="inline-flex items-center gap-1.5 rounded-[8px] bg-based-cyan px-4 py-3 font-b text-sm font-semibold text-based-heading"
                   >
                     <span className="opacity-[0.65]">{item.icon}</span>
                     {item.label}

@@ -41,23 +41,22 @@ export default function KontaktPage() {
       <SiteHeader />
       <main>
         <section
-          className="relative overflow-hidden bg-[#082220] px-8 pb-[5rem] pt-40"
+          className="relative overflow-hidden px-8 pb-[5rem] pt-40"
+          style={{
+            background:
+              "linear-gradient(135deg, #EFF9F5 0%, #E8F4F8 50%, #F0EDF8 100%)",
+          }}
           aria-label="Kontakt intro"
         >
-          <div className="aurora-wrap" aria-hidden>
-            <div className="aurora-band aurora-1" />
-            <div className="aurora-band aurora-2" />
-            <div className="aurora-band aurora-3" />
-            <div className="aurora-band aurora-4" />
-          </div>
+          <div className="pointer-events-none absolute right-0 top-0 h-[min(70vw,420px)] w-[min(70vw,420px)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(45,224,165,0.14)_0%,rgba(125,212,240,0.12)_45%,transparent_70%)]" aria-hidden />
           <div className="relative z-[1] mx-auto max-w-[780px] text-center">
-            <p className="mb-6 inline-block font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[rgba(238,247,246,0.85)]">
+            <p className="mb-6 inline-block font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-based-cyan">
               Teamet bakom BASEDtech
             </p>
-            <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] tracking-[0.01em] text-[#EEF7F6]">
+            <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] tracking-[0.01em] text-based-heading">
               Vi är enkla att nå. Och ännu enklare att prata med.
             </h1>
-            <p className="mt-8 font-b text-[1.05rem] font-light leading-[1.8] text-[rgba(238,247,246,0.75)]">
+            <p className="mt-8 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
               Vi tror på korta vägar och raka svar. Oavsett om du har en specifik
               fråga, vill boka en kostnadsfri analys eller bara vill se om vi
               passar ihop, hör av dig direkt till oss. Inga mellanhänder, inga
@@ -192,7 +191,7 @@ export default function KontaktPage() {
           </div>
         </section>
         <section
-          className="bg-based-section px-8 py-20 text-center sm:py-24"
+          className="bg-based-mist px-8 py-20 text-center sm:py-24"
           aria-label="Boka analys"
         >
           <div className="mx-auto max-w-[640px]">
