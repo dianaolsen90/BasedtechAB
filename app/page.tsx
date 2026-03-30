@@ -200,17 +200,21 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <Image
-                  src="/Bilder/avatar.png"
-                  alt="Larry, BASEDtechs pingvinmaskot"
-                  width={460}
-                  height={460}
-                  className="relative z-10 w-full max-w-[260px] rounded-[20px] motion-safe:animate-float min-[900px]:max-w-[460px]"
-                  style={{
-                    filter: "drop-shadow(0 30px 80px rgba(44,228,212,0.25))",
-                  }}
-                  priority
-                />
+                <div className="relative z-10 mx-auto w-full max-w-[260px] motion-safe:animate-float min-[900px]:max-w-[460px]">
+                  <div
+                    className="overflow-hidden rounded-[20px] shadow-[0_30px_80px_rgba(44,228,212,0.22)]"
+                    style={{ isolation: "isolate" }}
+                  >
+                    <Image
+                      src="/Bilder/avatar.png"
+                      alt="Larry, BASEDtechs pingvinmaskot"
+                      width={460}
+                      height={460}
+                      className="h-auto w-full mix-blend-multiply"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -416,24 +420,21 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 gap-6 min-[700px]:max-lg:grid-cols-2 lg:grid-cols-12 lg:gap-6">
               <article
-                className={`group relative flex min-h-[500px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-5 lg:row-span-2 lg:h-[500px] lg:min-h-0 ${bentoHover}`}
+                className={`group relative flex min-h-[400px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-5 lg:row-span-2 lg:h-[420px] lg:min-h-0 ${bentoHover}`}
               >
-                <div className="relative h-[260px] w-full shrink-0 overflow-hidden rounded-t-[12px] lg:h-auto lg:min-h-0 lg:basis-[55%] lg:shrink-0 lg:grow-0">
-                  <Image
-                    src="/Bilder/The Analyst.png"
-                    alt="Larry som analytiker som följer KPIer och ekonomiska trender i realtid"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 42vw"
-                    className="object-cover object-top"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center top",
-                      maxHeight: 260,
-                    }}
-                  />
+                <div className="relative flex h-[200px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-4 pt-4 lg:h-auto lg:min-h-0 lg:basis-[42%] lg:shrink-0 lg:grow-0 lg:px-5 lg:pt-5">
+                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                    <Image
+                      src="/Bilder/The Analyst.png"
+                      alt="Larry som analytiker som följer KPIer och ekonomiska trender i realtid"
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 42vw"
+                      className="object-contain object-top"
+                    />
+                  </div>
                 </div>
-                <div className="flex min-h-0 flex-1 flex-col px-8 pb-8 pt-8 lg:basis-[45%] lg:shrink-0 lg:grow-0">
+                <div className="flex min-h-0 flex-1 flex-col px-8 pb-8 pt-6 lg:basis-[58%] lg:shrink-0 lg:grow-0">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
                     THE ANALYST
                   </p>
@@ -449,19 +450,16 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-1 ${bentoHover}`}
               >
-                <div className="relative h-[200px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
-                  <Image
-                    src="/Bilder/The Automator.png"
-                    alt="Larry som automatiserar fakturor, kvitton och avstämningar"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover object-top"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center top",
-                      maxHeight: 220,
-                    }}
-                  />
+                <div className="relative flex h-[148px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
+                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                    <Image
+                      src="/Bilder/The Automator.png"
+                      alt="Larry som automatiserar fakturor, kvitton och avstämningar"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-contain object-top"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col px-6 pb-6 pt-6">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
@@ -478,19 +476,16 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.3)] bg-[rgba(44,228,212,0.08)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-1 ${bentoHover}`}
               >
-                <div className="relative h-[180px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
-                  <Image
-                    src="/Bilder/The problem solver.png"
-                    alt="Larry som problemlösare som tar sig an utmaningar stora som små"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 25vw"
-                    className="object-cover object-top"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center top",
-                      maxHeight: 220,
-                    }}
-                  />
+                <div className="relative flex h-[128px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
+                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                    <Image
+                      src="/Bilder/The problem solver.png"
+                      alt="Larry som problemlösare som tar sig an utmaningar stora som små"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 25vw"
+                      className="object-contain object-top"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
@@ -507,19 +502,16 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.18)] bg-[rgba(255,255,255,0.03)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-4 lg:col-start-6 lg:row-start-2 ${bentoHover}`}
               >
-                <div className="relative h-[200px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
-                  <Image
-                    src="/Bilder/The Advisor.png"
-                    alt="Larry som rådgivare som alltid är redo för ett samtal"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-cover object-top"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center top",
-                      maxHeight: 220,
-                    }}
-                  />
+                <div className="relative flex h-[148px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
+                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                    <Image
+                      src="/Bilder/The Advisor.png"
+                      alt="Larry som rådgivare som alltid är redo för ett samtal"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-contain object-top"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col px-6 pb-6 pt-6">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
@@ -536,19 +528,16 @@ export default function HomePage() {
               <article
                 className={`group relative flex min-h-[240px] flex-col overflow-hidden rounded-[20px] border border-[rgba(44,228,212,0.2)] bg-[rgba(44,228,212,0.05)] max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-3 lg:col-start-10 lg:row-start-2 ${bentoHover}`}
               >
-                <div className="relative h-[180px] w-full shrink-0 overflow-hidden rounded-t-[12px]">
-                  <Image
-                    src="/Bilder/The tech wizard.png"
-                    alt="Larry som teknikexpert som förenklar det komplexa"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 25vw"
-                    className="object-cover object-top"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center top",
-                      maxHeight: 220,
-                    }}
-                  />
+                <div className="relative flex h-[128px] w-full shrink-0 flex-col overflow-hidden rounded-t-[12px] px-3 pt-3">
+                  <div className="relative min-h-0 w-full flex-1 overflow-hidden rounded-[10px]">
+                    <Image
+                      src="/Bilder/The tech wizard.png"
+                      alt="Larry som teknikexpert som förenklar det komplexa"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 25vw"
+                      className="object-contain object-top"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
                   <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#0F9E8E]">
@@ -566,14 +555,14 @@ export default function HomePage() {
                 className={`group rounded-[20px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] p-12 max-lg:col-span-1 min-[700px]:max-lg:col-span-2 lg:col-span-12 lg:row-start-3 ${bentoHover}`}
               >
                 <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-12">
-                  <div className="relative mx-auto w-full max-w-[380px] overflow-hidden rounded-2xl">
+                  <div className="relative mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl">
                     <Image
                       src="/Bilder/The Team Player.png"
                       alt="Larry som lagspelare tillsammans med BASEDtech-teamet"
-                      width={380}
-                      height={320}
-                      sizes="(max-width: 1024px) 100vw, 380px"
-                      className="h-auto max-h-[320px] w-full object-cover object-top"
+                      width={280}
+                      height={236}
+                      sizes="(max-width: 1024px) 100vw, 280px"
+                      className="h-auto max-h-[236px] w-full object-contain object-top"
                       style={{
                         objectPosition: "center top",
                         filter:
