@@ -126,11 +126,11 @@ export function SiteHeader() {
           className="group inline-flex shrink-0 items-center rounded-xl border border-[rgba(125,212,240,0.12)] bg-[rgba(8,18,32,0.72)] px-2.5 py-2 backdrop-blur-[14px] transition-opacity hover:opacity-95"
         >
           <Image
-            src="/Bilder/Loga-basedtech.png"
-            alt="BASEDtech Sweden AB, logotyp med pingvin"
-            width={280}
-            height={98}
-            className="h-[64px] w-auto max-w-[min(48vw,260px)] object-contain object-left"
+            src="/loggan/basedtechlogo.png"
+            alt="BASEDtech Sweden AB logotyp"
+            width={240}
+            height={84}
+            className="h-[52px] w-auto max-w-[min(44vw,220px)] object-contain object-left sm:h-[56px]"
             priority
           />
         </Link>
