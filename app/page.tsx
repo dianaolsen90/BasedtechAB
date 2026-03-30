@@ -1,20 +1,23 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
   IconArrowRight,
   IconClock,
-  IconDocumentLarge,
   IconGroup,
   IconPhone,
-  IconPulse,
   IconShield,
-  IconStar,
 } from "@/app/components/icons";
+import { HomeTjansterSection } from "@/app/components/home-tjanster";
 import { ScrollRevealInit } from "@/app/components/scroll-reveal-init";
 import { SiteFooter } from "@/app/components/site-footer";
 import { SiteHeader } from "@/app/components/site-header";
 
-const borderStyle = { borderColor: "var(--based-border)" } as const;
+export const metadata: Metadata = {
+  title: "Tjänster | BASEDtech Sweden AB",
+  description:
+    "Automatisera din bokföring med BASEDtech. Vi erbjuder avstämningar, automagi och skräddarsydda lösningar. Kostnadsfri analys inom 48 timmar.",
+};
 
 const bentoHover =
   "transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1 hover:scale-[1.01] hover:border-[rgba(44,228,212,0.45)]";
@@ -309,134 +312,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section
-          id="tjanster"
-          className="reveal scroll-mt-[84px] bg-based-section py-16 pl-8 pr-8 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
-        >
-          <div className="mx-auto max-w-container text-center">
-            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
-              En sund bokföring ska inte kosta skjortan
-            </h2>
-          </div>
-          <div className="mx-auto mt-14 grid max-w-container grid-cols-1 gap-8 nav:grid-cols-3">
-            {[
-              {
-                num: "01",
-                Icon: IconPulse,
-                title: "Vi städar",
-                sub: "Avstämningar och kvalitetssäkring",
-                body: "Allt börjar med en korrekt grund att stå på. Vi granskar och justerar din bokföring tills den stämmer. Sedan är vi redo för nästa steg.",
-              },
-              {
-                num: "02",
-                Icon: IconDocumentLarge,
-                title: "Automagi",
-                sub: "Automatiserad bokföring",
-                body: "Vi implementerar moderna verktyg för automation av dina ekonomiprocesser. Fokus skiftar från manuellt arbete till renodlad ekonomisk analys.",
-              },
-              {
-                num: "03",
-                Icon: IconStar,
-                title: "Skräddarsytt",
-                sub: "Anpassade lösningar",
-                body: "Det finns alltid moment utanför bokföringen som driver tid i ekonomihanteringen. Från specialrapporter till anpassade listor. Vad behöver du?",
-              },
-            ].map((c) => {
-              const CardIcon = c.Icon;
-              return (
-                <article
-                  key={c.num}
-                  className="service-card-glow relative overflow-hidden rounded-[14px] border border-based-white bg-based-white p-8 text-left shadow-card-tjanst transition-all duration-300 hover:-translate-y-[4px] hover:[border-color:rgba(15,158,142,0.4)]"
-                >
-                  <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-based-cyan">
-                    {c.num}
-                  </p>
-                  <div
-                    className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl border bg-[rgba(15,158,142,0.1)] text-based-cyan"
-                    style={borderStyle}
-                  >
-                    <CardIcon className="h-7 w-7" />
-                  </div>
-                  <h3 className="mt-5 font-h text-xl font-bold tracking-[0.01em] text-based-heading">
-                    {c.title}
-                  </h3>
-                  <p className="mt-1 font-b text-sm font-light text-based-cyan">
-                    {c.sub}
-                  </p>
-                  <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-                    {c.body}
-                  </p>
-                </article>
-              );
-            })}
-          </div>
-          <div
-            className="mx-auto mt-20 w-full max-w-container border-t pt-16"
-            style={{ borderColor: "var(--based-border)" }}
-          >
-            <h3 className="text-center font-h text-[clamp(1.5rem,2.5vw,2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading nav:text-left">
-              Verktyg vi jobbar med
-            </h3>
-            <p className="mx-auto mt-4 max-w-3xl text-center font-b text-[1.05rem] font-light leading-[1.8] text-based-body nav:mx-0 nav:text-left">
-              I våra uppdrag använder vi utvalda svenskutvecklade, molnbaserade
-              och GDPR-säkrade plattformar. Vi kopplar på det som passar er
-              vardag, från fakturaflöden till kort och projekt, så att automagin
-              får rätt understöd.
-            </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 nav:grid-cols-2">
-              {[
-                {
-                  badge: "REDA",
-                  tag: "Smart fakturahantering",
-                  name: "REDA",
-                  text: "Kombinerar smart AI-tolkning med egna kontrollregler. Sluta lägga tid på fakturor utan fel. REDA sorterar det åt dig.",
-                },
-                {
-                  badge: "AI",
-                  tag: "Digital ekonomiassistent",
-                  name: "Lerry.ai",
-                  text: "En AI-assistent som säkerställer samtliga transaktioner enligt Skatteverkets regler. Analys och budget på nolltid.",
-                },
-                {
-                  badge: "MYNT",
-                  tag: "Enkelt med kortköp",
-                  name: "Mynt",
-                  text: "VISA-kort med tillhörande app. Foto på kvittot direkt vid köpet, in i bokföringen på sekunden. Kopplas till Google Pay och Apple Pay.",
-                },
-                {
-                  badge: "FLD",
-                  tag: "Projektredovisning",
-                  name: "Fieldly",
-                  text: "Hjälper bygg- och installationsföretag att hantera projektflöden effektivt. Kopplas enkelt till ditt affärssystem.",
-                },
-              ].map((p) => (
-                <article
-                  key={p.name}
-                  className="rounded-[14px] border bg-based-white p-6 transition-all duration-300 hover:-translate-y-[3px] hover:[border-color:rgba(15,158,142,0.4)]"
-                  style={borderStyle}
-                >
-                  <div
-                    className="inline-block rounded-[10px] border bg-[rgba(15,158,142,0.1)] px-3 py-1.5"
-                    style={borderStyle}
-                  >
-                    <span className="font-h text-xs font-semibold uppercase tracking-[0.1em] text-based-cyan">
-                      {p.badge}
-                    </span>
-                  </div>
-                  <p className="mt-3 font-h text-xs font-semibold uppercase tracking-[0.14em] text-based-body">
-                    {p.tag}
-                  </p>
-                  <h3 className="mt-1 font-h text-lg font-bold tracking-[0.01em] text-based-heading">
-                    {p.name}
-                  </h3>
-                  <p className="mt-3 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-                    {p.text}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <HomeTjansterSection />
         <section
           id="meet-larry"
           className="reveal relative scroll-mt-[84px] overflow-hidden bg-[#082220] px-8 py-28"
