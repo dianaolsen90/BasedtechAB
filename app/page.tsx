@@ -3,12 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   IconArrowRight,
-  IconCheckSmall,
   IconClock,
   IconGroup,
-  IconPhone14,
   IconShield,
-  IconZap,
 } from "@/app/components/icons";
 import { HomeTjansterSection } from "@/app/components/home-tjanster";
 import { ScrollRevealInit } from "@/app/components/scroll-reveal-init";
@@ -74,33 +71,8 @@ export default function HomePage() {
               <p className="hero-fade-3 max-w-[500px] font-b text-[1.05rem] font-normal leading-[1.85] text-[#EEF7F6]">
                 Vi tar hand om det. Du fokuserar på att växa.
               </p>
-              <div className="hero-fade-4 mt-6 mb-8 flex items-center justify-center gap-2.5 min-[900px]:justify-start">
-                <span
-                  className="h-2 w-2 shrink-0 rounded-full bg-[rgba(255,80,80,0.8)] motion-safe:animate-[pulse_2s_ease-in-out_infinite]"
-                  aria-hidden
-                />
-                <p className="font-h text-[0.85rem] font-semibold text-[rgba(238,247,246,0.6)]">
-                  Varje dag utan automagi kostar dig tid och pengar.
-                </p>
-              </div>
-              <div className="hero-fade-5 flex flex-wrap items-center justify-center gap-4 min-[900px]:justify-start">
-                <a
-                  href="tel:0733017339"
-                  className="inline-flex items-center gap-2 rounded-[10px] bg-[#0F9E8E] px-8 py-4 font-h text-base font-bold text-[#082220] shadow-[0_20px_40px_rgba(44,228,212,0.25)] transition-all duration-[250ms] hover:-translate-y-[3px] hover:bg-[#2CE4D4]"
-                >
-                  <IconPhone14 className="h-5 w-5 shrink-0" />
-                  Ring David nu: 073-301 73 39
-                </a>
-                <Link
-                  href="/#tjanster"
-                  className="group inline-flex items-center gap-2 rounded-[10px] border border-[rgba(44,228,212,0.35)] bg-transparent px-8 py-4 font-h text-[0.95rem] font-semibold text-[rgba(238,247,246,0.8)] transition-colors hover:border-[#2CE4D4] hover:text-[#EEF7F6]"
-                >
-                  <IconArrowRight className="h-5 w-5 shrink-0 transition-transform group-hover:translate-x-0.5" />
-                  Se hur det fungerar
-                </Link>
-              </div>
-              <div className="hero-fade-6 mt-10 flex flex-wrap items-center justify-center gap-6 min-[900px]:justify-start">
-                <div className="flex items-center gap-2.5">
+              <div className="hero-fade-4 mt-10 flex w-full max-w-[420px] flex-col gap-5 text-center min-[900px]:text-left">
+                <div className="flex flex-wrap items-center justify-center gap-4 min-[900px]:justify-start">
                   <div className="flex items-center pl-2">
                     <Image
                       src="/Bilder/adamprofil.jpg"
@@ -117,7 +89,7 @@ export default function HomePage() {
                       className="-ml-3.5 h-10 w-10 rounded-full border-2 border-[#082220] object-cover"
                     />
                   </div>
-                  <div className="text-center min-[900px]:text-left">
+                  <div>
                     <p className="font-h text-[0.875rem] font-semibold text-[#EEF7F6]">
                       David och Johan
                     </p>
@@ -126,37 +98,20 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                <div
-                  className="hidden h-9 w-px shrink-0 bg-[rgba(44,228,212,0.2)] min-[900px]:block"
-                  aria-hidden
-                />
-                <div className="text-center min-[900px]:text-left">
-                  <p className="font-h text-[0.875rem] font-semibold text-[#EEF7F6]">
-                    Kostnadsfri analys
-                  </p>
-                  <p className="font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
-                    Inga bindningar
-                  </p>
-                </div>
-              </div>
-              <div className="hero-fade-7 mt-12 flex flex-col items-center gap-6 border-t border-[rgba(44,228,212,0.12)] pt-10 max-[600px]:gap-6 min-[900px]:flex-row min-[900px]:items-stretch min-[900px]:gap-10">
-                {[
-                  { n: "416h", l: "Sparad tid per år" },
-                  { n: "94%", l: "Färre bokföringsfel" },
-                  { n: "0 kr", l: "Kostnad för analys" },
-                ].map((s) => (
-                  <div
-                    key={s.n}
-                    className="w-full max-w-[220px] border-l-2 border-[rgba(44,228,212,0.4)] pl-4 text-center min-[900px]:max-w-none min-[900px]:text-left"
+                <div className="flex flex-col gap-2 border-t border-[rgba(44,228,212,0.12)] pt-5">
+                  <a
+                    href="tel:0733017339"
+                    className="font-b text-[0.95rem] font-normal text-[rgba(238,247,246,0.75)] transition-colors hover:text-[#2CE4D4]"
                   >
-                    <p className="font-h text-[1.8rem] font-extrabold text-[#2CE4D4]">
-                      {s.n}
-                    </p>
-                    <p className="mt-1 font-b text-[0.8rem] font-light text-[rgba(238,247,246,0.5)]">
-                      {s.l}
-                    </p>
-                  </div>
-                ))}
+                    073-301 73 39
+                  </a>
+                  <a
+                    href="mailto:david.olsen@basedtech.se"
+                    className="font-b text-[0.9rem] font-light text-[rgba(238,247,246,0.55)] transition-colors hover:text-[#2CE4D4]"
+                  >
+                    david.olsen@basedtech.se
+                  </a>
+                </div>
               </div>
             </div>
             <div className="order-1 flex min-h-[320px] items-center justify-center min-[900px]:order-2 min-[900px]:min-h-[480px]">
@@ -180,32 +135,6 @@ export default function HomePage() {
                   aria-hidden
                 >
                   <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2CE4D4]" />
-                </div>
-                <div className="hero-float-badge-1 absolute right-0 top-[15%] z-20 hidden max-w-[220px] rounded-xl border border-[rgba(44,228,212,0.35)] bg-[rgba(44,228,212,0.12)] px-5 py-3.5 backdrop-blur-[10px] min-[900px]:block">
-                  <div className="flex items-start gap-3">
-                    <IconZap className="h-5 w-5 shrink-0 text-[#2CE4D4]" />
-                    <div>
-                      <p className="font-h text-[0.85rem] font-bold text-[#EEF7F6]">
-                        Automagi aktiverad
-                      </p>
-                      <p className="mt-1 font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
-                        8h sparad denna veckan
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="hero-float-badge-2 absolute bottom-[20%] left-0 z-20 hidden max-w-[220px] rounded-xl border border-[rgba(44,228,212,0.35)] bg-[rgba(44,228,212,0.12)] px-5 py-3.5 backdrop-blur-[10px] min-[900px]:block">
-                  <div className="flex items-start gap-3">
-                    <IconCheckSmall className="h-5 w-5 shrink-0 text-[#2CE4D4]" />
-                    <div>
-                      <p className="font-h text-[0.85rem] font-bold text-[#EEF7F6]">
-                        Bokföring: Klar
-                      </p>
-                      <p className="mt-1 font-b text-[0.75rem] font-light text-[rgba(238,247,246,0.5)]">
-                        47 fakturor hanterade idag
-                      </p>
-                    </div>
-                  </div>
                 </div>
                 <div className="relative z-10 mx-auto w-full max-w-[260px] motion-safe:animate-float min-[900px]:max-w-[460px]">
                   <div
@@ -665,25 +594,6 @@ export default function HomePage() {
                 className="h-auto w-full object-contain"
               />
             </div>
-          </div>
-        </section>
-        <section
-          id="cta"
-          className="reveal scroll-mt-[84px] bg-based-white py-16 pl-8 pr-8 max-[600px]:py-16 max-[600px]:pl-5 max-[600px]:pr-5 sm:py-24"
-        >
-          <div className="mx-auto max-w-contact text-center">
-            <h2 className="font-h text-[clamp(2rem,3.5vw,3.2rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
-              Vill du veta mer?
-            </h2>
-            <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
-              Vi tar gärna ett samtal om hur vi kan hjälpa dig.
-            </p>
-            <Link
-              href="/kontakt"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-based-cyan px-8 py-3 font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
-            >
-              Träffa teamet
-            </Link>
           </div>
         </section>
       </main>

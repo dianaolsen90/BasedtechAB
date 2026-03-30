@@ -1,12 +1,4 @@
-import Image from "next/image";
-import {
-  IconBroom,
-  IconCheckSmall,
-  IconMail14,
-  IconPhone14,
-  IconStar,
-  IconZap,
-} from "@/app/components/icons";
+import { IconBroom, IconCheckSmall, IconStar, IconZap } from "@/app/components/icons";
 
 const tHover =
   "transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-2 hover:border-[rgba(44,228,212,0.5)] hover:shadow-[0_40px_80px_rgba(44,228,212,0.08)]";
@@ -230,81 +222,6 @@ export function HomeTjansterSection() {
                 </article>
               );
             })}
-          </div>
-          <div className="relative mt-20 overflow-hidden rounded-[24px] border border-[rgba(44,228,212,0.25)] bg-[rgba(44,228,212,0.06)] px-8 py-20 text-center max-md:px-6 max-md:py-14 sm:px-16">
-            <div
-              className="pointer-events-none absolute right-0 top-0 h-[300px] w-[300px] -translate-y-1/4 translate-x-1/4 rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle, rgba(44,228,212,0.12) 0%, transparent 70%)",
-              }}
-              aria-hidden
-            />
-            <div className="relative z-[1] mx-auto max-w-3xl">
-              <Image
-                src="/Bilder/avatar.png"
-                alt="Larry, BASEDtechs maskot"
-                width={80}
-                height={80}
-                className="mx-auto mb-8 h-20 w-20 rounded-full border-2 border-[rgba(44,228,212,0.4)] object-cover"
-                style={{
-                  filter: "drop-shadow(0 0 20px rgba(44,228,212,0.3))",
-                }}
-              />
-              <h3 className="font-h text-[clamp(2rem,4vw,3.5rem)] font-extrabold leading-[1.1] text-[#EEF7F6]">
-                Redo att sluta slösa tid?
-                <br />
-                <span className="text-[#2CE4D4]">Ring David eller Johan nu.</span>
-              </h3>
-              <p className="mx-auto mt-6 max-w-[520px] font-b text-[1.05rem] font-light leading-[1.8] text-[rgba(238,247,246,0.65)]">
-                Vi erbjuder en kostnadsfri analys där vi visar exakt hur mycket
-                tid och pengar du kan spara. Inga konstigheter och ingen
-                försäljning. Bara konkreta svar från personer som verkligen
-                förstår din vardag.
-              </p>
-              <div className="my-8 flex flex-wrap items-center justify-center gap-6">
-                <div className="flex items-center pl-2">
-                  <Image
-                    src="/Bilder/adamprofil.jpg"
-                    alt=""
-                    width={48}
-                    height={48}
-                    className="h-12 w-12 rounded-full border-2 border-[#082220] object-cover"
-                  />
-                  <Image
-                    src="/Bilder/davidolsenprofilbild.jpg"
-                    alt=""
-                    width={48}
-                    height={48}
-                    className="-ml-4 h-12 w-12 rounded-full border-2 border-[#082220] object-cover"
-                  />
-                </div>
-                <div className="text-left">
-                  <p className="font-h text-base font-semibold text-[#EEF7F6]">
-                    David och Johan svarar inom 24 timmar
-                  </p>
-                  <p className="font-b text-[0.8rem] font-light text-[rgba(238,247,246,0.5)]">
-                    Kostnadsfri analys. Inga bindningar.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a
-                  href="tel:+46733017339"
-                  className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#0F9E8E] px-12 py-[1.1rem] font-h text-[1.05rem] font-bold text-[#082220] shadow-[0_20px_40px_rgba(44,228,212,0.2)] transition-all duration-300 hover:-translate-y-[3px] hover:bg-[#2CE4D4]"
-                >
-                  <IconPhone14 className="h-5 w-5 shrink-0" />
-                  Ring oss nu: 073-301 73 39
-                </a>
-                <a
-                  href="mailto:david.olsen@basedtech.se"
-                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[rgba(44,228,212,0.4)] bg-transparent px-12 py-[1.1rem] font-h text-[1.05rem] font-semibold text-[#2CE4D4] transition-all duration-300 hover:border-[#2CE4D4] hover:bg-[rgba(44,228,212,0.06)]"
-                >
-                  <IconMail14 className="h-5 w-5 shrink-0" />
-                  Skicka ett mail
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
