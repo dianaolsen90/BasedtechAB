@@ -544,15 +544,6 @@ export default function HomePage() {
                 </div>
               </article>
             </div>
-            <div className="mx-auto mt-16 flex max-w-[280px] justify-center opacity-90">
-              <Image
-                src="/Loga-basedtech.png"
-                alt="BASEDtech Sweden AB logotyp"
-                width={280}
-                height={84}
-                className="h-auto w-full object-contain brightness-0 invert"
-              />
-            </div>
           </div>
         </section>
       </main>
