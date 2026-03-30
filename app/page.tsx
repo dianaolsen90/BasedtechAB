@@ -7,6 +7,7 @@ import {
   IconGroup,
   IconShield,
 } from "@/app/components/icons";
+import { HeroPolarGlobe } from "@/app/components/hero-polar-globe";
 import { HomeTjansterSection } from "@/app/components/home-tjanster";
 import { ScrollRevealInit } from "@/app/components/scroll-reveal-init";
 import { SiteFooter } from "@/app/components/site-footer";
@@ -98,6 +99,7 @@ export default function HomePage() {
                 }}
                 aria-hidden
               />
+              <HeroPolarGlobe />
               <div className="relative z-[1] mx-auto w-full max-w-[280px] motion-safe:animate-float md:max-w-[min(100%,520px)]">
                 <Image
                   src="/Bilder/avatar.png"
