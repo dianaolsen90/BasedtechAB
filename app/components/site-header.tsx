@@ -115,11 +115,11 @@ export function SiteHeader() {
   }
 
   const linkBase =
-    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-based-heading/80 transition-colors hover:text-based-heading";
-  const linkActive = "nav-active !text-based-cyan";
+    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-nav-frost transition-colors hover:text-snow-white";
+  const linkActive = "nav-active !text-aurora-teal";
 
   return (
-    <header className="sticky top-0 z-50 min-h-[96px] w-full border-b border-[rgba(26,61,53,0.08)] bg-white/85 shadow-[0_1px_0_rgba(26,61,53,0.04)] backdrop-blur-[12px]">
+    <header className="sticky top-0 z-50 min-h-[96px] w-full border-b-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.72)] shadow-[0_1px_0_rgba(0,0,0,0.2)] backdrop-blur-[14px]">
       <div className="mx-auto flex min-h-[96px] max-w-container items-center justify-between px-8 py-2">
         <Link href="/" className="group flex shrink-0 items-center">
           <Image
@@ -127,7 +127,7 @@ export function SiteHeader() {
             alt="BASEDtech Sweden AB, logotyp med pingvin"
             width={320}
             height={112}
-            className="h-[96px] w-auto max-w-[min(52vw,320px)]"
+            className="h-[96px] w-auto max-w-[min(52vw,320px)] brightness-0 invert"
             priority
           />
         </Link>
@@ -142,7 +142,7 @@ export function SiteHeader() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group inline-flex items-center gap-1.5 rounded-[8px] bg-based-cyan px-4 py-2.5 font-b text-sm font-semibold text-based-heading shadow-sm transition hover:bg-based-cyan-bright"
+                  className="group inline-flex items-center gap-1.5 rounded-[20px] border border-aurora-teal bg-transparent px-4 py-2.5 font-b text-sm font-semibold text-aurora-teal transition hover:bg-[rgba(45,224,165,0.08)]"
                 >
                   <NavIconWrap>{item.icon}</NavIconWrap>
                   {item.label}
@@ -176,7 +176,7 @@ export function SiteHeader() {
         </nav>
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-lg border border-[rgba(26,61,53,0.1)] bg-based-mist text-based-heading transition-opacity hover:opacity-90 nav:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg border border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] text-snow-white transition-opacity hover:opacity-90 nav:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Stäng meny" : "Öppna meny"}
@@ -188,13 +188,13 @@ export function SiteHeader() {
       {open ? (
         <div
           id="mobile-menu"
-          className="border-t border-[rgba(26,61,53,0.08)] bg-white/95 px-8 py-4 backdrop-blur-md nav:hidden"
+          className="border-t-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.95)] px-8 py-4 backdrop-blur-md nav:hidden"
         >
           <nav className="flex flex-col gap-2" aria-label="Mobilmeny">
             {items.map((item) => {
               const active = isActive(item);
-              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-based-heading/80 hover:text-based-heading ${
-                active ? "text-based-cyan" : ""
+              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-nav-frost hover:text-snow-white ${
+                active ? "text-aurora-teal" : ""
               }`;
               if (item.kind === "mailto") {
                 return (
@@ -202,7 +202,7 @@ export function SiteHeader() {
                     key={item.label}
                     href={item.href}
                     onClick={close}
-                    className="inline-flex items-center gap-1.5 rounded-[8px] bg-based-cyan px-4 py-3 font-b text-sm font-semibold text-based-heading"
+                    className="inline-flex items-center gap-1.5 rounded-[20px] border border-aurora-teal bg-transparent px-4 py-3 font-b text-sm font-semibold text-aurora-teal"
                   >
                     <span className="opacity-[0.65]">{item.icon}</span>
                     {item.label}

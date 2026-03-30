@@ -12,6 +12,9 @@ export const metadata: Metadata = {
 
 const borderStyle = { borderColor: "var(--based-border)" } as const;
 
+const polarCard =
+  "rounded-2xl border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] shadow-card-tjanst";
+
 function LinkedInConnectLink({ href }: { href: string }) {
   return (
     <a
@@ -41,19 +44,18 @@ export default function KontaktPage() {
       <SiteHeader />
       <main>
         <section
-          className="relative overflow-hidden px-8 pb-[5rem] pt-40"
-          style={{
-            background:
-              "linear-gradient(135deg, #EFF9F5 0%, #E8F4F8 50%, #F0EDF8 100%)",
-          }}
+          className="relative overflow-hidden bg-polar-night px-8 pb-[5rem] pt-40"
           aria-label="Kontakt intro"
         >
-          <div className="pointer-events-none absolute right-0 top-0 h-[min(70vw,420px)] w-[min(70vw,420px)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(45,224,165,0.14)_0%,rgba(125,212,240,0.12)_45%,transparent_70%)]" aria-hidden />
+          <div
+            className="pointer-events-none absolute right-0 top-0 h-[min(70vw,420px)] w-[min(70vw,420px)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(45,224,165,0.07)_0%,rgba(125,212,240,0.06)_45%,transparent_70%)]"
+            aria-hidden
+          />
           <div className="relative z-[1] mx-auto max-w-[780px] text-center">
-            <p className="mb-6 inline-block font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-based-cyan">
+            <p className="mb-6 inline-block font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-aurora-teal">
               Teamet bakom BASEDtech
             </p>
-            <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] tracking-[0.01em] text-based-heading">
+            <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] tracking-[0.01em] text-snow-white">
               Vi är enkla att nå. Och ännu enklare att prata med.
             </h1>
             <p className="mt-8 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
@@ -66,14 +68,11 @@ export default function KontaktPage() {
           </div>
         </section>
         <section
-          className="bg-based-white py-16 pl-8 pr-8 sm:py-24"
+          className="bg-deep-ocean py-16 pl-8 pr-8 sm:py-24"
           aria-label="Team"
         >
           <div className="mx-auto grid max-w-[960px] grid-cols-1 gap-12 nav:grid-cols-2">
-            <article
-              className="overflow-hidden rounded-2xl border bg-based-white shadow-sm"
-              style={borderStyle}
-            >
+            <article className={`overflow-hidden ${polarCard} border-t-2 border-t-[#2DE0A5]`}>
               <div className="relative w-full max-h-[420px] overflow-hidden rounded-t-2xl">
                 <Image
                   src="/Bilder/davidolsenprofilbild.jpg"
@@ -88,19 +87,19 @@ export default function KontaktPage() {
                   className="pointer-events-none absolute inset-x-0 bottom-0 top-1/2 rounded-t-2xl"
                   style={{
                     background:
-                      "linear-gradient(transparent, rgba(8,34,32,0.4))",
+                      "linear-gradient(transparent, rgba(10,22,40,0.65))",
                   }}
                   aria-hidden
                 />
               </div>
               <div className="p-8">
-                <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-based-heading">
+                <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-snow-white">
                   David Olsen
                 </h2>
-                <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-based-cyan">
+                <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-aurora-teal">
                   Grundare och rådgivare
                 </p>
-                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
+                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-card">
                   David har tillbringat över 20 år i byråvärlden och sett precis
                   vad som händer när ekonomihanteringen inte hänger med
                   verksamhetens tempo. Han startade BASEDtech för att det finns
@@ -113,26 +112,23 @@ export default function KontaktPage() {
                 >
                   <a
                     href="tel:0733017339"
-                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-based-cyan"
+                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-aurora-teal"
                   >
-                    <IconPhone14 className="shrink-0 text-based-cyan" />
+                    <IconPhone14 className="shrink-0 text-aurora-teal" />
                     073-301 73 39
                   </a>
                   <a
                     href="mailto:david.olsen@basedtech.se"
-                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-based-cyan"
+                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-aurora-teal"
                   >
-                    <IconMail14 className="shrink-0 text-based-cyan" />
+                    <IconMail14 className="shrink-0 text-aurora-teal" />
                     david.olsen@basedtech.se
                   </a>
                   <LinkedInConnectLink href="https://www.linkedin.com/in/david-olsen-075343220/" />
                 </div>
               </div>
             </article>
-            <article
-              className="overflow-hidden rounded-2xl border bg-based-white shadow-sm"
-              style={borderStyle}
-            >
+            <article className={`overflow-hidden ${polarCard} border-t-2 border-t-[#7DD4F0]`}>
               <div className="relative w-full max-h-[420px] overflow-hidden rounded-t-2xl">
                 <Image
                   src="/Bilder/adamprofil.jpg"
@@ -146,19 +142,19 @@ export default function KontaktPage() {
                   className="pointer-events-none absolute inset-x-0 bottom-0 top-1/2 rounded-t-2xl"
                   style={{
                     background:
-                      "linear-gradient(transparent, rgba(8,34,32,0.4))",
+                      "linear-gradient(transparent, rgba(10,22,40,0.65))",
                   }}
                   aria-hidden
                 />
               </div>
               <div className="p-8">
-                <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-based-heading">
+                <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-snow-white">
                   Johan Adamsson
                 </h2>
-                <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-based-cyan">
+                <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-aurora-teal">
                   Partner och implementerare
                 </p>
-                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
+                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-card">
                   Johan är den som ser till att allt faktiskt fungerar i
                   praktiken. Han tar systemet från idé till vardag, utbildar
                   teamet och finns kvar tills det sitter. Med ett öga för
@@ -172,16 +168,16 @@ export default function KontaktPage() {
                 >
                   <a
                     href="tel:0733017339"
-                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-based-cyan"
+                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-aurora-teal"
                   >
-                    <IconPhone14 className="shrink-0 text-based-cyan" />
+                    <IconPhone14 className="shrink-0 text-aurora-teal" />
                     073-301 73 39
                   </a>
                   <a
                     href="mailto:johan.adamsson@basedtech.se"
-                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-based-cyan"
+                    className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-aurora-teal"
                   >
-                    <IconMail14 className="shrink-0 text-based-cyan" />
+                    <IconMail14 className="shrink-0 text-aurora-teal" />
                     johan.adamsson@basedtech.se
                   </a>
                   <LinkedInConnectLink href="https://www.linkedin.com/in/johan-adamsson-071957152/" />
@@ -191,14 +187,14 @@ export default function KontaktPage() {
           </div>
         </section>
         <section
-          className="bg-based-mist px-8 py-20 text-center sm:py-24"
+          className="bg-frost px-8 py-20 text-center sm:py-24"
           aria-label="Boka analys"
         >
           <div className="mx-auto max-w-[640px]">
-            <p className="mb-4 font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-based-cyan">
+            <p className="mb-4 font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-aurora-teal">
               Kostnadsfri analys
             </p>
-            <h2 className="font-h text-[clamp(1.75rem,3vw,2.25rem)] font-bold leading-[1.1] tracking-[0.01em] text-based-heading">
+            <h2 className="font-h text-[clamp(1.75rem,3vw,2.25rem)] font-bold leading-[1.1] tracking-[0.01em] text-snow-white">
               Redo att effektivisera din ekonomi?
             </h2>
             <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
@@ -207,7 +203,7 @@ export default function KontaktPage() {
             </p>
             <a
               href="mailto:david.olsen@basedtech.se"
-              className="mt-8 inline-flex items-center justify-center rounded-lg bg-based-cyan px-8 py-3 font-b text-sm font-medium text-based-heading transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
+              className="mt-8 inline-flex items-center justify-center rounded-[24px] bg-aurora-teal px-8 py-3 font-b text-sm font-extrabold text-polar-night transition hover:-translate-y-0.5 hover:bg-based-cyan-bright"
             >
               Boka ett samtal
             </a>
