@@ -11,10 +11,10 @@ const links = [
 ];
 
 const navLinkClass =
-  "block font-b text-[1rem] font-normal leading-snug text-[rgba(180,215,235,0.35)] no-underline transition-colors duration-200 hover:text-[rgba(180,215,235,0.55)]";
+  "block font-b text-[1rem] font-normal leading-snug text-[#C8DDE9] no-underline transition-colors duration-200 hover:text-[#E8F4FB] opacity-70 hover:opacity-100";
 
 const contactLinkClass =
-  "font-b text-[0.95rem] font-normal text-[rgba(180,215,235,0.45)] no-underline transition-colors duration-200 hover:text-ice-blue";
+  "font-b text-[0.95rem] font-normal text-[#C8DDE9] no-underline transition-colors duration-200 hover:text-[#2ECFB0] opacity-80 hover:opacity-100";
 
 const sectionLabelClass =
   "font-h text-[0.7rem] font-bold uppercase tracking-[0.14em] text-aurora-teal";
@@ -22,7 +22,7 @@ const sectionLabelClass =
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-[rgba(46,207,176,0.3)] bg-[#030810]">
+    <footer className="border-t border-[rgba(46,207,176,0.25)] bg-[#0F2240]">
       <div className="mx-auto max-w-[1160px] px-8 pb-6 pt-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12 lg:items-start">
           <div>
@@ -38,7 +38,7 @@ export function SiteFooter() {
                 className="h-[240px] w-auto max-w-full object-contain object-left md:h-[272px]"
               />
             </Link>
-            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[rgba(168,197,218,0.55)]">
+            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[#C8DDE9] opacity-60">
               Smart ekonomistyrning.
               <br />
               Personlig service, alltid.
@@ -64,7 +64,7 @@ export function SiteFooter() {
                   david.olsen@basedtech.se
                 </a>
               </div>
-              <p className="mt-4 font-b text-[0.875rem] font-light leading-relaxed text-[rgba(180,215,235,0.35)]">
+              <p className="mt-4 font-b text-[0.875rem] font-light leading-relaxed text-[#C8DDE9] opacity-50">
                 Svarar inom 24 timmar
               </p>
             </div>
@@ -73,7 +73,7 @@ export function SiteFooter() {
                 href="https://www.linkedin.com/company/basedtech-sweden-ab/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] p-2.5 text-ice-blue transition-colors duration-200 hover:border-[rgba(125,212,240,0.28)] hover:bg-[rgba(125,212,240,0.08)] hover:text-arctic-mist"
+                className="inline-flex items-center justify-center rounded-lg border border-[rgba(200,221,233,0.2)] bg-[rgba(255,255,255,0.06)] p-2.5 text-[#C8DDE9] transition-colors duration-200 hover:border-[rgba(46,207,176,0.4)] hover:bg-[rgba(46,207,176,0.1)] hover:text-aurora-teal"
                 aria-label="BASEDtech på LinkedIn"
               >
                 <svg
@@ -111,8 +111,8 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[rgba(46,207,176,0.15)] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
-          <span className="text-center font-b text-[0.8rem] font-light text-[rgba(180,215,235,0.35)] min-[600px]:text-left">
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[rgba(200,221,233,0.15)] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
+          <span className="text-center font-b text-[0.8rem] font-light text-[#C8DDE9] opacity-50 min-[600px]:text-left">
             {year} BASEDtech Sweden AB
           </span>
           <span className="text-center font-b text-[0.8rem] font-light text-aurora-teal min-[600px]:text-right">

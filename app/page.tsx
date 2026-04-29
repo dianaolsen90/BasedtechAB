@@ -44,52 +44,48 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <section
-          className="relative overflow-hidden bg-arctic-night px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24"
+          className="relative overflow-hidden px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24"
+          style={{
+            background:
+              "linear-gradient(160deg, #F8FAFB 0%, #EEF4F8 50%, #E6F7F4 100%)",
+          }}
           aria-label="Introduktion"
         >
-          <div
-            className="pointer-events-none absolute inset-0 z-0"
-            style={{
-              background: "var(--aurora-gradient)",
-              mixBlendMode: "screen" as const,
-            }}
-            aria-hidden
+          <SnowflakeSvg
+            className="snowflake-slow pointer-events-none absolute left-[5%] top-[8%] text-nordic-teal"
+            style={{ width: 24, height: 24, opacity: 0.15 }}
           />
           <SnowflakeSvg
-            className="snowflake-slow pointer-events-none absolute left-[5%] top-[8%] text-aurora-teal"
-            style={{ width: 24, height: 24, opacity: 0.2 }}
+            className="snowflake-medium pointer-events-none absolute right-[8%] top-[12%] text-nordic-teal"
+            style={{ width: 20, height: 20, opacity: 0.12 }}
           />
           <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute right-[8%] top-[12%] text-frost-white"
-            style={{ width: 20, height: 20, opacity: 0.15 }}
+            className="snowflake-fast pointer-events-none absolute bottom-[15%] left-[15%] text-nordic-teal"
+            style={{ width: 16, height: 16, opacity: 0.15 }}
           />
           <SnowflakeSvg
-            className="snowflake-fast pointer-events-none absolute bottom-[15%] left-[15%] text-aurora-teal"
-            style={{ width: 16, height: 16, opacity: 0.25 }}
+            className="snowflake-slow pointer-events-none absolute bottom-[20%] right-[12%] text-nordic-teal"
+            style={{ width: 28, height: 28, opacity: 0.12 }}
           />
           <SnowflakeSvg
-            className="snowflake-slow pointer-events-none absolute bottom-[20%] right-[12%] text-frost-white"
-            style={{ width: 28, height: 28, opacity: 0.18 }}
+            className="snowflake-medium pointer-events-none absolute left-[2%] top-1/2 text-nordic-teal"
+            style={{ width: 18, height: 18, opacity: 0.1 }}
           />
           <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute left-[2%] top-1/2 text-aurora-teal"
-            style={{ width: 18, height: 18, opacity: 0.15 }}
-          />
-          <SnowflakeSvg
-            className="snowflake-fast pointer-events-none absolute right-[3%] top-1/3 text-frost-white"
-            style={{ width: 22, height: 22, opacity: 0.2 }}
+            className="snowflake-fast pointer-events-none absolute right-[3%] top-1/3 text-nordic-teal"
+            style={{ width: 22, height: 22, opacity: 0.12 }}
           />
           <div className="relative z-[2] mx-auto flex max-w-container flex-col items-center gap-12 md:flex-row md:gap-16">
             <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left">
-              <h1 className="hero-fade-1 mb-6 font-h text-[clamp(2.4rem,5vw,3.75rem)] font-bold leading-[1.1] text-frost-white">
+              <h1 className="hero-fade-1 mb-6 font-h text-[clamp(2.4rem,5vw,3.75rem)] font-bold leading-[1.1] text-nordic-navy">
                 Vi brinner för en smart ekonomihantering
               </h1>
-              <p className="hero-fade-2 mb-4 max-w-2xl font-b text-xl font-light leading-[1.8] text-frost-muted">
+              <p className="hero-fade-2 mb-4 max-w-2xl font-b text-xl font-light leading-[1.8] text-nordic-slate">
                 Bokföringen är inte bara till för revisorn eller Skatteverket.
                 Den är ditt viktigaste verktyg för att mäta och utveckla din
                 verksamhet.
               </p>
-              <p className="hero-fade-3 mb-8 max-w-2xl font-b text-base font-light leading-[1.8] text-frost-subtle">
+              <p className="hero-fade-3 mb-8 max-w-2xl font-b text-base font-light leading-[1.8] text-nordic-subtle">
                 BASEDtech Sweden AB hjälper ekonomiavdelningar och
                 redovisningsansvariga att automatisera och effektivisera
                 bokföringen. Med över 20 års erfarenhet inom byråvärlden har vi
@@ -100,13 +96,13 @@ export default function HomePage() {
               <div className="hero-fade-4 flex flex-wrap justify-center gap-4 md:justify-start">
                 <Link
                   href="/kontakt"
-                  className="rounded-full bg-aurora-teal px-8 py-4 font-b text-base font-semibold text-arctic-night transition-transform duration-300 hover:scale-[1.04]"
+                  className="rounded-full bg-nordic-teal px-8 py-4 font-b text-base font-semibold text-white transition-colors duration-300 hover:bg-nordic-teal-light"
                 >
                   Kostnadsfri analys
                 </Link>
                 <Link
                   href="#tjanster"
-                  className="rounded-full border border-aurora-teal px-8 py-4 font-b text-base font-semibold text-aurora-teal transition-colors duration-300 hover:bg-[rgba(46,207,176,0.08)]"
+                  className="rounded-full border border-nordic-teal px-8 py-4 font-b text-base font-semibold text-nordic-teal transition-colors duration-300 hover:bg-[#E6F7F4]"
                 >
                   Läs mer
                 </Link>
@@ -119,7 +115,10 @@ export default function HomePage() {
                 width={560}
                 height={480}
                 className="h-auto w-full max-w-[480px] object-contain"
-                style={{ filter: "drop-shadow(var(--glow-teal))" }}
+                style={{
+                  filter:
+                    "drop-shadow(0 8px 32px rgba(14, 124, 110, 0.15))",
+                }}
                 priority
               />
             </div>
@@ -127,7 +126,8 @@ export default function HomePage() {
         </section>
         <section
           id="tjanster"
-          className="reveal scroll-mt-[84px] bg-arctic-deep px-6 py-24 md:px-8"
+          className="reveal scroll-mt-[84px] px-6 py-24 md:px-8"
+          style={{ background: "#EEF4F8" }}
         >
           <div className="mx-auto max-w-container">
             <div className="mb-16 text-center">
@@ -144,17 +144,20 @@ export default function HomePage() {
                   aria-hidden
                 />
               </div>
-              <h2 className="font-h text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-none text-frost-white">
+              <h2 className="font-h text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-none text-nordic-navy">
                 Tre steg mot full{" "}
-                <span className="text-aurora-teal">automagi</span>
+                <span className="text-nordic-teal">automagi</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-aurora-teal">
+              <div
+                className="rounded-2xl border border-[#C8DDE9] bg-white p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 16px rgba(15,34,64,0.07)" }}
+              >
                 <div className="mb-4">
                   <SnowflakeSvg className="h-6 w-6 text-aurora-teal" />
                 </div>
-                <div className="mb-6 overflow-hidden rounded-xl bg-[rgba(255,255,255,0.03)]">
+                <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
                     src="/images/manadsrapport-pingvin.png"
                     alt="Pingvin vid månadsrapport"
@@ -163,29 +166,32 @@ export default function HomePage() {
                     className="h-auto w-full object-cover"
                   />
                 </div>
-                <h3 className="mb-3 font-h text-xl font-bold text-frost-white">
+                <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
                   Vem älskar inte rena skrivbord?
                 </h3>
-                <p className="font-b text-base font-light leading-[1.75] text-frost-muted">
+                <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
                   Allt börjar med en korrekt grund att stå på. Vi granskar och
                   justerar historisk bokföringsdata så att den är pricksäker,
                   sedan är vi redo för automagi.
                 </p>
               </div>
-              <div className="rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-aurora-teal">
+              <div
+                className="rounded-2xl border border-[#C8DDE9] bg-white p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 16px rgba(15,34,64,0.07)" }}
+              >
                 <div className="mb-4">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
-                    className="h-6 w-6 text-aurora-purple"
+                    className="h-6 w-6 text-aurora-teal"
                     aria-hidden
                   >
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                   </svg>
                 </div>
-                <div className="mb-6 overflow-hidden rounded-xl bg-[rgba(255,255,255,0.03)]">
+                <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
                     src="/images/automagi.png"
                     alt="Pingvin vid skrivbord med tech-skärmar"
@@ -194,17 +200,20 @@ export default function HomePage() {
                     className="h-auto w-full object-cover"
                   />
                 </div>
-                <h3 className="mb-3 font-h text-xl font-bold text-frost-white">
+                <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
                   Automagi - på riktigt
                 </h3>
-                <p className="font-b text-base font-light leading-[1.75] text-frost-muted">
+                <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
                   Att skicka digitala PDF:er till affärssystemet är inte
                   automagi. Vi implementerar moderna verktyg som faktiskt
                   automatiserar dina ekonomiprocesser. Fokus skiftas från
                   manuellt arbete till renodlad ekonomisk analys.
                 </p>
               </div>
-              <div className="rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-aurora-teal">
+              <div
+                className="rounded-2xl border border-[#C8DDE9] bg-white p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 16px rgba(15,34,64,0.07)" }}
+              >
                 <div className="mb-4">
                   <svg
                     viewBox="0 0 24 24"
@@ -217,7 +226,7 @@ export default function HomePage() {
                     <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 3.5-2 5-3 6H8c-1-1-3-2.5-3-6a7 7 0 0 1 7-7z" />
                   </svg>
                 </div>
-                <div className="mb-6 overflow-hidden rounded-xl bg-[rgba(255,255,255,0.03)]">
+                <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
                     src="/images/eureka.png"
                     alt="Pingvin vid whiteboard med lösningsflöde"
@@ -226,10 +235,10 @@ export default function HomePage() {
                     className="h-auto w-full object-cover"
                   />
                 </div>
-                <h3 className="mb-3 font-h text-xl font-bold text-frost-white">
+                <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
                   EUREKA!
                 </h3>
-                <p className="font-b text-base font-light leading-[1.75] text-frost-muted">
+                <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
                   Det finns alltid saker utanför bokföringen som driver tid -
                   från specialrapporter till anpassade listor. Vi hittar dem,
                   automatiserar dem. Vi kan redovisning, uppföljning och kod.
@@ -241,14 +250,10 @@ export default function HomePage() {
         </section>
         <section
           id="om-oss"
-          className="reveal relative scroll-mt-[84px] overflow-hidden bg-arctic-night px-6 py-24 md:px-8"
+          className="reveal scroll-mt-[84px] px-6 py-24 md:px-8"
+          style={{ background: "#F8FAFB" }}
         >
-          <div
-            className="pointer-events-none absolute inset-0 z-0"
-            style={{ background: "var(--aurora-gradient)", opacity: 0.5 }}
-            aria-hidden
-          />
-          <div className="relative z-[1] mx-auto max-w-container">
+          <div className="mx-auto max-w-container">
             <div className="mb-12 text-center">
               <div className="mb-6 flex items-center justify-center gap-3">
                 <span
@@ -263,17 +268,20 @@ export default function HomePage() {
                   aria-hidden
                 />
               </div>
-              <h2 className="font-h text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1.1] text-frost-white">
+              <h2 className="font-h text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1.1] text-nordic-navy">
                 Marknadens vassaste verktyg - enligt oss
               </h2>
-              <p className="mx-auto mt-6 max-w-2xl font-b text-base font-light leading-[1.8] text-frost-muted">
+              <p className="mx-auto mt-6 max-w-2xl font-b text-base font-light leading-[1.8] text-nordic-subtle">
                 Vi samarbetar med leverantörer som tillhandahåller svenska,
                 molnbaserade och GDPR-säkrade program som kopplas på efter
                 behov. Nedan är ett urval av produkter vi arbetar med.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="flex flex-row gap-5 rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-aurora-teal">
+              <div
+                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
+              >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
                     src="/images/reda-pingvin.png"
@@ -284,17 +292,20 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-h text-lg font-bold text-frost-white">
+                  <h3 className="mb-2 font-h text-lg font-bold text-nordic-navy">
                     REDA
                   </h3>
-                  <p className="font-b text-sm font-light leading-[1.75] text-frost-muted">
+                  <p className="font-b text-sm font-light leading-[1.75] text-nordic-slate">
                     AI-tolkad fakturahantering med egna kontrollregler. Lägg
                     inte onödig tid på korrekta fakturor - REDA hanterar dem åt
                     dig.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-5 rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-aurora-teal">
+              <div
+                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
+              >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
                     src="/images/mynt-pingvin.png"
@@ -305,17 +316,20 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-h text-lg font-bold text-frost-white">
+                  <h3 className="mb-2 font-h text-lg font-bold text-nordic-navy">
                     Mynt
                   </h3>
-                  <p className="font-b text-sm font-light leading-[1.75] text-frost-muted">
+                  <p className="font-b text-sm font-light leading-[1.75] text-nordic-slate">
                     VISA-kort med tillhörande app. Fota kvittot direkt och
                     skicka det till bokföringen. Kopplas till Google Pay och
                     Apple Pay.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-5 rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-aurora-teal">
+              <div
+                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
+              >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
                     src="/images/fieldly-pingvin.png"
@@ -326,17 +340,20 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-h text-lg font-bold text-frost-white">
+                  <h3 className="mb-2 font-h text-lg font-bold text-nordic-navy">
                     Fieldly
                   </h3>
-                  <p className="font-b text-sm font-light leading-[1.75] text-frost-muted">
+                  <p className="font-b text-sm font-light leading-[1.75] text-nordic-slate">
                     Med Fieldly i fickan och på kontoret arbetar, planerar och
                     kommunicerar du mer effektivt med kollegorna - full kontroll,
                     lyckade projekt och nöjda kunder.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-5 rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-aurora-teal">
+              <div
+                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
+              >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
                     src="/images/manadsrapport-pingvin.png"
@@ -347,13 +364,13 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <span className="mb-2 inline-block rounded-full bg-[rgba(123,94,167,0.2)] px-3 py-1 font-b text-xs font-medium text-aurora-purple">
+                  <span className="mb-2 inline-block rounded-full border border-aurora-teal bg-[#E6F7F4] px-3 py-1 font-b text-xs font-medium text-nordic-teal">
                     Lanseras i september
                   </span>
-                  <h3 className="mb-2 font-h text-lg font-bold text-frost-white">
+                  <h3 className="mb-2 font-h text-lg font-bold text-nordic-navy">
                     Månadsrapport-knappen
                   </h3>
-                  <p className="font-b text-sm font-light leading-[1.75] text-frost-muted">
+                  <p className="font-b text-sm font-light leading-[1.75] text-nordic-slate">
                     Månadsrapporten klar med ett enda knapptryck. Lite
                     inställningar krävs första gången, sedan sköter det sig
                     självt. Kontakta oss för mer info.
@@ -364,73 +381,80 @@ export default function HomePage() {
           </div>
         </section>
         <section
-          className="reveal relative overflow-hidden px-6 py-24 md:px-8"
+          className="reveal relative overflow-hidden border-t border-[#C8DDE9] px-6 py-24 md:px-8"
           style={{
-            background: "linear-gradient(to bottom, #0A1628, #060D1A)",
+            background:
+              "linear-gradient(160deg, #EEF4F8 0%, #E6F7F4 100%)",
           }}
         >
           <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute left-[8%] top-[10%] text-aurora-teal"
-            style={{ width: 20, height: 20, opacity: 0.18 }}
+            className="snowflake-medium pointer-events-none absolute left-[8%] top-[10%] text-nordic-teal"
+            style={{ width: 20, height: 20, opacity: 0.15 }}
           />
           <SnowflakeSvg
-            className="snowflake-slow pointer-events-none absolute right-[6%] top-[20%] text-frost-white"
-            style={{ width: 24, height: 24, opacity: 0.15 }}
+            className="snowflake-slow pointer-events-none absolute right-[6%] top-[20%] text-nordic-teal"
+            style={{ width: 24, height: 24, opacity: 0.12 }}
           />
           <SnowflakeSvg
-            className="snowflake-fast pointer-events-none absolute bottom-[15%] left-[12%] text-aurora-teal"
-            style={{ width: 16, height: 16, opacity: 0.2 }}
+            className="snowflake-fast pointer-events-none absolute bottom-[15%] left-[12%] text-nordic-teal"
+            style={{ width: 16, height: 16, opacity: 0.15 }}
           />
           <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute bottom-[20%] right-[10%] text-frost-white"
-            style={{ width: 22, height: 22, opacity: 0.18 }}
+            className="snowflake-medium pointer-events-none absolute bottom-[20%] right-[10%] text-nordic-teal"
+            style={{ width: 22, height: 22, opacity: 0.12 }}
           />
           <div className="relative z-[1] mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 font-h text-4xl font-bold leading-[1.1] text-frost-white">
+            <h2 className="mb-6 font-h text-4xl font-bold leading-[1.1] text-nordic-navy">
               Vi finns med dig hela vägen på effektiviseringsresan
             </h2>
-            <p className="mb-10 font-b text-lg font-light leading-[1.8] text-frost-muted">
+            <p className="mb-10 font-b text-lg font-light leading-[1.8] text-nordic-slate">
               Vi hjälper dig implementera tjänsterna och utbildar personalen i
               deras användning. AI i all ära, men när det gäller support är det
               alltid personligt som gäller.
             </p>
             <div className="mb-12 flex flex-wrap justify-center gap-6">
-              <div className="rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-6 text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(46,207,176,0.2)]">
-                  <span className="font-h text-lg font-bold text-aurora-teal">
+              <div
+                className="rounded-2xl border border-[#C8DDE9] bg-white p-6 text-center"
+                style={{ boxShadow: "0 2px 10px rgba(15,34,64,0.06)" }}
+              >
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E6F7F4]">
+                  <span className="font-h text-lg font-bold text-[#0E7C6E]">
                     DO
                   </span>
                 </div>
-                <p className="font-h text-base font-semibold text-frost-white">
+                <p className="font-h text-base font-semibold text-nordic-navy">
                   David Olsen
                 </p>
                 <a
                   href="mailto:david.olsen@basedtech.se"
-                  className="mt-1 block font-b text-sm font-light text-frost-muted transition-colors hover:text-aurora-teal"
+                  className="mt-1 block font-b text-sm font-light text-nordic-slate transition-colors hover:text-nordic-teal"
                 >
                   david.olsen@basedtech.se
                 </a>
                 <a
                   href="tel:0733017339"
-                  className="mt-1 block font-b text-sm font-light text-frost-muted transition-colors hover:text-aurora-teal"
+                  className="mt-1 block font-b text-sm font-light text-nordic-slate transition-colors hover:text-nordic-teal"
                 >
                   073-301 73 39
                 </a>
               </div>
-              <div className="rounded-2xl border border-[rgba(46,207,176,0.2)] bg-arctic-ice p-6 text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(123,94,167,0.2)]">
-                  <span className="font-h text-lg font-bold text-aurora-purple">
+              <div
+                className="rounded-2xl border border-[#C8DDE9] bg-white p-6 text-center"
+                style={{ boxShadow: "0 2px 10px rgba(15,34,64,0.06)" }}
+              >
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#EEF0F8]">
+                  <span className="font-h text-lg font-bold text-[#2E4A62]">
                     JA
                   </span>
                 </div>
-                <p className="font-h text-base font-semibold text-frost-white">
+                <p className="font-h text-base font-semibold text-nordic-navy">
                   Johan Adamsson
                 </p>
               </div>
             </div>
             <Link
               href="/kontakt"
-              className="inline-flex items-center rounded-full bg-aurora-teal px-8 py-4 font-b text-base font-semibold text-arctic-night transition-transform duration-300 hover:scale-[1.05]"
+              className="inline-flex items-center rounded-full bg-nordic-teal px-8 py-4 font-b text-base font-semibold text-white transition-colors duration-300 hover:bg-nordic-teal-light hover:scale-[1.05]"
             >
               Boka kostnadsfri analys
             </Link>

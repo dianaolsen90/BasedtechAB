@@ -32,7 +32,9 @@ html {
 
 @layer base {
   body {
-    @apply bg-polar-night text-based-body antialiased;
+    @apply antialiased;
+    background-color: #F8FAFB;
+    color: #0F2240;
     font-family: var(--font-b);
     font-weight: 300;
     font-size: 1.05rem;
@@ -142,7 +144,7 @@ html {
   bottom: 0;
   width: 100%;
   height: 1px;
-  background-color: #2de0a5;
+  background-color: #0e7c6e;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.25s ease-out;

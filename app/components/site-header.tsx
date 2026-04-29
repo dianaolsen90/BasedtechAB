@@ -70,7 +70,7 @@ const items: NavItem[] = [
 
 function NavIconWrap({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex shrink-0 opacity-[0.65] transition-opacity group-hover:opacity-100">
+    <span className="inline-flex shrink-0 opacity-[0.55] transition-opacity group-hover:opacity-100">
       {children}
     </span>
   );
@@ -115,11 +115,14 @@ export function SiteHeader() {
   }
 
   const linkBase =
-    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-nav-frost transition-colors hover:text-snow-white";
-  const linkActive = "nav-active !text-aurora-teal";
+    "nav-link-underline group inline-flex items-center gap-1.5 pb-1 font-b text-sm font-normal text-nordic-navy transition-colors hover:text-nordic-teal";
+  const linkActive = "nav-active !text-nordic-teal";
 
   return (
-    <header className="sticky top-0 z-50 min-h-[140px] w-full border-b-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.72)] shadow-[0_1px_0_rgba(0,0,0,0.2)] backdrop-blur-[14px]">
+    <header
+      className="sticky top-0 z-50 min-h-[140px] w-full border-b border-[#C8DDE9] bg-white"
+      style={{ boxShadow: "0 1px 12px rgba(15,34,64,0.06)" }}
+    >
       <div className="mx-auto flex min-h-[140px] max-w-container items-center justify-between px-8 py-2">
         <Link
           href="/"
@@ -145,7 +148,7 @@ export function SiteHeader() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group inline-flex items-center gap-1.5 rounded-[20px] border border-aurora-teal bg-transparent px-4 py-2.5 font-b text-sm font-semibold text-aurora-teal transition hover:bg-[rgba(45,224,165,0.08)]"
+                  className="group inline-flex items-center gap-1.5 rounded-[20px] border border-[#0E7C6E] bg-transparent px-4 py-2.5 font-b text-sm font-semibold text-[#0E7C6E] transition-colors duration-200 hover:bg-[#0E7C6E] hover:text-white"
                 >
                   <NavIconWrap>{item.icon}</NavIconWrap>
                   {item.label}
@@ -179,7 +182,7 @@ export function SiteHeader() {
         </nav>
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-lg border border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] text-snow-white transition-opacity hover:opacity-90 nav:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#C8DDE9] bg-white text-nordic-navy transition-opacity hover:opacity-80 nav:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Stäng meny" : "Öppna meny"}
@@ -191,13 +194,13 @@ export function SiteHeader() {
       {open ? (
         <div
           id="mobile-menu"
-          className="border-t-[0.5px] border-[rgba(125,212,240,0.15)] bg-[rgba(8,18,32,0.95)] px-8 py-4 backdrop-blur-md nav:hidden"
+          className="border-t border-[#C8DDE9] bg-white px-8 py-4 nav:hidden"
         >
           <nav className="flex flex-col gap-2" aria-label="Mobilmeny">
             {items.map((item) => {
               const active = isActive(item);
-              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-nav-frost hover:text-snow-white ${
-                active ? "text-aurora-teal" : ""
+              const rowClass = `inline-flex items-center gap-1.5 font-b text-sm font-normal text-nordic-navy hover:text-nordic-teal ${
+                active ? "text-nordic-teal" : ""
               }`;
               if (item.kind === "mailto") {
                 return (
@@ -205,7 +208,7 @@ export function SiteHeader() {
                     key={item.label}
                     href={item.href}
                     onClick={close}
-                    className="inline-flex items-center gap-1.5 rounded-[20px] border border-aurora-teal bg-transparent px-4 py-3 font-b text-sm font-semibold text-aurora-teal"
+                    className="inline-flex items-center gap-1.5 rounded-[20px] border border-[#0E7C6E] bg-transparent px-4 py-3 font-b text-sm font-semibold text-[#0E7C6E]"
                   >
                     <span className="opacity-[0.65]">{item.icon}</span>
                     {item.label}
@@ -220,7 +223,7 @@ export function SiteHeader() {
                     onClick={close}
                     className={`py-3 ${rowClass}`}
                   >
-                    <span className="opacity-[0.65]">{item.icon}</span>
+                    <span className="opacity-[0.55]">{item.icon}</span>
                     {item.label}
                   </Link>
                 );
@@ -233,7 +236,7 @@ export function SiteHeader() {
                     onClick={close}
                     className={`py-3 ${rowClass}`}
                   >
-                    <span className="opacity-[0.65]">{item.icon}</span>
+                    <span className="opacity-[0.55]">{item.icon}</span>
                     {item.label}
                   </Link>
                 );
@@ -245,7 +248,7 @@ export function SiteHeader() {
                   onClick={close}
                   className={`py-3 ${rowClass}`}
                 >
-                  <span className="opacity-[0.65]">{item.icon}</span>
+                  <span className="opacity-[0.55]">{item.icon}</span>
                   {item.label}
                 </Link>
               );

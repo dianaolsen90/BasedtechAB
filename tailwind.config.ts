@@ -40,6 +40,11 @@ const config: Config = {
         "frost-white": "#F0F8FF",
         "frost-muted": "#A8C5DA",
         "frost-subtle": "#6B8FA8",
+        "nordic-teal": "#0E7C6E",
+        "nordic-teal-light": "#12A090",
+        "nordic-navy": "#0F2240",
+        "nordic-slate": "#2E4A62",
+        "nordic-subtle": "#6B8FA8",
       },
       fontFamily: {
         h: ["var(--font-h)", "sans-serif"],
