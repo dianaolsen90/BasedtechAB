@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
             <div className="hero-fade-5 flex flex-1 items-center justify-center">
               <Image
-                src="/images/bokforing-inte-for-revisorn.png"
+                src="/Bilder/avatar.png"
                 alt="Pingvin som undervisar om bokföring"
                 width={560}
                 height={480}
@@ -159,7 +159,7 @@ export default function HomePage() {
                 </div>
                 <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
-                    src="/images/manadsrapport-pingvin.png"
+                    src="/Bilder/The Analyst.png"
                     alt="Pingvin vid månadsrapport"
                     width={400}
                     height={260}
@@ -193,7 +193,7 @@ export default function HomePage() {
                 </div>
                 <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
-                    src="/images/automagi.png"
+                    src="/Bilder/The Automator.png"
                     alt="Pingvin vid skrivbord med tech-skärmar"
                     width={400}
                     height={260}
@@ -228,7 +228,7 @@ export default function HomePage() {
                 </div>
                 <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
-                    src="/images/eureka.png"
+                    src="/Bilder/The problem solver.png"
                     alt="Pingvin vid whiteboard med lösningsflöde"
                     width={400}
                     height={260}
@@ -284,7 +284,7 @@ export default function HomePage() {
               >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
-                    src="/images/reda-pingvin.png"
+                    src="/Bilder/The Advisor.png"
                     alt="REDA - AI-tolkad fakturahantering"
                     width={100}
                     height={100}
@@ -308,7 +308,7 @@ export default function HomePage() {
               >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
-                    src="/images/mynt-pingvin.png"
+                    src="/Bilder/The tech wizard.png"
                     alt="Mynt - VISA-kort med app"
                     width={100}
                     height={100}
@@ -332,7 +332,7 @@ export default function HomePage() {
               >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
-                    src="/images/fieldly-pingvin.png"
+                    src="/Bilder/The Team Player.png"
                     alt="Fieldly - projekt och kommunikation"
                     width={100}
                     height={100}
@@ -356,7 +356,7 @@ export default function HomePage() {
               >
                 <div className="shrink-0 overflow-hidden rounded-xl">
                   <Image
-                    src="/images/manadsrapport-pingvin.png"
+                    src="/Bilder/The Analyst.png"
                     alt="Månadsrapport-knappen"
                     width={100}
                     height={100}
