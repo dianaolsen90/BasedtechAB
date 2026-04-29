@@ -43,6 +43,7 @@ export default function HomePage() {
       <ScrollRevealInit />
       <SiteHeader />
       <main>
+        {/* ── HERO ── */}
         <section
           className="relative overflow-hidden px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24"
           style={{
@@ -67,15 +68,7 @@ export default function HomePage() {
             className="snowflake-slow pointer-events-none absolute bottom-[20%] right-[12%] text-nordic-teal"
             style={{ width: 28, height: 28, opacity: 0.12 }}
           />
-          <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute left-[2%] top-1/2 text-nordic-teal"
-            style={{ width: 18, height: 18, opacity: 0.1 }}
-          />
-          <SnowflakeSvg
-            className="snowflake-fast pointer-events-none absolute right-[3%] top-1/3 text-nordic-teal"
-            style={{ width: 22, height: 22, opacity: 0.12 }}
-          />
-          <div className="relative z-[2] mx-auto flex max-w-container flex-col items-center gap-12 md:flex-row md:gap-16">
+          <div className="relative z-[2] mx-auto flex max-w-container flex-col items-center gap-10 md:flex-row md:gap-14">
             <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left">
               <h1 className="hero-fade-1 mb-6 font-h text-[clamp(2.4rem,5vw,3.75rem)] font-bold leading-[1.1] text-nordic-navy">
                 Vi brinner för en smart ekonomihantering
@@ -110,20 +103,21 @@ export default function HomePage() {
             </div>
             <div className="hero-fade-5 flex flex-1 items-center justify-center">
               <Image
-                src="/Bilder/avatar.png"
-                alt="Pingvin som undervisar om bokföring"
-                width={560}
-                height={480}
-                className="h-auto w-full max-w-[480px] object-contain"
+                src="/Bilder/The Team Player.png"
+                alt="David Olsen och Johan Adamsson - BASEDtech"
+                width={600}
+                height={520}
+                className="h-auto w-full max-w-[520px] object-contain"
                 style={{
-                  filter:
-                    "drop-shadow(0 8px 32px rgba(14, 124, 110, 0.15))",
+                  filter: "drop-shadow(0 12px 40px rgba(14, 124, 110, 0.18))",
                 }}
                 priority
               />
             </div>
           </div>
         </section>
+
+        {/* ── VAD VI GÖR ── */}
         <section
           id="tjanster"
           className="reveal scroll-mt-[84px] px-6 py-24 md:px-8"
@@ -132,17 +126,11 @@ export default function HomePage() {
           <div className="mx-auto max-w-container">
             <div className="mb-16 text-center">
               <div className="mb-6 flex items-center justify-center gap-3">
-                <span
-                  className="h-px w-10 bg-aurora-teal opacity-70"
-                  aria-hidden
-                />
+                <span className="h-px w-10 bg-aurora-teal opacity-70" aria-hidden />
                 <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-aurora-teal">
                   VAD VI GÖR
                 </p>
-                <span
-                  className="h-px w-10 bg-aurora-teal opacity-70"
-                  aria-hidden
-                />
+                <span className="h-px w-10 bg-aurora-teal opacity-70" aria-hidden />
               </div>
               <h2 className="font-h text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-none text-nordic-navy">
                 Tre steg mot full{" "}
@@ -151,103 +139,111 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <div
-                className="rounded-2xl border border-[#C8DDE9] bg-white p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
+                className="flex flex-col rounded-2xl border border-[#C8DDE9] bg-white transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 16px rgba(15,34,64,0.07)" }}
               >
-                <div className="mb-4">
-                  <SnowflakeSvg className="h-6 w-6 text-aurora-teal" />
-                </div>
-                <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
+                <div className="relative w-full overflow-hidden rounded-t-2xl bg-[#EEF4F8]" style={{ aspectRatio: "4/3" }}>
                   <Image
                     src="/Bilder/The Analyst.png"
-                    alt="Pingvin vid månadsrapport"
-                    width={400}
-                    height={260}
-                    className="h-auto w-full object-cover"
+                    alt="Pingvin analyserar bokföring"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
-                  Vem älskar inte rena skrivbord?
-                </h3>
-                <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
-                  Allt börjar med en korrekt grund att stå på. Vi granskar och
-                  justerar historisk bokföringsdata så att den är pricksäker,
-                  sedan är vi redo för automagi.
-                </p>
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="mb-3">
+                    <SnowflakeSvg className="h-6 w-6 text-aurora-teal" />
+                  </div>
+                  <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
+                    Vem älskar inte rena skrivbord?
+                  </h3>
+                  <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
+                    Allt börjar med en korrekt grund att stå på. Vi granskar och
+                    justerar historisk bokföringsdata så att den är pricksäker,
+                    sedan är vi redo för automagi.
+                  </p>
+                </div>
               </div>
               <div
-                className="rounded-2xl border border-[#C8DDE9] bg-white p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
+                className="flex flex-col rounded-2xl border border-[#C8DDE9] bg-white transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 16px rgba(15,34,64,0.07)" }}
               >
-                <div className="mb-4">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="h-6 w-6 text-aurora-teal"
-                    aria-hidden
-                  >
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                  </svg>
-                </div>
-                <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
+                <div className="relative w-full overflow-hidden rounded-t-2xl bg-[#EEF4F8]" style={{ aspectRatio: "4/3" }}>
                   <Image
                     src="/Bilder/The Automator.png"
-                    alt="Pingvin vid skrivbord med tech-skärmar"
-                    width={400}
-                    height={260}
-                    className="h-auto w-full object-cover"
+                    alt="Pingvin automatiserar ekonomiflöden"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
-                  Automagi - på riktigt
-                </h3>
-                <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
-                  Att skicka digitala PDF:er till affärssystemet är inte
-                  automagi. Vi implementerar moderna verktyg som faktiskt
-                  automatiserar dina ekonomiprocesser. Fokus skiftas från
-                  manuellt arbete till renodlad ekonomisk analys.
-                </p>
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="mb-3">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      className="h-6 w-6 text-aurora-teal"
+                      aria-hidden
+                    >
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                  </div>
+                  <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
+                    Automagi - på riktigt
+                  </h3>
+                  <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
+                    Att skicka digitala PDF:er till affärssystemet är inte
+                    automagi. Vi implementerar moderna verktyg som faktiskt
+                    automatiserar dina ekonomiprocesser. Fokus skiftas från
+                    manuellt arbete till renodlad ekonomisk analys.
+                  </p>
+                </div>
               </div>
               <div
-                className="rounded-2xl border border-[#C8DDE9] bg-white p-8 transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
+                className="flex flex-col rounded-2xl border border-[#C8DDE9] bg-white transition-all duration-[350ms] hover:scale-[1.02] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 16px rgba(15,34,64,0.07)" }}
               >
-                <div className="mb-4">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className="h-6 w-6 text-aurora-green"
-                    aria-hidden
-                  >
-                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 3.5-2 5-3 6H8c-1-1-3-2.5-3-6a7 7 0 0 1 7-7z" />
-                  </svg>
-                </div>
-                <div className="mb-6 overflow-hidden rounded-xl bg-[#EEF4F8]">
+                <div className="relative w-full overflow-hidden rounded-t-2xl bg-[#EEF4F8]" style={{ aspectRatio: "4/3" }}>
                   <Image
                     src="/Bilder/The problem solver.png"
-                    alt="Pingvin vid whiteboard med lösningsflöde"
-                    width={400}
-                    height={260}
-                    className="h-auto w-full object-cover"
+                    alt="Pingvin löser ekonomiska utmaningar"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
-                  EUREKA!
-                </h3>
-                <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
-                  Det finns alltid saker utanför bokföringen som driver tid -
-                  från specialrapporter till anpassade listor. Vi hittar dem,
-                  automatiserar dem. Vi kan redovisning, uppföljning och kod.
-                  Vad behöver du?
-                </p>
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="mb-3">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      className="h-6 w-6 text-aurora-green"
+                      aria-hidden
+                    >
+                      <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 3.5-2 5-3 6H8c-1-1-3-2.5-3-6a7 7 0 0 1 7-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="mb-3 font-h text-xl font-bold text-nordic-navy">
+                    EUREKA!
+                  </h3>
+                  <p className="font-b text-base font-light leading-[1.75] text-nordic-slate">
+                    Det finns alltid saker utanför bokföringen som driver tid -
+                    från specialrapporter till anpassade listor. Vi hittar dem,
+                    automatiserar dem. Vi kan redovisning, uppföljning och kod.
+                    Vad behöver du?
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* ── PARTNERS ── */}
         <section
           id="om-oss"
           className="reveal scroll-mt-[84px] px-6 py-24 md:px-8"
@@ -256,17 +252,11 @@ export default function HomePage() {
           <div className="mx-auto max-w-container">
             <div className="mb-12 text-center">
               <div className="mb-6 flex items-center justify-center gap-3">
-                <span
-                  className="h-px w-10 bg-aurora-teal opacity-70"
-                  aria-hidden
-                />
+                <span className="h-px w-10 bg-aurora-teal opacity-70" aria-hidden />
                 <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-aurora-teal">
                   VERKTYG
                 </p>
-                <span
-                  className="h-px w-10 bg-aurora-teal opacity-70"
-                  aria-hidden
-                />
+                <span className="h-px w-10 bg-aurora-teal opacity-70" aria-hidden />
               </div>
               <h2 className="font-h text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1.1] text-nordic-navy">
                 Marknadens vassaste verktyg - enligt oss
@@ -279,16 +269,16 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div
-                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                className="flex flex-row items-center gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
               >
-                <div className="shrink-0 overflow-hidden rounded-xl">
+                <div className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
                     src="/Bilder/The Advisor.png"
                     alt="REDA - AI-tolkad fakturahantering"
-                    width={100}
-                    height={100}
-                    className="h-[100px] w-[100px] object-cover"
+                    fill
+                    className="object-cover object-top"
+                    sizes="120px"
                   />
                 </div>
                 <div>
@@ -303,16 +293,16 @@ export default function HomePage() {
                 </div>
               </div>
               <div
-                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                className="flex flex-row items-center gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
               >
-                <div className="shrink-0 overflow-hidden rounded-xl">
+                <div className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
                     src="/Bilder/The tech wizard.png"
                     alt="Mynt - VISA-kort med app"
-                    width={100}
-                    height={100}
-                    className="h-[100px] w-[100px] object-cover"
+                    fill
+                    className="object-cover object-top"
+                    sizes="120px"
                   />
                 </div>
                 <div>
@@ -327,16 +317,16 @@ export default function HomePage() {
                 </div>
               </div>
               <div
-                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                className="flex flex-row items-center gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
               >
-                <div className="shrink-0 overflow-hidden rounded-xl">
+                <div className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
-                    src="/Bilder/The Team Player.png"
+                    src="/Bilder/The problem solver.png"
                     alt="Fieldly - projekt och kommunikation"
-                    width={100}
-                    height={100}
-                    className="h-[100px] w-[100px] object-cover"
+                    fill
+                    className="object-cover object-top"
+                    sizes="120px"
                   />
                 </div>
                 <div>
@@ -351,16 +341,16 @@ export default function HomePage() {
                 </div>
               </div>
               <div
-                className="flex flex-row gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
+                className="flex flex-row items-center gap-5 rounded-2xl border border-[#C8DDE9] bg-white p-6 transition-all duration-[350ms] hover:scale-[1.01] hover:border-[#0E7C6E]"
                 style={{ boxShadow: "0 2px 12px rgba(15,34,64,0.06)" }}
               >
-                <div className="shrink-0 overflow-hidden rounded-xl">
+                <div className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-xl bg-[#EEF4F8]">
                   <Image
                     src="/Bilder/The Analyst.png"
                     alt="Månadsrapport-knappen"
-                    width={100}
-                    height={100}
-                    className="h-[100px] w-[100px] object-cover"
+                    fill
+                    className="object-cover object-top"
+                    sizes="120px"
                   />
                 </div>
                 <div>
@@ -380,84 +370,75 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ── CTA ── */}
         <section
-          className="reveal relative overflow-hidden border-t border-[#C8DDE9] px-6 py-24 md:px-8"
+          className="reveal border-t border-[#C8DDE9] px-6 py-24 md:px-8"
           style={{
-            background:
-              "linear-gradient(160deg, #EEF4F8 0%, #E6F7F4 100%)",
+            background: "linear-gradient(160deg, #EEF4F8 0%, #E6F7F4 100%)",
           }}
         >
-          <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute left-[8%] top-[10%] text-nordic-teal"
-            style={{ width: 20, height: 20, opacity: 0.15 }}
-          />
-          <SnowflakeSvg
-            className="snowflake-slow pointer-events-none absolute right-[6%] top-[20%] text-nordic-teal"
-            style={{ width: 24, height: 24, opacity: 0.12 }}
-          />
-          <SnowflakeSvg
-            className="snowflake-fast pointer-events-none absolute bottom-[15%] left-[12%] text-nordic-teal"
-            style={{ width: 16, height: 16, opacity: 0.15 }}
-          />
-          <SnowflakeSvg
-            className="snowflake-medium pointer-events-none absolute bottom-[20%] right-[10%] text-nordic-teal"
-            style={{ width: 22, height: 22, opacity: 0.12 }}
-          />
-          <div className="relative z-[1] mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 font-h text-4xl font-bold leading-[1.1] text-nordic-navy">
-              Vi finns med dig hela vägen på effektiviseringsresan
-            </h2>
-            <p className="mb-10 font-b text-lg font-light leading-[1.8] text-nordic-slate">
-              Vi hjälper dig implementera tjänsterna och utbildar personalen i
-              deras användning. AI i all ära, men när det gäller support är det
-              alltid personligt som gäller.
-            </p>
-            <div className="mb-12 flex flex-wrap justify-center gap-6">
-              <div
-                className="rounded-2xl border border-[#C8DDE9] bg-white p-6 text-center"
-                style={{ boxShadow: "0 2px 10px rgba(15,34,64,0.06)" }}
-              >
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#E6F7F4]">
-                  <span className="font-h text-lg font-bold text-[#0E7C6E]">
-                    DO
-                  </span>
-                </div>
-                <p className="font-h text-base font-semibold text-nordic-navy">
-                  David Olsen
-                </p>
-                <a
-                  href="mailto:david.olsen@basedtech.se"
-                  className="mt-1 block font-b text-sm font-light text-nordic-slate transition-colors hover:text-nordic-teal"
-                >
-                  david.olsen@basedtech.se
-                </a>
-                <a
-                  href="tel:0733017339"
-                  className="mt-1 block font-b text-sm font-light text-nordic-slate transition-colors hover:text-nordic-teal"
-                >
-                  073-301 73 39
-                </a>
+          <div className="mx-auto max-w-container">
+            <div className="flex flex-col items-center gap-12 md:flex-row md:gap-16">
+              <div className="flex flex-1 items-center justify-center">
+                <Image
+                  src="/Bilder/The Team Player.png"
+                  alt="David Olsen och Johan Adamsson - BASEDtech teamet"
+                  width={560}
+                  height={480}
+                  className="h-auto w-full max-w-[480px] object-contain"
+                  style={{
+                    filter: "drop-shadow(0 8px 32px rgba(14, 124, 110, 0.15))",
+                  }}
+                />
               </div>
-              <div
-                className="rounded-2xl border border-[#C8DDE9] bg-white p-6 text-center"
-                style={{ boxShadow: "0 2px 10px rgba(15,34,64,0.06)" }}
-              >
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#EEF0F8]">
-                  <span className="font-h text-lg font-bold text-[#2E4A62]">
-                    JA
-                  </span>
-                </div>
-                <p className="font-h text-base font-semibold text-nordic-navy">
-                  Johan Adamsson
+              <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left">
+                <h2 className="mb-6 font-h text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.1] text-nordic-navy">
+                  Vi finns med dig hela vägen på effektiviseringsresan
+                </h2>
+                <p className="mb-8 font-b text-lg font-light leading-[1.8] text-nordic-slate">
+                  Vi hjälper dig implementera tjänsterna och utbildar personalen
+                  i deras användning. AI i all ära, men när det gäller support
+                  är det alltid personligt som gäller.
                 </p>
+                <div className="mb-8 flex flex-wrap justify-center gap-4 md:justify-start">
+                  <div
+                    className="rounded-2xl border border-[#C8DDE9] bg-white px-6 py-4 text-center"
+                    style={{ boxShadow: "0 2px 10px rgba(15,34,64,0.06)" }}
+                  >
+                    <p className="font-h text-base font-semibold text-nordic-navy">
+                      David Olsen
+                    </p>
+                    <a
+                      href="mailto:david.olsen@basedtech.se"
+                      className="mt-1 block font-b text-sm font-light text-nordic-slate transition-colors hover:text-nordic-teal"
+                    >
+                      david.olsen@basedtech.se
+                    </a>
+                    <a
+                      href="tel:0733017339"
+                      className="mt-0.5 block font-b text-sm font-light text-nordic-slate transition-colors hover:text-nordic-teal"
+                    >
+                      073-301 73 39
+                    </a>
+                  </div>
+                  <div
+                    className="rounded-2xl border border-[#C8DDE9] bg-white px-6 py-4 text-center"
+                    style={{ boxShadow: "0 2px 10px rgba(15,34,64,0.06)" }}
+                  >
+                    <p className="font-h text-base font-semibold text-nordic-navy">
+                      Johan Adamsson
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href="/kontakt"
+                  className="inline-flex items-center rounded-full bg-nordic-teal px-8 py-4 font-b text-base font-semibold text-white transition-colors duration-300 hover:bg-nordic-teal-light"
+                >
+                  Boka kostnadsfri analys
+                </Link>
               </div>
             </div>
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center rounded-full bg-nordic-teal px-8 py-4 font-b text-base font-semibold text-white transition-colors duration-300 hover:bg-nordic-teal-light hover:scale-[1.05]"
-            >
-              Boka kostnadsfri analys
-            </Link>
           </div>
         </section>
       </main>
