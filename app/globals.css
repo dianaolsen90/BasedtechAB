@@ -20,6 +20,14 @@ html {
   --based-border-hover: rgba(125, 212, 240, 0.22);
   --font-h: "Barlow Condensed", sans-serif;
   --font-b: "Barlow", sans-serif;
+  --aurora-gradient: linear-gradient(
+    135deg,
+    rgba(46, 207, 176, 0.15) 0%,
+    rgba(123, 94, 167, 0.12) 40%,
+    rgba(59, 130, 246, 0.1) 100%
+  );
+  --glow-teal: 0 0 40px rgba(46, 207, 176, 0.25);
+  --glow-purple: 0 0 40px rgba(123, 94, 167, 0.2);
 }
 
 @layer base {
@@ -407,6 +415,27 @@ html {
   opacity: 0.65;
 }
 
+@keyframes snowflakeRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.snowflake-slow {
+  animation: snowflakeRotate 36s linear infinite;
+}
+
+.snowflake-medium {
+  animation: snowflakeRotate 24s linear infinite;
+}
+
+.snowflake-fast {
+  animation: snowflakeRotate 16s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -430,6 +459,11 @@ html {
     opacity: 1;
   }
   .aurora-band {
+    animation: none !important;
+  }
+  .snowflake-slow,
+  .snowflake-medium,
+  .snowflake-fast {
     animation: none !important;
   }
 }

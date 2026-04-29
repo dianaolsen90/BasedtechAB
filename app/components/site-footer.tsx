@@ -22,7 +22,7 @@ const sectionLabelClass =
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t-[0.5px] border-[rgba(125,212,240,0.08)] bg-[#060F1C]">
+    <footer className="border-t border-[rgba(46,207,176,0.3)] bg-[#030810]">
       <div className="mx-auto max-w-[1160px] px-8 pb-6 pt-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12 lg:items-start">
           <div>
@@ -38,7 +38,7 @@ export function SiteFooter() {
                 className="h-[240px] w-auto max-w-full object-contain object-left md:h-[272px]"
               />
             </Link>
-            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[rgba(180,215,235,0.35)]">
+            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[rgba(168,197,218,0.55)]">
               Smart ekonomistyrning.
               <br />
               Personlig service, alltid.
@@ -111,12 +111,12 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[rgba(125,212,240,0.08)] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[rgba(46,207,176,0.15)] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
           <span className="text-center font-b text-[0.8rem] font-light text-[rgba(180,215,235,0.35)] min-[600px]:text-left">
             {year} BASEDtech Sweden AB
           </span>
-          <span className="text-center font-b text-[0.8rem] font-light text-[rgba(180,215,235,0.35)] min-[600px]:text-right">
-            Automagi för din ekonomi
+          <span className="text-center font-b text-[0.8rem] font-light text-aurora-teal min-[600px]:text-right">
+            Automagi för din ekonomi.
           </span>
         </div>
       </div>
