@@ -4,111 +4,79 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-function AnimatedWord({
-  word,
-  index,
-  className,
-}: {
-  word: string;
-  index: number;
-  className: string;
-}) {
-  return (
-    <motion.span
-      className={className}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        delay: 0.4 + index * 0.12,
-        duration: 0.55,
-        ease: [0.0, 0.0, 0.2, 1] as [number, number, number, number],
-      }}
-    >
-      {word}
-    </motion.span>
-  );
-}
-
-const navyWords = ["Automatiserad", "bokföring"];
-const tealWords = ["som", "glider", "på", "is"];
+const ease = [0.0, 0.0, 0.2, 1] as [number, number, number, number];
 
 export function HeroBanner() {
   return (
-    <section
-      className="relative flex min-h-screen w-full items-center overflow-hidden"
-      aria-label="Hero"
-    >
+    <section className="w-full" aria-label="Hero bild">
       <Image
         src="/Bilder/herobase.png"
         alt="BASEDtech – automatiserad bokföring"
-        fill
+        width={1920}
+        height={1080}
         priority
-        className="object-cover object-center"
+        className="h-auto w-full object-contain"
         sizes="100vw"
       />
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(100deg, rgba(240,248,253,0.88) 0%, rgba(232,244,252,0.72) 45%, rgba(220,238,250,0.15) 100%)",
-        }}
-      />
-      <div className="relative z-10 w-full px-6 py-32 md:px-12 lg:px-20">
-        <div className="max-w-xl">
-          <motion.p
-            className="mb-5 font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0EA5C9]"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+    </section>
+  );
+}
+
+export function HeroTagline() {
+  return (
+    <section
+      className="px-6 py-16"
+      style={{ background: "#F8FAFB" }}
+      aria-label="Tagline"
+    >
+      <div className="max-w-3xl">
+        <motion.p
+          className="mb-3 text-sm font-medium uppercase tracking-widest text-[#0EA5C9]"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease }}
+        >
+          Automagi för din ekonomi
+        </motion.p>
+        <motion.p
+          className="font-h text-4xl font-bold leading-tight text-[#1B2F4A] md:text-5xl"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.6, ease }}
+        >
+          Automatiserad bokföring
+        </motion.p>
+        <motion.p
+          className="font-h text-4xl font-bold italic leading-tight text-[#0EA5C9] md:text-5xl"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6, ease }}
+        >
+          som glider på is
+        </motion.p>
+        <motion.div
+          className="my-4 h-0.5 w-16 bg-[#0EA5C9]"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6, ease }}
+        />
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6, ease }}
+        >
+          <Link
+            href="/kontakt"
+            className="inline-flex items-center rounded-full bg-[#0EA5C9] px-8 py-4 font-h text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#0891B2]"
           >
-            Automagi för din ekonomi
-          </motion.p>
-          <h1 className="mb-5 font-h text-[clamp(2.6rem,6vw,4.2rem)] font-bold leading-[1.06]">
-            <span className="flex flex-wrap gap-x-4">
-              {navyWords.map((w, i) => (
-                <AnimatedWord
-                  key={w}
-                  word={w}
-                  index={i}
-                  className="text-[#1B2F4A]"
-                />
-              ))}
-            </span>
-            <span className="flex flex-wrap gap-x-4">
-              {tealWords.map((w, i) => (
-                <AnimatedWord
-                  key={w}
-                  word={w}
-                  index={navyWords.length + i}
-                  className="italic text-[#0EA5C9]"
-                />
-              ))}
-            </span>
-          </h1>
-          <motion.div
-            className="mb-8 h-[2px] w-14 bg-[#0EA5C9]"
-            initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            style={{ transformOrigin: "left" }}
-            transition={{
-              delay: 1.1,
-              duration: 0.5,
-              ease: [0.0, 0.0, 0.2, 1] as [number, number, number, number],
-            }}
-          />
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-          >
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center rounded-full bg-[#0EA5C9] px-8 py-4 font-h text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#0891B2]"
-            >
-              Boka kostnadsfri analys
-            </Link>
-          </motion.div>
-        </div>
+            Boka kostnadsfri analys
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

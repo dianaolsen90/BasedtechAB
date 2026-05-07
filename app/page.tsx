@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { HeroBanner } from "@/app/components/hero-banner";
+import { HeroBanner, HeroTagline } from "@/app/components/hero-banner";
 import {
   IntroSection,
   CardsSection,
@@ -21,6 +21,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <HeroBanner />
+        <HeroTagline />
         <IntroSection />
         <CardsSection />
         <ProductsSection />
