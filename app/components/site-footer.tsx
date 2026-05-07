@@ -1,17 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  IconLinkedIn20,
-  IconMapPin,
-  IconMail14,
-  IconPhone14,
-} from "./icons";
+import { IconLinkedIn20, IconMail14, IconPhone14 } from "./icons";
 
 const companyLinks = [
   { href: "/#om-oss", label: "Om oss" },
-  { href: "/#meet-larry", label: "Möt Larry" },
-  { href: "/karriar", label: "Karriär" },
-  { href: "/blog", label: "Blog" },
+  { href: "/#tjanster", label: "Tjänster" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 const legalLinks = [
@@ -22,52 +16,40 @@ const legalLinks = [
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-[#C8DDE9] bg-white">
-      <div className="mx-auto max-w-[1160px] px-6 pb-6 pt-14 sm:px-10">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          <div className="flex flex-col gap-5">
+    <footer
+      className="border-t-2 border-[#0EA5C9]"
+      style={{ background: "linear-gradient(160deg, #F7FAFB 0%, #EBF5F9 100%)" }}
+    >
+      <div className="mx-auto max-w-[1160px] px-6 pb-8 pt-14 sm:px-10">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+          <div className="flex flex-col gap-4">
             <Link href="/" className="inline-flex shrink-0 transition-opacity hover:opacity-90">
               <Image
                 src="/Bilder/1.png"
                 alt="BASEDtech Sweden AB logotyp"
                 width={900}
                 height={565}
-                className="h-[72px] w-auto object-contain object-left"
+                className="h-[70px] w-auto object-contain object-left"
                 style={{ mixBlendMode: "multiply" }}
               />
             </Link>
-            <p className="max-w-[200px] text-sm leading-relaxed text-[#2E4A62]">
-              Automagi för din ekonomi.
+            <p className="text-sm text-gray-500">Automagi för din ekonomi.</p>
+            <p className="text-xs italic text-gray-400">
+              Vi arbetar med klienter över hela Norden med fokus på digital
+              ekonomiautomation.
             </p>
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/company/basedtech-sweden-ab"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="BASEDtech på LinkedIn"
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#C8DDE9] text-[#2E4A62] transition-colors hover:border-[#0E7C6E] hover:text-[#0E7C6E]"
-              >
-                <IconLinkedIn20 className="h-[16px] w-[16px]" />
-              </a>
-            </div>
+            <a
+              href="https://www.linkedin.com/company/basedtech-sweden-ab"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="BASEDtech på LinkedIn"
+              className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#BAE6F7] text-[#2D4A5F] transition-colors hover:border-[#0EA5C9] hover:text-[#0EA5C9]"
+            >
+              <IconLinkedIn20 className="h-4 w-4" />
+            </a>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0E7C6E]">
-              Kontor
-            </h3>
-            <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-2 text-sm text-[#2E4A62]">
-                <IconMapPin className="mt-0.5 h-[14px] w-[14px] shrink-0 text-[#0E7C6E]" />
-                <span>Östra Längdgatan 5, 611 39 Nyköping</span>
-              </li>
-              <li className="text-sm leading-relaxed text-[#6B8FA8]">
-                Vi arbetar med klienter över hela Norden med fokus på digital
-                ekonomiautomation.
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0E7C6E]">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#0EA5C9]">
               Företaget
             </h3>
             <ul className="flex flex-col gap-2.5">
@@ -75,52 +57,49 @@ export function SiteFooter() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-[#2E4A62] transition-colors hover:text-[#0E7C6E]"
+                    className="group relative inline-block text-sm text-[#2D4A5F] transition-colors hover:text-[#0EA5C9]"
                   >
                     {l.label}
+                    <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[#0EA5C9] transition-all duration-200 group-hover:w-full" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0E7C6E]">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#0EA5C9]">
               Kontakt
             </h3>
             <ul className="flex flex-col gap-3">
               <li>
                 <a
                   href="tel:0733017339"
-                  className="flex items-center gap-2 text-sm text-[#2E4A62] transition-colors hover:text-[#0E7C6E]"
+                  className="flex items-center gap-2 text-sm text-[#2D4A5F] transition-colors hover:text-[#0EA5C9]"
                 >
-                  <IconPhone14 className="shrink-0 text-[#0E7C6E]" />
+                  <IconPhone14 className="shrink-0 text-[#0EA5C9]" />
                   073-301 73 39
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:hej@basedtech.se"
-                  className="flex items-center gap-2 text-sm text-[#2E4A62] transition-colors hover:text-[#0E7C6E]"
+                  className="flex items-center gap-2 text-sm text-[#2D4A5F] transition-colors hover:text-[#0EA5C9]"
                 >
-                  <IconMail14 className="shrink-0 text-[#0E7C6E]" />
+                  <IconMail14 className="shrink-0 text-[#0EA5C9]" />
                   hej@basedtech.se
                 </a>
-              </li>
-              <li className="flex items-start gap-2 text-sm text-[#2E4A62]">
-                <IconMapPin className="mt-0.5 shrink-0 text-[#0E7C6E]" />
-                Östra Längdgatan 5, 611 39 Nyköping
               </li>
             </ul>
             <Link
               href="/kontakt"
-              className="mt-1 inline-flex w-fit items-center rounded-[20px] border border-[#0E7C6E] px-5 py-2.5 text-sm font-semibold text-[#0E7C6E] transition-colors duration-200 hover:bg-[#0E7C6E] hover:text-white"
+              className="mt-1 inline-flex w-fit items-center rounded-full bg-[#0EA5C9] px-6 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#0891B2]"
             >
               Ta ett snack
             </Link>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-start gap-2 border-t border-[#C8DDE9] pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <span className="text-xs text-[#6B8FA8]">
+        <div className="mt-10 flex flex-col gap-2 border-t border-[#BAE6F7] pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <span className="text-xs text-gray-400">
             © {year} BASEDtech Sweden AB · Org.nr 559535-2286 · Östra Längdgatan 5, 611 39 Nyköping
           </span>
           <div className="flex items-center gap-4">
@@ -128,7 +107,7 @@ export function SiteFooter() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-xs text-[#6B8FA8] transition-colors hover:text-[#0E7C6E]"
+                className="text-xs text-gray-400 transition-colors hover:text-[#0EA5C9]"
               >
                 {l.label}
               </Link>
