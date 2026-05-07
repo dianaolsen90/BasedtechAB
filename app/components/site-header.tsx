@@ -15,7 +15,7 @@ import {
   IconStar,
 } from "./icons";
 
-const SECTION_IDS = ["om-oss", "tjanster", "meet-larry"] as const;
+const SECTION_IDS = ["om-oss", "tjanster"] as const;
 
 type SectionId = (typeof SECTION_IDS)[number];
 
@@ -46,13 +46,6 @@ const items: NavItem[] = [
     label: "Tjänster",
     sectionId: "tjanster",
     icon: <IconDocument className="h-[14px] w-[14px] shrink-0" />,
-  },
-  {
-    kind: "section",
-    href: "/#meet-larry",
-    label: "Möt Larry",
-    sectionId: "meet-larry",
-    icon: <IconStar className="h-[14px] w-[14px] shrink-0" />,
   },
   {
     kind: "kontakt",
