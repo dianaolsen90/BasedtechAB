@@ -31,11 +31,12 @@ export function SiteFooter() {
               className="inline-flex max-w-full transition-opacity hover:opacity-95"
             >
               <Image
-                src="/loggan/basedtechlogo.png"
+                src="/Bilder/1.png"
                 alt="BASEDtech Sweden AB logotyp"
                 width={900}
                 height={565}
                 className="h-[240px] w-auto max-w-full object-contain object-left md:h-[272px]"
+                style={{ filter: "brightness(0) invert(1)" }}
               />
             </Link>
             <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[#C8DDE9] opacity-60">

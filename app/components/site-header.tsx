@@ -129,11 +129,12 @@ export function SiteHeader() {
           className="group inline-flex shrink-0 items-center transition-opacity hover:opacity-95"
         >
           <Image
-            src="/loggan/basedtechlogo.png"
+            src="/Bilder/1.png"
             alt="BASEDtech Sweden AB logotyp"
             width={900}
             height={565}
             className="h-[104px] w-auto max-w-[min(88vw,440px)] object-contain object-left sm:h-[112px]"
+            style={{ mixBlendMode: "multiply" }}
             priority
           />
         </Link>
