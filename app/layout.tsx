@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CookieBanner } from "@/app/components/cookie-banner";
 
 export const metadata: Metadata = {
   title: "BASEDtech · Automagi för din ekonomi",
@@ -26,7 +27,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen font-b font-light">{children}</body>
+      <body className="min-h-screen font-b font-light">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }
