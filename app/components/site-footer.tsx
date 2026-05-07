@@ -25,7 +25,7 @@ export function SiteFooter() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="inline-flex shrink-0 transition-opacity hover:opacity-90">
               <Image
-                src="/Bilder/1.png"
+                src="/Bilder/basedlogga1.png"
                 alt="BASEDtech Sweden AB logotyp"
                 width={900}
                 height={565}

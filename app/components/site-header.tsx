@@ -122,7 +122,7 @@ export function SiteHeader() {
           className="group inline-flex shrink-0 items-center transition-opacity hover:opacity-95"
         >
           <Image
-            src="/Bilder/1.png"
+            src="/Bilder/basedlogga1.png"
             alt="BASEDtech Sweden AB logotyp"
             width={900}
             height={565}
