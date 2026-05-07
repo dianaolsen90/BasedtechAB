@@ -28,6 +28,15 @@ html {
   );
   --glow-teal: 0 0 40px rgba(46, 207, 176, 0.25);
   --glow-purple: 0 0 40px rgba(123, 94, 167, 0.2);
+
+  /* Arctic light theme */
+  --bg-primary: #F7FAFB;
+  --bg-secondary: #EBF5F9;
+  --bg-accent: #DFF0F7;
+  --text-primary: #0D2137;
+  --text-body: #2D4A5F;
+  --arctic-teal: #0EA5C9;
+  --arctic-glow: #BAE6F7;
 }
 
 @layer base {
@@ -436,6 +445,34 @@ html {
 
 .snowflake-fast {
   animation: snowflakeRotate 16s linear infinite;
+}
+
+.arctic-bg {
+  position: relative;
+}
+
+.arctic-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg stroke='%230EA5C9' stroke-width='1.2' fill='none'%3E%3Cline x1='24' y1='3' x2='24' y2='45'/%3E%3Cline x1='3' y1='24' x2='45' y2='24'/%3E%3Cline x1='7.5' y1='7.5' x2='40.5' y2='40.5'/%3E%3Cline x1='40.5' y1='7.5' x2='7.5' y2='40.5'/%3E%3Ccircle cx='24' cy='24' r='3'/%3E%3Ccircle cx='24' cy='8' r='1.5'/%3E%3Ccircle cx='24' cy='40' r='1.5'/%3E%3Ccircle cx='8' cy='24' r='1.5'/%3E%3Ccircle cx='40' cy='24' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 48px 48px;
+  background-repeat: repeat;
+}
+
+.arctic-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-divider {
+  height: 1px;
+  background-color: #BAE6F7;
+  border: none;
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
