@@ -48,14 +48,14 @@ export default function KontaktPage() {
           style={{ background: "#F7FAFB" }}
           aria-label="Kontakt intro"
         >
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
             <p className="mb-5 text-[0.7rem] font-semibold uppercase tracking-widest text-[#0EA5C9]">
               Teamet bakom BASEDtech
             </p>
             <h1 className="mb-6 font-h text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-[#0D2137]">
               Vi är enkla att nå. Och ännu enklare att prata med.
             </h1>
-            <p className="text-[1.05rem] font-light leading-[1.8] text-[#2D4A5F]">
+            <p className="mx-auto max-w-2xl text-[1.05rem] font-light leading-[1.8] text-[#2D4A5F]">
               Vi tror på korta vägar och raka svar. Oavsett om du har en specifik fråga, vill boka en kostnadsfri analys eller bara vill se om vi passar ihop, hör av dig direkt till oss. Inga mellanhänder, inga formulär som försvinner i en inkorg. Du pratar med oss från dag ett.
             </p>
           </div>
