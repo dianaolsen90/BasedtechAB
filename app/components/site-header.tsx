@@ -113,10 +113,10 @@ export function SiteHeader() {
 
   return (
     <header
-      className="sticky top-0 z-50 min-h-[140px] w-full border-b border-[#C8DDE9] bg-white"
+      className="sticky top-0 z-50 w-full border-b border-[#C8DDE9] bg-white"
       style={{ boxShadow: "0 1px 12px rgba(15,34,64,0.06)" }}
     >
-      <div className="mx-auto flex min-h-[140px] max-w-container items-center justify-between px-8 py-2">
+      <div className="mx-auto flex max-w-container items-center justify-between px-8 py-3">
         <Link
           href="/"
           className="group inline-flex shrink-0 items-center transition-opacity hover:opacity-95"
@@ -126,7 +126,7 @@ export function SiteHeader() {
             alt="BASEDtech Sweden AB logotyp"
             width={900}
             height={565}
-            className="h-[104px] w-auto max-w-[min(88vw,440px)] object-contain object-left sm:h-[112px]"
+            className="h-[52px] w-auto max-w-[min(88vw,260px)] object-contain object-left sm:h-[60px]"
             style={{ mixBlendMode: "multiply" }}
             priority
           />
@@ -142,7 +142,7 @@ export function SiteHeader() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="group inline-flex items-center gap-1.5 rounded-[20px] border border-[#0E7C6E] bg-transparent px-4 py-2.5 font-b text-sm font-semibold text-[#0E7C6E] transition-colors duration-200 hover:bg-[#0E7C6E] hover:text-white"
+                  className="group inline-flex items-center gap-1.5 rounded-full border border-[#0E7C6E] bg-transparent px-4 py-2 font-b text-sm font-semibold text-[#0E7C6E] transition-colors duration-200 hover:bg-[#0E7C6E] hover:text-white"
                 >
                   <NavIconWrap>{item.icon}</NavIconWrap>
                   {item.label}
