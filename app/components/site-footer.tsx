@@ -90,12 +90,12 @@ export function SiteFooter() {
                 </a>
               </li>
             </ul>
-            <Link
-              href="/kontakt"
+            <a
+              href="mailto:hej@basedtech.se?subject=Ta ett snack - BASEDtech"
               className="mt-1 inline-flex w-fit items-center rounded-full bg-[#0EA5C9] px-6 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#0891B2]"
             >
               Ta ett snack
-            </Link>
+            </a>
           </div>
         </div>
         <div className="mt-10 flex flex-col gap-2 border-t border-[#BAE6F7] pt-5 sm:flex-row sm:items-center sm:justify-between">

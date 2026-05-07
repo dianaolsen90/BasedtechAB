@@ -55,7 +55,7 @@ const items: NavItem[] = [
   },
   {
     kind: "mailto",
-    href: "mailto:david.olsen@basedtech.se",
+    href: "mailto:hej@basedtech.se?subject=Ta ett snack - BASEDtech",
     label: "Ta ett snack",
     icon: <IconPhone className="h-[14px] w-[14px] shrink-0" />,
   },
