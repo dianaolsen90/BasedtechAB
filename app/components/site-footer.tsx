@@ -58,9 +58,7 @@ export function SiteFooter() {
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-2 text-sm text-[#2E4A62]">
                 <IconMapPin className="mt-0.5 h-[14px] w-[14px] shrink-0 text-[#0E7C6E]" />
-                <span>
-                  Nyköping, Sverige
-                </span>
+                <span>Östra Längdgatan 5, 611 39 Nyköping</span>
               </li>
               <li className="text-sm leading-relaxed text-[#6B8FA8]">
                 Vi arbetar med klienter över hela Norden med fokus på digital
@@ -101,16 +99,16 @@ export function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="mailto:david.olsen@basedtech.se"
+                  href="mailto:hej@basedtech.se"
                   className="flex items-center gap-2 text-sm text-[#2E4A62] transition-colors hover:text-[#0E7C6E]"
                 >
                   <IconMail14 className="shrink-0 text-[#0E7C6E]" />
-                  david.olsen@basedtech.se
+                  hej@basedtech.se
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-sm text-[#2E4A62]">
-                <IconMapPin className="shrink-0 text-[#0E7C6E]" />
-                Nyköping, Sverige
+              <li className="flex items-start gap-2 text-sm text-[#2E4A62]">
+                <IconMapPin className="mt-0.5 shrink-0 text-[#0E7C6E]" />
+                Östra Längdgatan 5, 611 39 Nyköping
               </li>
             </ul>
             <Link
@@ -123,7 +121,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-12 flex flex-col items-start gap-2 border-t border-[#C8DDE9] pt-5 sm:flex-row sm:items-center sm:justify-between">
           <span className="text-xs text-[#6B8FA8]">
-            © {year} BASEDtech Sweden AB · Org.nr 559XXX-XXXX
+            © {year} BASEDtech Sweden AB · Org.nr 559535-2286 · Östra Längdgatan 5, 611 39 Nyköping
           </span>
           <div className="flex items-center gap-4">
             {legalLinks.map((l) => (
