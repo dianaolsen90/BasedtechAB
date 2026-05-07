@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { HeroBanner } from "@/app/components/hero-banner";
 import { ScrollRevealInit } from "@/app/components/scroll-reveal-init";
 import { SiteFooter } from "@/app/components/site-footer";
 import { SiteHeader } from "@/app/components/site-header";
@@ -43,6 +44,7 @@ export default function HomePage() {
       <ScrollRevealInit />
       <SiteHeader />
       <main>
+        <HeroBanner />
         {/* ── HERO ── */}
         <section
           className="relative overflow-hidden px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24"
