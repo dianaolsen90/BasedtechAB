@@ -98,8 +98,8 @@ export function IntroSection() {
 const cards = [
   {
     title: "Vem älskar inte rena skrivbord?",
-    image: "/Bilder/Automagi.png",
-    alt: "Automagi – ren bokföringsgrund",
+    image: "/Bilder/rentskrivbord.jpg",
+    alt: "Rent skrivbord – korrekt bokföringsgrund",
     body: "Allt börjar med en korrekt grund att stå på. Vi säkerställer att historisk bokföringsdata är korrekt genom att granska och justera, sedan är vi redo för automagi!",
   },
   {
