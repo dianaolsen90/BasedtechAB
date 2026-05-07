@@ -44,21 +44,18 @@ export default function KontaktPage() {
       <SiteHeader />
       <main>
         <section
-          className="relative overflow-hidden bg-polar-night px-8 pb-[5rem] pt-40"
+          className="px-8 py-24"
+          style={{ background: "#F7FAFB" }}
           aria-label="Kontakt intro"
         >
-          <div
-            className="pointer-events-none absolute right-0 top-0 h-[min(70vw,420px)] w-[min(70vw,420px)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(45,224,165,0.07)_0%,rgba(125,212,240,0.06)_45%,transparent_70%)]"
-            aria-hidden
-          />
-          <div className="relative z-[1] mx-auto max-w-[780px] text-center">
-            <p className="mb-6 inline-block font-h text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-aurora-teal">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="mb-5 inline-block text-[0.7rem] font-semibold uppercase tracking-widest text-[#0EA5C9]">
               Teamet bakom BASEDtech
             </p>
-            <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] tracking-[0.01em] text-snow-white">
+            <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-[#0D2137]">
               Vi är enkla att nå. Och ännu enklare att prata med.
             </h1>
-            <p className="mt-8 font-b text-[1.05rem] font-light leading-[1.8] text-based-body">
+            <p className="mt-6 text-[1.05rem] font-light leading-[1.8] text-[#2D4A5F]">
               Vi tror på korta vägar och raka svar. Oavsett om du har en specifik
               fråga, vill boka en kostnadsfri analys eller bara vill se om vi
               passar ihop, hör av dig direkt till oss. Inga mellanhänder, inga
