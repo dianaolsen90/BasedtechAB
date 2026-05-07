@@ -322,7 +322,7 @@ export function CtaSection() {
               är det alltid personligt som gäller!
             </p>
             <p className="mb-8 font-h text-lg italic text-[#0D2137]">
-              — David Olsen & Johan Adamsson
+              David Olsen &amp; Johan Adamsson
             </p>
             <Link
               href="/kontakt"
