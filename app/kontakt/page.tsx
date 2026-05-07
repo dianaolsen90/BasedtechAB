@@ -55,7 +55,7 @@ export default function KontaktPage() {
             <h1 className="font-h text-[clamp(2rem,4vw,3rem)] font-bold leading-tight text-[#0D2137]">
               Vi är enkla att nå. Och ännu enklare att prata med.
             </h1>
-            <p className="mt-6 text-[1.05rem] font-light leading-[1.8] text-[#2D4A5F]">
+            <p className="mt-6 text-[1.05rem] font-light leading-[1.8] text-[#2D4A5F] text-pretty">
               Vi tror på korta vägar och raka svar. Oavsett om du har en specifik
               fråga, vill boka en kostnadsfri analys eller bara vill se om vi
               passar ihop, hör av dig direkt till oss. Inga mellanhänder, inga
