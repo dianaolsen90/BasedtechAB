@@ -6,76 +6,81 @@ import { motion } from "framer-motion";
 
 const ease = [0.0, 0.0, 0.2, 1] as [number, number, number, number];
 
-export function HeroBanner() {
+function FadeIn({
+  children,
+  delay = 0,
+  x = 0,
+  y = 0,
+  className,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  x?: number;
+  y?: number;
+  className?: string;
+}) {
   return (
-    <section className="w-full" aria-label="Hero bild">
-      <Image
-        src="/Bilder/herobase.png"
-        alt="BASEDtech – automatiserad bokföring"
-        width={1920}
-        height={1080}
-        priority
-        className="h-auto w-full object-contain"
-        sizes="100vw"
-      />
-    </section>
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, x, y }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ delay, duration: 0.65, ease }}
+    >
+      {children}
+    </motion.div>
   );
 }
 
-export function HeroTagline() {
+export function HeroBanner() {
   return (
     <section
-      className="px-6 py-16"
+      className="relative w-full overflow-hidden"
       style={{ background: "#F8FAFB" }}
-      aria-label="Tagline"
+      aria-label="Hero"
     >
-      <div className="max-w-3xl">
-        <motion.p
-          className="mb-3 text-sm font-medium uppercase tracking-widest text-[#0EA5C9]"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease }}
-        >
-          Automagi för din ekonomi
-        </motion.p>
-        <motion.p
-          className="font-h text-4xl font-bold leading-tight text-[#1B2F4A] md:text-5xl"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1, duration: 0.6, ease }}
-        >
-          Automatiserad bokföring
-        </motion.p>
-        <motion.p
-          className="font-h text-4xl font-bold italic leading-tight text-[#0EA5C9] md:text-5xl"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.6, ease }}
-        >
-          som glider på is
-        </motion.p>
+      <div className="mx-auto flex max-w-[1400px] flex-col md:flex-row md:items-stretch">
+        <div className="flex flex-1 flex-col justify-center px-8 py-20 md:py-28 md:pl-14 lg:pl-20">
+          <FadeIn delay={0.1} x={-24}>
+            <p className="mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[#0EA5C9]">
+              Automagi för din ekonomi
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.25} x={-24}>
+            <h1 className="mb-1 font-h text-[clamp(2.4rem,5.5vw,4rem)] font-bold leading-[1.06] text-[#1B2F4A]">
+              Automatiserad bokföring
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.38} x={-24}>
+            <p className="font-h text-[clamp(2.4rem,5.5vw,4rem)] font-bold italic leading-[1.06] text-[#0EA5C9]">
+              som glider på is
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.52} x={-24}>
+            <div className="my-6 h-0.5 w-14 bg-[#0EA5C9]" />
+          </FadeIn>
+          <FadeIn delay={0.62} y={10}>
+            <Link
+              href="/kontakt"
+              className="inline-flex w-fit items-center rounded-full bg-[#0EA5C9] px-8 py-4 font-h text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#0891B2]"
+            >
+              Boka kostnadsfri analys
+            </Link>
+          </FadeIn>
+        </div>
         <motion.div
-          className="my-4 h-0.5 w-16 bg-[#0EA5C9]"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6, ease }}
-        />
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.6, ease }}
+          className="relative min-h-[320px] flex-1 md:min-h-[560px]"
+          initial={{ opacity: 0, scale: 1.03 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, duration: 0.9, ease }}
         >
-          <Link
-            href="/kontakt"
-            className="inline-flex items-center rounded-full bg-[#0EA5C9] px-8 py-4 font-h text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#0891B2]"
-          >
-            Boka kostnadsfri analys
-          </Link>
+          <Image
+            src="/Bilder/heroB.png"
+            alt="BASEDtech – automatiserad bokföring"
+            fill
+            priority
+            className="object-contain object-center md:object-right"
+            sizes="(max-width: 768px) 100vw, 55vw"
+          />
         </motion.div>
       </div>
     </section>
