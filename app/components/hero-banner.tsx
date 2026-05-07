@@ -16,12 +16,12 @@ function AnimatedWord({
   return (
     <motion.span
       className={className}
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.3 + index * 0.12,
+        delay: 0.4 + index * 0.12,
         duration: 0.55,
-        ease: [0.0, 0.0, 0.2, 1],
+        ease: [0.0, 0.0, 0.2, 1] as [number, number, number, number],
       }}
     >
       {word}
@@ -35,40 +35,35 @@ const tealWords = ["som", "glider", "på", "is"];
 export function HeroBanner() {
   return (
     <section
-      className="relative min-h-screen w-full overflow-hidden"
+      className="relative flex min-h-screen w-full items-center overflow-hidden"
       aria-label="Hero"
-      style={{
-        background:
-          "linear-gradient(150deg, #F8FAFB 0%, #EAF3F8 55%, #E0F0F5 100%)",
-      }}
     >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div
-          className="absolute -right-32 -top-32 h-[600px] w-[600px] rounded-full opacity-20"
-          style={{
-            background:
-              "radial-gradient(circle, #0EA5C9 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute -bottom-24 left-1/4 h-[400px] w-[400px] rounded-full opacity-10"
-          style={{
-            background:
-              "radial-gradient(circle, #1B2F4A 0%, transparent 70%)",
-          }}
-        />
-      </div>
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center gap-10 px-6 py-24 md:flex-row md:gap-16">
-        <div className="flex flex-1 flex-col items-start">
+      <Image
+        src="/Bilder/herobase.png"
+        alt="BASEDtech – automatiserad bokföring"
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(100deg, rgba(240,248,253,0.88) 0%, rgba(232,244,252,0.72) 45%, rgba(220,238,250,0.15) 100%)",
+        }}
+      />
+      <div className="relative z-10 w-full px-6 py-32 md:px-12 lg:px-20">
+        <div className="max-w-xl">
           <motion.p
             className="mb-5 font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#0EA5C9]"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             Automagi för din ekonomi
           </motion.p>
-          <h1 className="mb-6 font-h text-[clamp(2.4rem,5.5vw,4rem)] font-bold leading-[1.08]">
+          <h1 className="mb-5 font-h text-[clamp(2.6rem,6vw,4.2rem)] font-bold leading-[1.06]">
             <span className="flex flex-wrap gap-x-4">
               {navyWords.map((w, i) => (
                 <AnimatedWord
@@ -91,16 +86,20 @@ export function HeroBanner() {
             </span>
           </h1>
           <motion.div
-            className="mb-8 h-[2px] w-16 bg-[#0EA5C9]"
+            className="mb-8 h-[2px] w-14 bg-[#0EA5C9]"
             initial={{ opacity: 0, scaleX: 0 }}
             animate={{ opacity: 1, scaleX: 1 }}
             style={{ transformOrigin: "left" }}
-            transition={{ delay: 1.0, duration: 0.5, ease: [0.0, 0.0, 0.2, 1] }}
+            transition={{
+              delay: 1.1,
+              duration: 0.5,
+              ease: [0.0, 0.0, 0.2, 1] as [number, number, number, number],
+            }}
           />
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.5 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
           >
             <Link
               href="/kontakt"
@@ -110,22 +109,6 @@ export function HeroBanner() {
             </Link>
           </motion.div>
         </div>
-        <motion.div
-          className="flex flex-1 items-center justify-center"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: [0.0, 0.0, 0.2, 1] }}
-        >
-          <Image
-            src="/Bilder/hero basedtech.png"
-            alt="BASEDtech – automatiserad bokföring"
-            width={700}
-            height={560}
-            priority
-            className="h-auto w-full max-w-[560px] object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </motion.div>
       </div>
     </section>
   );
