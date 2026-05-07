@@ -11,18 +11,18 @@ const links = [
 ];
 
 const navLinkClass =
-  "block font-b text-[1rem] font-normal leading-snug text-[#C8DDE9] no-underline transition-colors duration-200 hover:text-[#E8F4FB] opacity-70 hover:opacity-100";
+  "block font-b text-[1rem] font-normal leading-snug text-nordic-slate no-underline transition-colors duration-200 hover:text-nordic-teal";
 
 const contactLinkClass =
-  "font-b text-[0.95rem] font-normal text-[#C8DDE9] no-underline transition-colors duration-200 hover:text-[#2ECFB0] opacity-80 hover:opacity-100";
+  "font-b text-[0.95rem] font-normal text-nordic-slate no-underline transition-colors duration-200 hover:text-nordic-teal";
 
 const sectionLabelClass =
-  "font-h text-[0.7rem] font-bold uppercase tracking-[0.14em] text-aurora-teal";
+  "font-h text-[0.7rem] font-bold uppercase tracking-[0.14em] text-nordic-teal";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-[rgba(46,207,176,0.25)] bg-[#0F2240]">
+    <footer className="border-t border-[#C8DDE9] bg-white">
       <div className="mx-auto max-w-[1160px] px-8 pb-6 pt-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12 lg:items-start">
           <div>
@@ -36,10 +36,10 @@ export function SiteFooter() {
                 width={900}
                 height={565}
                 className="h-[240px] w-auto max-w-full object-contain object-left md:h-[272px]"
-                style={{ filter: "brightness(0) invert(1)" }}
+                style={{ mixBlendMode: "multiply" }}
               />
             </Link>
-            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-[#C8DDE9] opacity-60">
+            <p className="mt-4 max-w-[320px] font-h text-[1rem] font-medium leading-[1.55] text-nordic-slate">
               Smart ekonomistyrning.
               <br />
               Personlig service, alltid.
@@ -47,7 +47,7 @@ export function SiteFooter() {
             <div className="mt-6">
               <p className={sectionLabelClass}>Kontakt</p>
               <div className="mt-4 flex items-center gap-2.5">
-                <span className="inline-flex shrink-0 text-aurora-teal" aria-hidden>
+                <span className="inline-flex shrink-0 text-nordic-teal" aria-hidden>
                   <IconPhone14 className="h-[14px] w-[14px]" />
                 </span>
                 <a href="tel:0733017339" className={contactLinkClass}>
@@ -55,7 +55,7 @@ export function SiteFooter() {
                 </a>
               </div>
               <div className="mt-4 flex items-center gap-2.5">
-                <span className="inline-flex shrink-0 text-aurora-teal" aria-hidden>
+                <span className="inline-flex shrink-0 text-nordic-teal" aria-hidden>
                   <IconMail14 className="h-[14px] w-[14px]" />
                 </span>
                 <a
@@ -65,7 +65,7 @@ export function SiteFooter() {
                   david.olsen@basedtech.se
                 </a>
               </div>
-              <p className="mt-4 font-b text-[0.875rem] font-light leading-relaxed text-[#C8DDE9] opacity-50">
+              <p className="mt-4 font-b text-[0.875rem] font-light leading-relaxed text-nordic-subtle">
                 Svarar inom 24 timmar
               </p>
             </div>
@@ -74,7 +74,7 @@ export function SiteFooter() {
                 href="https://www.linkedin.com/company/basedtech-sweden-ab/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg border border-[rgba(200,221,233,0.2)] bg-[rgba(255,255,255,0.06)] p-2.5 text-[#C8DDE9] transition-colors duration-200 hover:border-[rgba(46,207,176,0.4)] hover:bg-[rgba(46,207,176,0.1)] hover:text-aurora-teal"
+                className="inline-flex items-center justify-center rounded-lg border border-[#C8DDE9] bg-[#F8FAFB] p-2.5 text-nordic-slate transition-colors duration-200 hover:border-nordic-teal hover:bg-[#E6F7F4] hover:text-nordic-teal"
                 aria-label="BASEDtech på LinkedIn"
               >
                 <svg
@@ -112,11 +112,11 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[rgba(200,221,233,0.15)] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
-          <span className="text-center font-b text-[0.8rem] font-light text-[#C8DDE9] opacity-50 min-[600px]:text-left">
+        <div className="mt-10 flex flex-col items-center gap-3 border-t border-[#C8DDE9] pt-6 min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between">
+          <span className="text-center font-b text-[0.8rem] font-light text-nordic-subtle min-[600px]:text-left">
             {year} BASEDtech Sweden AB
           </span>
-          <span className="text-center font-b text-[0.8rem] font-light text-aurora-teal min-[600px]:text-right">
+          <span className="text-center font-b text-[0.8rem] font-semibold text-nordic-teal min-[600px]:text-right">
             Automagi för din ekonomi.
           </span>
         </div>
