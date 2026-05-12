@@ -186,6 +186,7 @@ export function CardsSection() {
 const products = [
   {
     name: "REDA",
+    subtitle: "Automatiserad fakturahantering",
     image: "/Bilder/5.png",
     alt: "REDA – AI-tolkad fakturahantering",
     body: "REDA gör hanteringen enkel med en kombination av AI-tolk och möjligheten att sätta egna kontrollregler, lägg inte onödig tid på korrekta fakturor.",
