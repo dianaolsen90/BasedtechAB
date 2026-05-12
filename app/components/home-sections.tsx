@@ -193,6 +193,7 @@ const products = [
   },
   {
     name: "Mynt",
+    subtitle: "Företagskort med automatisk kvittohantering",
     image: "/Bilder/2.png",
     alt: "Mynt – VISA-kort med app",
     body: "Mynt utfärdar VISA-kort med en tillhörande app som är väldigt användarvänlig. Fota kvittot direkt och skicka in det till bokföringen. Självklart kan kortet kopplas till Google eller Apple Pay!",
@@ -272,6 +273,11 @@ export function ProductsSection() {
                   )}
                   <h3 className="font-h text-base font-bold text-[#0D2137]">
                     {p.name}
+                    {p.subtitle && (
+                      <span className="ml-2 font-h text-base font-bold text-[#0D2137]">
+                        – {p.subtitle}
+                      </span>
+                    )}
                   </h3>
                   <p className="text-sm leading-relaxed text-[#2D4A5F]">
                     {p.body}
