@@ -541,19 +541,18 @@ html {
     order: 1 !important;
     inset: unset !important;
     width: 100% !important;
-    height: 220px !important;
+    height: auto !important;
     overflow: hidden !important;
     flex-shrink: 0 !important;
   }
 
   .hero-img-wrap img {
-    position: absolute !important;
-    inset: 0 !important;
+    position: relative !important;
+    inset: unset !important;
     width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    object-position: center top !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
   }
 
   .hero-card-wrap {
