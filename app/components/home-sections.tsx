@@ -202,6 +202,7 @@ const products = [
   },
   {
     name: "Fieldly",
+    subtitle: "Projektredovisningssystem",
     image: "/Bilder/3.png",
     alt: "Fieldly – projekt och kommunikation",
     body: "Med Fieldly i fickan och på kontoret kan du arbeta, planera och kommunicera mer effektivt med dina kollegor – full kontroll, lyckade projekt och nöjda kunder.",
