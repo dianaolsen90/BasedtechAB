@@ -10,7 +10,6 @@ const companyLinks = [
 
 const legalLinks = [
   { href: "/integritetspolicy", label: "Integritetspolicy" },
-  { href: "/anvandarvillkor", label: "Användarvillkor" },
 ];
 
 export function SiteFooter() {
@@ -34,10 +33,6 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-gray-500">Automagi för din ekonomi.</p>
-            <p className="text-xs italic text-gray-400">
-              Vi arbetar med klienter över hela Norden med fokus på digital
-              ekonomiautomation.
-            </p>
             <a
               href="https://www.linkedin.com/company/basedtech-sweden-ab"
               target="_blank"
