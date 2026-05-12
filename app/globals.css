@@ -48,6 +48,25 @@ html {
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv01", "kern";
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: rgba(14, 165, 201, 0.18);
+    color: #0D2137;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #0EA5C9;
+    outline-offset: 3px;
+    border-radius: 6px;
   }
 }
 
@@ -503,6 +522,123 @@ html {
   0%   { background-position: 0% 0%; }
   50%  { background-position: 100% 0%; }
   100% { background-position: 0% 0%; }
+}
+
+/* ================================================
+   2026 MODERNISATION
+   Subtle depth, motion and polish — no colors,
+   layout, text or images are changed.
+   ================================================ */
+
+/* Modern multi-layer shadow palette */
+:root {
+  --shadow-soft:
+    0 1px 2px rgba(13, 33, 55, 0.04),
+    0 2px 6px rgba(13, 33, 55, 0.05),
+    0 8px 24px rgba(13, 33, 55, 0.06);
+  --shadow-lift:
+    0 1px 3px rgba(13, 33, 55, 0.06),
+    0 6px 14px rgba(13, 33, 55, 0.08),
+    0 22px 40px rgba(13, 33, 55, 0.10);
+  --shadow-cta-glow:
+    0 6px 18px rgba(14, 165, 201, 0.28),
+    0 2px 6px rgba(14, 165, 201, 0.18);
+}
+
+/* Smoother default transitions on interactive elements */
+a, button, [role="button"] {
+  transition:
+    color 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+
+/* Primary cyan CTA buttons (already use bg-[#0EA5C9]) — modern lift + glow */
+a[class*="bg-[#0EA5C9]"],
+a[class*="bg-aurora-teal"] {
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-cta-glow);
+}
+
+a[class*="bg-[#0EA5C9]"]:hover,
+a[class*="bg-aurora-teal"]:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 24px rgba(14, 165, 201, 0.34),
+    0 4px 10px rgba(14, 165, 201, 0.22);
+}
+
+a[class*="bg-[#0EA5C9]"]:active,
+a[class*="bg-aurora-teal"]:active {
+  transform: translateY(0);
+}
+
+/* Subtle sheen sweep across primary CTAs on hover */
+a[class*="bg-[#0EA5C9]"]::before,
+a[class*="bg-aurora-teal"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  transition: left 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+a[class*="bg-[#0EA5C9]"]:hover::before,
+a[class*="bg-aurora-teal"]:hover::before {
+  left: 130%;
+}
+
+/* Card-style containers: refined elevation */
+.shadow-sm {
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.shadow-md,
+.shadow-lg {
+  box-shadow: var(--shadow-lift) !important;
+}
+
+/* Section dividers: gradient instead of flat hairline */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(14, 165, 201, 0.35) 50%,
+    transparent 100%
+  ) !important;
+  border: none;
+  margin: 0;
+}
+
+/* Smooth in-page anchor scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  a[class*="bg-[#0EA5C9]"]::before,
+  a[class*="bg-aurora-teal"]::before {
+    display: none;
+  }
+  a, button, [role="button"] {
+    transition: none !important;
+  }
 }
 
 /* ================================================
