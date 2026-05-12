@@ -9,23 +9,14 @@ const ease = [0.0, 0.0, 0.2, 1] as [number, number, number, number];
 export function HeroBanner() {
   return (
     <section className="hero-section relative w-full overflow-hidden" aria-label="Hero">
-      <div className="hero-img-wrap relative w-full h-[220px] sm:h-auto">
+      <div className="hero-img-wrap relative w-full">
         <Image
           src="/Bilder/heroB.png"
           alt="BASEDtech – automatiserad bokföring"
           width={1920}
           height={1080}
           priority
-          className="block sm:hidden w-full h-[220px] object-cover object-left"
-          sizes="100vw"
-        />
-        <Image
-          src="/Bilder/heroB.png"
-          alt="BASEDtech – automatiserad bokföring"
-          width={1920}
-          height={1080}
-          priority
-          className="hidden sm:block h-auto w-full"
+          className="h-auto w-full"
           sizes="100vw"
         />
       </div>
