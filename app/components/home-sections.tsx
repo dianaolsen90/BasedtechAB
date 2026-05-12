@@ -231,7 +231,7 @@ export function ProductsSection() {
           >
             <SectionLabel>Verktyg</SectionLabel>
             <h2 className="mb-4 font-h text-[clamp(2rem,4vw,3rem)] font-bold italic text-[#0D2137]">
-              Marknadens vassaste verktyg enligt oss
+              Marknadens vassaste verktyg
             </h2>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#2D4A5F]">
               Vi samarbetar med leverantörer som tillhandahåller
