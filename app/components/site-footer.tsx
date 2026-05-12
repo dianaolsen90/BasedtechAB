@@ -32,7 +32,7 @@ export function SiteFooter() {
                 style={{ mixBlendMode: "multiply" }}
               />
             </Link>
-            <p className="text-sm text-gray-500">Automagi för din ekonomi.</p>
+            <p className="text-sm text-gray-500">Automagi för din ekonomifunktion</p>
             <a
               href="https://www.linkedin.com/company/basedtech-sweden-ab"
               target="_blank"
