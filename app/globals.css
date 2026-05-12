@@ -532,7 +532,8 @@ html {
   .hero-section {
     position: relative !important;
     display: block !important;
-    min-height: 420px !important;
+    min-height: unset !important;
+    aspect-ratio: 1920 / 680 !important;
     overflow: hidden !important;
   }
 
@@ -552,7 +553,7 @@ html {
     height: 100% !important;
     max-width: none !important;
     object-fit: cover !important;
-    object-position: left center !important;
+    object-position: 30% center !important;
   }
 
   /* Card wrapper: fills section, centres the card */
@@ -582,13 +583,13 @@ html {
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
-    width: 75% !important;
-    max-width: 340px !important;
-    background: rgba(255, 255, 255, 0.75) !important;
+    width: 68% !important;
+    max-width: 300px !important;
+    background: rgba(255, 255, 255, 0.82) !important;
     backdrop-filter: blur(16px) !important;
     -webkit-backdrop-filter: blur(16px) !important;
-    border-radius: 20px !important;
-    padding: 1.25rem 1.5rem !important;
+    border-radius: 16px !important;
+    padding: 0.9rem 1rem !important;
     text-align: center !important;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10) !important;
     border: 1px solid rgba(255, 255, 255, 0.30) !important;
