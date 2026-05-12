@@ -135,7 +135,7 @@ export function CardsSection() {
             <SectionLabel>Vad vi gör</SectionLabel>
             <h2 className="font-h text-[clamp(2rem,4vw,3rem)] font-bold text-[#0D2137]">
               Tre steg mot full{" "}
-              <span className="italic text-[#0EA5C9]">automagi</span>
+              <span className="automagi-word italic">automagi</span>
             </h2>
           </motion.div>
           <motion.div

@@ -475,6 +475,36 @@ html {
   margin: 0;
 }
 
+.automagi-word {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #0369A1 0%, #0EA5C9 45%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding-bottom: 5px;
+}
+
+.automagi-word::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #0369A1 0%, #0EA5C9 40%, #7DD3FC 70%, #0EA5C9 100%);
+  background-size: 250% 100%;
+  animation: automagi-shine 4s ease-in-out infinite;
+}
+
+@keyframes automagi-shine {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -503,6 +533,9 @@ html {
   .snowflake-slow,
   .snowflake-medium,
   .snowflake-fast {
+    animation: none !important;
+  }
+  .automagi-word::after {
     animation: none !important;
   }
 }
