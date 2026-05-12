@@ -89,9 +89,6 @@ export default function KontaktPage() {
                 <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-snow-white">
                   David Olsen
                 </h2>
-                <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-aurora-teal">
-                  Grundare och rådgivare
-                </p>
                 <div
                   className="mt-6 border-t pt-6"
                   style={{ borderColor: "var(--based-border)" }}
@@ -137,9 +134,6 @@ export default function KontaktPage() {
                 <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-snow-white">
                   Johan Adamsson
                 </h2>
-                <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-aurora-teal">
-                  Partner och implementerare
-                </p>
                 <div
                   className="mt-6 border-t pt-6"
                   style={{ borderColor: "var(--based-border)" }}
