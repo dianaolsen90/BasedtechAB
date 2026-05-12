@@ -297,10 +297,7 @@ export function ProductsSection() {
 
 export function CtaSection() {
   return (
-    <section
-      className="arctic-bg px-6 py-16 md:py-24"
-      style={{ background: "#DFF0F7" }}
-    >
+    <section className="bg-deep-ocean px-6 py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         <motion.div
           className="flex flex-col items-center gap-12 md:flex-row-reverse md:gap-16"
@@ -315,26 +312,28 @@ export function CtaSection() {
               alt="David Olsen och Johan Adamsson – BASEDtech"
               width={640}
               height={480}
-              className="h-auto w-full rounded-2xl shadow-[0_4px_24px_rgba(14,165,201,0.10)]"
+              className="h-auto w-full rounded-2xl shadow-[0_4px_28px_rgba(0,20,40,0.4)]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </motion.div>
           <motion.div className="flex flex-1 flex-col" variants={fadeLeft}>
-            <SectionLabel>Vi finns här</SectionLabel>
-            <h2 className="mb-5 font-h text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight text-[#0D2137]">
+            <p className="mb-4 text-[0.7rem] font-semibold uppercase tracking-widest text-aurora-teal">
+              Vi finns här
+            </p>
+            <h2 className="mb-5 font-h text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight text-snow-white">
               Vi finns med dig hela vägen på effektiviseringsresan
             </h2>
-            <p className="mb-6 leading-relaxed text-[#2D4A5F]">
+            <p className="mb-6 leading-relaxed text-based-body">
               Vi hjälper att implementera tjänsterna och utbilda personal i
               deras användning. AI i all ära, men när det kommer till support
               är det alltid personligt som gäller!
             </p>
-            <p className="mb-8 font-h text-lg italic text-[#0D2137]">
+            <p className="mb-8 font-h text-lg italic text-ice-blue">
               David Olsen &amp; Johan Adamsson
             </p>
             <Link
               href="/kontakt"
-              className="inline-flex w-fit items-center rounded-full bg-[#0EA5C9] px-8 py-4 font-h text-base font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-[#0891B2]"
+              className="inline-flex w-fit items-center rounded-full bg-aurora-teal px-8 py-4 font-h text-base font-semibold text-polar-night shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-aurora-mint"
             >
               Boka kostnadsfri analys
             </Link>
