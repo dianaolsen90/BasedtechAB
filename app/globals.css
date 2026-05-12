@@ -528,12 +528,10 @@ html {
     display: block;
   }
 
-  /* --- Hero: image on top, text card below (mobile-first) --- */
+  /* --- Hero: frosted card overlaid on image --- */
   .hero-section {
     position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: unset !important;
+    display: block !important;
     overflow: hidden !important;
   }
 
@@ -542,7 +540,6 @@ html {
     inset: unset !important;
     width: 100% !important;
     height: auto !important;
-    order: 1 !important;
   }
 
   .hero-img-wrap img {
@@ -551,39 +548,37 @@ html {
     width: 100% !important;
     height: auto !important;
     max-width: 100% !important;
-    object-fit: contain !important;
     display: block !important;
   }
 
   .hero-card-wrap {
-    position: relative !important;
-    inset: unset !important;
-    order: 2 !important;
+    position: absolute !important;
+    inset: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    padding: 1.5rem 1.25rem !important;
-    background: #F7FAFB !important;
+    justify-content: center !important;
+    padding: 0.75rem !important;
+    background: transparent !important;
   }
 
   .hero-card {
     position: relative !important;
     transform: none !important;
-    z-index: 1 !important;
+    z-index: 5 !important;
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
+    width: 58% !important;
+    max-width: 220px !important;
+    background: rgba(255, 255, 255, 0.82) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-radius: 14px !important;
+    padding: 0.75rem 0.9rem !important;
     text-align: center !important;
-    box-shadow: none !important;
-    border: none !important;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.10) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
   }
 
   .hero-card[style] {
@@ -591,20 +586,20 @@ html {
   }
 
   .hero-card p:first-child {
-    font-size: 0.7rem !important;
-    letter-spacing: 0.12em !important;
-    margin-bottom: 0.5rem !important;
+    font-size: 0.6rem !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 0.3rem !important;
   }
 
   .hero-h1 {
-    font-size: 1.75rem !important;
+    font-size: 1.05rem !important;
     font-weight: 800 !important;
-    line-height: 1.15 !important;
-    margin-bottom: 0.1rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important;
   }
 
   .hero-italic {
-    font-size: 1.5rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.2 !important;
   }
 
@@ -612,9 +607,9 @@ html {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
-    padding: 0.85rem 1rem !important;
-    font-size: 1rem !important;
-    margin-top: 1.25rem !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    margin-top: 0.6rem !important;
     border-radius: 50px !important;
     box-sizing: border-box !important;
   }
