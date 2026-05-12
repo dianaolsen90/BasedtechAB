@@ -543,12 +543,9 @@ html {
   }
 
   .hero-img-wrap img {
-    position: relative !important;
-    inset: unset !important;
     width: 100% !important;
     height: auto !important;
     max-width: 100% !important;
-    display: block !important;
   }
 
   .hero-card-wrap {
