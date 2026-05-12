@@ -533,22 +533,24 @@ html {
     position: relative !important;
     display: block !important;
     overflow: hidden !important;
+    aspect-ratio: 16 / 9 !important;
   }
 
   .hero-img-wrap {
-    position: relative !important;
-    inset: unset !important;
+    position: absolute !important;
+    inset: 0 !important;
     width: 100% !important;
-    height: auto !important;
+    height: 100% !important;
   }
 
   .hero-img-wrap img {
-    position: relative !important;
-    inset: unset !important;
+    position: absolute !important;
+    inset: 0 !important;
     width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    display: block !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center top !important;
   }
 
   .hero-card-wrap {
