@@ -11,7 +11,7 @@ export function HeroBanner() {
     <section className="hero-section relative w-full overflow-hidden" aria-label="Hero">
       <div className="hero-img-wrap relative w-full">
         <Image
-          src="/Bilder/herobase.png"
+          src="/Bilder/heroB.png"
           alt="BASEDtech – automatiserad bokföring"
           width={1920}
           height={1080}
