@@ -71,7 +71,7 @@ export function IntroSection() {
             </motion.div>
             <motion.div className="flex-1" variants={fadeRight}>
               <SectionLabel>Om oss</SectionLabel>
-              <h2 className="mb-5 font-h text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight text-[#0D2137]">
+              <h2 className="section-h2 mb-5 font-h text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight text-[#0D2137]">
                 Vi brinner för en smart ekonomihantering
               </h2>
               <p className="mb-5 text-lg font-semibold leading-relaxed text-[#0D2137]">
@@ -133,7 +133,7 @@ export function CardsSection() {
             variants={fadeUp}
           >
             <SectionLabel>Vad vi gör</SectionLabel>
-            <h2 className="font-h text-[clamp(2rem,4vw,3rem)] font-bold text-[#0D2137]">
+            <h2 className="section-h2 font-h text-[clamp(2rem,4vw,3rem)] font-bold text-[#0D2137]">
               Tre steg mot full{" "}
               <span className="automagi-word italic">automagi</span>
             </h2>
@@ -233,7 +233,7 @@ export function ProductsSection() {
             variants={fadeUp}
           >
             <SectionLabel>Verktyg</SectionLabel>
-            <h2 className="mb-4 font-h text-[clamp(2rem,4vw,3rem)] font-bold italic text-[#0D2137]">
+            <h2 className="section-h2 mb-4 font-h text-[clamp(2rem,4vw,3rem)] font-bold italic text-[#0D2137]">
               Marknadens vassaste verktyg
             </h2>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#2D4A5F]">
@@ -320,7 +320,7 @@ export function CtaSection() {
             <p className="mb-4 text-[0.7rem] font-semibold uppercase tracking-widest text-aurora-teal">
               Vi finns här
             </p>
-            <h2 className="mb-5 font-h text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight text-snow-white">
+            <h2 className="section-h2 mb-5 font-h text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight text-snow-white">
               Vi finns med dig hela vägen på effektiviseringsresan
             </h2>
             <p className="mb-6 leading-relaxed text-based-body">
