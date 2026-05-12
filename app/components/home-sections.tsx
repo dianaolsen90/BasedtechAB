@@ -126,7 +126,7 @@ export function CardsSection() {
       >
         <div className="mx-auto max-w-6xl">
           <motion.div
-            className="mb-14 text-center"
+            className="mb-8 text-center md:mb-14"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -165,7 +165,7 @@ export function CardsSection() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-7">
+                <div className="flex flex-1 flex-col p-5 sm:p-7">
                   <h3 className="mb-3 font-h text-xl font-bold italic text-[#0D2137]">
                     {card.title}
                   </h3>
@@ -226,7 +226,7 @@ export function ProductsSection() {
       >
         <div className="mx-auto max-w-6xl">
           <motion.div
-            className="mb-14 text-center"
+            className="mb-8 text-center md:mb-14"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
@@ -258,13 +258,13 @@ export function ProductsSection() {
                 className="group relative flex flex-row items-center gap-5 overflow-hidden rounded-2xl border border-[#BAE6F7] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#0EA5C9] hover:shadow-md"
               >
                 <div className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 rounded-t-2xl bg-[#0EA5C9] transition-transform duration-300 group-hover:scale-x-100" />
-                <div className="relative h-[110px] w-[110px] shrink-0 overflow-hidden rounded-xl bg-[#EBF5F9]">
+                <div className="relative h-[80px] w-[80px] shrink-0 overflow-hidden rounded-xl bg-[#EBF5F9] sm:h-[110px] sm:w-[110px]">
                   <Image
                     src={p.image}
                     alt={p.alt}
                     fill
                     className="object-cover object-top"
-                    sizes="110px"
+                    sizes="(max-width: 640px) 80px, 110px"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">

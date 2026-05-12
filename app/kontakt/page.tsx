@@ -44,7 +44,7 @@ export default function KontaktPage() {
       <SiteHeader />
       <main>
         <section
-          className="px-8 py-24"
+          className="px-4 py-16 sm:px-8 sm:py-24"
           style={{ background: "#F7FAFB" }}
           aria-label="Kontakt intro"
         >
@@ -61,7 +61,7 @@ export default function KontaktPage() {
           </div>
         </section>
         <section
-          className="bg-deep-ocean py-16 pl-8 pr-8 sm:py-24"
+          className="bg-deep-ocean px-4 py-12 sm:px-8 sm:py-24"
           aria-label="Team"
         >
           <div className="mx-auto grid max-w-[960px] grid-cols-1 gap-12 nav:grid-cols-2">
@@ -85,7 +85,7 @@ export default function KontaktPage() {
                   aria-hidden
                 />
               </div>
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-snow-white">
                   David Olsen
                 </h2>
@@ -130,7 +130,7 @@ export default function KontaktPage() {
                   aria-hidden
                 />
               </div>
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <h2 className="font-h text-[2rem] font-extrabold leading-tight tracking-[0.01em] text-snow-white">
                   Johan Adamsson
                 </h2>
@@ -159,7 +159,7 @@ export default function KontaktPage() {
           </div>
         </section>
         <section
-          className="bg-frost px-8 py-20 text-center sm:py-24"
+          className="bg-frost px-4 py-14 text-center sm:px-8 sm:py-24"
           aria-label="Boka analys"
         >
           <div className="mx-auto max-w-[640px]">

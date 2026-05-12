@@ -77,6 +77,7 @@ const tools = [
     badge: "REDA",
     cat: "SMART FAKTURAHANTERING",
     name: "REDA",
+    subtitle: "Automatiserad fakturahantering",
     text: "AI som lär sig dina fakturaflöden och hanterar dem automatiskt. Sätter egna kontrollregler så du slipper kolla fakturor som redan är korrekta.",
     usp: "Sparar 3 till 5 timmar fakturahantering per vecka",
   },
@@ -84,6 +85,7 @@ const tools = [
     badge: "AI",
     cat: "DIGITAL EKONOMIASSISTENT",
     name: "Lerry.ai",
+    subtitle: undefined,
     text: "En AI som aldrig sover, aldrig missar en transaktion och alltid följer Skatteverkets regler. Budget, analys och rapporter på nolltid. Din ekonomiassistent för en bråkdel av kostnaden.",
     usp: "Ekonomianalys på under 30 sekunder",
   },
@@ -91,6 +93,7 @@ const tools = [
     badge: "MYNT",
     cat: "ENKELT MED KORTKÖP",
     name: "Mynt",
+    subtitle: "Företagskort med automatisk kvittohantering",
     text: "Foto på kvittot direkt vid köpet. Klart. Inga kvittohögar, inga borttappade underlag och inga stressade bokslut. Kopplas till Google Pay och Apple Pay.",
     usp: "Noll borttappade kvitton",
   },
@@ -98,6 +101,7 @@ const tools = [
     badge: "FLD",
     cat: "PROJEKTREDOVISNING",
     name: "Fieldly",
+    subtitle: "Projektredovisningssystem",
     text: "Bygg- och installationsbolag slösar i snitt 20% av projekttiden på administration. Fieldly tar hand om projektflödena automatiskt och kopplar direkt till ditt affärssystem.",
     usp: "20% mindre administrativ tid per projekt",
   },
@@ -106,11 +110,11 @@ const tools = [
 export function HomeTjansterSection() {
   return (
     <section id="tjanster" className="reveal scroll-mt-[84px]">
-      <div className="relative overflow-hidden bg-polar-night px-8 py-36">
+      <div className="relative overflow-hidden bg-polar-night px-4 py-16 sm:px-8 lg:py-36">
         <div className="pointer-events-none absolute right-0 top-0 h-[min(60vw,480px)] w-[min(60vw,480px)] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(45,224,165,0.08)_0%,rgba(125,212,240,0.06)_45%,transparent_70%)]" aria-hidden />
         <div className="relative z-[1] mx-auto max-w-container">
-          <div className="mb-16 text-center">
-            <div className="mb-8 flex items-center justify-center gap-3">
+          <div className="mb-8 text-center lg:mb-16">
+            <div className="mb-6 flex items-center justify-center gap-3 lg:mb-8">
               <span
                 className="h-px w-10 max-w-[3rem] bg-aurora-teal opacity-70 sm:w-14"
                 aria-hidden
@@ -123,7 +127,7 @@ export function HomeTjansterSection() {
                 aria-hidden
               />
             </div>
-            <h2 className="font-h text-[clamp(3rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-[0.01em] text-snow-white">
+            <h2 className="font-h text-[clamp(2rem,6vw,5rem)] font-extrabold leading-[1.05] tracking-[0.01em] text-snow-white">
               En bokföring som fungerar
               <br />
               ska ge dig kontroll,
@@ -132,14 +136,14 @@ export function HomeTjansterSection() {
               <br />
               <span className="text-aurora-teal">Här börjar automagi.</span>
             </h2>
-            <p className="mx-auto mt-8 max-w-[600px] font-b text-[1.1rem] font-light leading-[1.8] text-based-body">
+            <p className="mx-auto mt-6 max-w-[600px] font-b text-[1rem] font-light leading-[1.8] text-based-body sm:text-[1.1rem] lg:mt-8">
               Vi säkrar rätt grund, hittar felkällor och tar bort tidstjuvarna.
               Sedan automatiserar vi det som går att automatisera, med personlig
               service hela vägen.
             </p>
           </div>
           <div
-            className="my-14 flex w-full flex-wrap items-center justify-center gap-x-16 gap-y-6 border-y border-[rgba(125,212,240,0.15)] px-8 py-8 max-lg:max-w-none max-lg:overflow-x-auto max-lg:flex-nowrap max-lg:justify-start max-lg:gap-10 max-lg:px-4"
+            className="my-8 flex w-full flex-wrap items-center justify-center gap-x-16 gap-y-6 border-y border-[rgba(125,212,240,0.15)] px-4 py-6 max-lg:max-w-none max-lg:overflow-x-auto max-lg:flex-nowrap max-lg:justify-start max-lg:gap-10 sm:px-8 sm:py-8 lg:my-14"
             style={{
               background:
                 "linear-gradient(90deg, rgba(45,224,165,0.06), rgba(125,212,240,0.08), rgba(168,232,245,0.06))",
@@ -160,28 +164,28 @@ export function HomeTjansterSection() {
               </div>
             ))}
           </div>
-          <div className="mt-24 grid grid-cols-1 gap-10 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-24 lg:grid-cols-3 lg:gap-10">
             {serviceCards.map((c) => {
               const CardIcon = c.Icon;
               return (
                 <article
                   key={c.num}
-                  className={`relative flex min-h-[600px] flex-col overflow-hidden ${polarCard} ${c.topAccent} ${tHover}`}
+                  className={`relative flex flex-col overflow-hidden ${polarCard} ${c.topAccent} ${tHover}`}
                 >
                   <div
-                    className={`relative min-h-[200px] px-10 pb-10 pt-10 ${c.topBg}`}
+                    className={`relative px-5 pb-6 pt-6 sm:px-10 sm:pb-10 sm:pt-10 ${c.topBg}`}
                   >
                     <span
-                      className="pointer-events-none absolute right-6 top-4 font-h text-[8rem] font-extrabold leading-none text-[rgba(45,224,165,0.1)]"
+                      className="pointer-events-none absolute right-6 top-4 font-h text-[6rem] font-extrabold leading-none text-[rgba(45,224,165,0.1)] sm:text-[8rem]"
                       aria-hidden
                     >
                       {c.num}
                     </span>
                     <div className="relative z-[1]">
-                      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[14px] border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)]">
-                        <CardIcon className="h-7 w-7 text-aurora-teal" />
+                      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-[14px] border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] sm:mb-6 sm:h-14 sm:w-14">
+                        <CardIcon className="h-6 w-6 text-aurora-teal sm:h-7 sm:w-7" />
                       </div>
-                      <h3 className="font-h text-[2.2rem] font-extrabold leading-tight text-snow-white">
+                      <h3 className="font-h text-[1.8rem] font-extrabold leading-tight text-snow-white sm:text-[2.2rem]">
                         {c.title}
                       </h3>
                       <p className="mt-2 font-h text-base font-medium text-based-muted">
@@ -189,11 +193,11 @@ export function HomeTjansterSection() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-1 flex-col px-10 pb-10 pt-2">
+                  <div className="flex flex-1 flex-col px-5 pb-6 pt-2 sm:px-10 sm:pb-10">
                     <p className="font-b text-base font-light leading-[1.85] text-based-card">
                       {c.body}
                     </p>
-                    <ul className="mt-6 space-y-3">
+                    <ul className="mt-5 space-y-3 sm:mt-6">
                       {c.steps.map((s) => (
                         <li
                           key={s}
@@ -204,12 +208,12 @@ export function HomeTjansterSection() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-8 rounded-r-lg border-l-[3px] border-[rgba(125,212,240,0.35)] bg-[rgba(125,212,240,0.06)] py-4 pl-5 pr-4">
+                    <div className="mt-6 rounded-r-lg border-l-[3px] border-[rgba(125,212,240,0.35)] bg-[rgba(125,212,240,0.06)] py-4 pl-5 pr-4">
                       <p className="font-b text-[0.875rem] font-light italic leading-relaxed text-based-muted">
                         {c.fomo}
                       </p>
                     </div>
-                    <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="mt-5 flex flex-wrap gap-2 sm:mt-6 sm:gap-3">
                       {c.badges.map((b) => (
                         <span
                           key={b}
@@ -226,25 +230,25 @@ export function HomeTjansterSection() {
           </div>
         </div>
       </div>
-      <div className="bg-deep-ocean px-8 py-32">
+      <div className="bg-deep-ocean px-4 py-16 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-container">
-          <div className="mb-16 text-center">
+          <div className="mb-10 text-center lg:mb-16">
             <p className="font-h text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-aurora-teal">
               VERKTYGEN VI SVÄR VID
             </p>
-            <h2 className="mt-6 font-h text-[clamp(2rem,4vw,3rem)] font-extrabold leading-[1.1] text-snow-white">
+            <h2 className="mt-5 font-h text-[clamp(1.8rem,4vw,3rem)] font-extrabold leading-[1.1] text-snow-white lg:mt-6">
               Handplockade verktyg.
               <br />
               <span className="text-ice-blue">
                 Testade av oss. Godkända för dig.
               </span>
             </h2>
-            <p className="mx-auto mt-8 max-w-2xl font-b text-base font-light leading-[1.8] text-based-body">
+            <p className="mx-auto mt-6 max-w-2xl font-b text-base font-light leading-[1.8] text-based-body lg:mt-8">
               Vi testar allt och behåller bara det bästa. Sedan kopplar vi ihop
               det så det faktiskt fungerar i din vardag.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:gap-8 md:grid-cols-2">
             {tools.map((t, i) => {
               const accents = [
                 "border-t-2 border-t-[#2DE0A5]",
@@ -255,21 +259,26 @@ export function HomeTjansterSection() {
               return (
                 <article
                   key={t.name}
-                  className={`rounded-2xl border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] p-10 shadow-card-tjanst ${accents[i % 4]} ${toolHover}`}
+                  className={`rounded-2xl border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] p-5 shadow-card-tjanst sm:p-10 ${accents[i % 4]} ${toolHover}`}
                 >
-                  <span className="mb-6 inline-block rounded-lg border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] px-4 py-2 font-h text-[0.9rem] font-bold text-aurora-teal">
+                  <span className="mb-4 inline-block rounded-lg border-[0.5px] border-[rgba(125,212,240,0.18)] bg-[rgba(255,255,255,0.04)] px-4 py-2 font-h text-[0.9rem] font-bold text-aurora-teal sm:mb-6">
                     {t.badge}
                   </span>
                   <p className="font-h text-[0.7rem] font-medium uppercase tracking-[0.1em] text-based-muted">
                     {t.cat}
                   </p>
-                  <h3 className="mt-2 font-h text-[1.8rem] font-extrabold text-snow-white">
+                  <h3 className="mt-2 font-h text-[1.5rem] font-extrabold text-snow-white sm:text-[1.8rem]">
                     {t.name}
+                    {t.subtitle && (
+                      <span className="ml-2 font-h text-[1.5rem] font-extrabold text-snow-white sm:text-[1.8rem]">
+                        – {t.subtitle}
+                      </span>
+                    )}
                   </h3>
                   <p className="mt-4 font-b text-[0.9rem] font-light leading-[1.75] text-based-card">
                     {t.text}
                   </p>
-                  <div className="mt-6 flex items-center gap-2 border-t border-[rgba(125,212,240,0.15)] pt-6">
+                  <div className="mt-5 flex items-center gap-2 border-t border-[rgba(125,212,240,0.15)] pt-5 sm:mt-6 sm:pt-6">
                     <IconZap className="h-4 w-4 shrink-0 text-ice-blue" />
                     <p className="font-b text-[0.85rem] font-normal text-based-muted">
                       {t.usp}
