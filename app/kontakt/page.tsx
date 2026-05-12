@@ -68,7 +68,7 @@ export default function KontaktPage() {
             <article className={`overflow-hidden ${polarCard} border-t-2 border-t-[#2DE0A5]`}>
               <div className="relative w-full max-h-[420px] overflow-hidden rounded-t-2xl">
                 <Image
-                  src="/Bilder/davidolsenprofilbild.jpg"
+                  src="/Bilder/David.jpg"
                   alt="Porträtt av David Olsen"
                   width={960}
                   height={560}
@@ -91,13 +91,6 @@ export default function KontaktPage() {
                 </h2>
                 <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-aurora-teal">
                   Grundare och rådgivare
-                </p>
-                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-card">
-                  David har tillbringat över 20 år i byråvärlden och sett precis
-                  vad som händer när ekonomihanteringen inte hänger med
-                  verksamhetens tempo. Han startade BASEDtech för att det finns
-                  ett bättre sätt. Konkret, personligt och utan onödig krångel.
-                  Hör av dig direkt så svarar David inom kort.
                 </p>
                 <div
                   className="mt-6 border-t pt-6"
@@ -124,7 +117,7 @@ export default function KontaktPage() {
             <article className={`overflow-hidden ${polarCard} border-t-2 border-t-[#7DD4F0]`}>
               <div className="relative w-full max-h-[420px] overflow-hidden rounded-t-2xl">
                 <Image
-                  src="/Bilder/adamprofil.jpg"
+                  src="/Bilder/Johan.jpg"
                   alt="Porträtt av Johan Adamsson"
                   width={960}
                   height={560}
@@ -146,14 +139,6 @@ export default function KontaktPage() {
                 </h2>
                 <p className="mt-2 font-h text-sm font-semibold uppercase tracking-[0.14em] text-aurora-teal">
                   Partner och implementerare
-                </p>
-                <p className="mt-4 font-b text-[1.05rem] font-light leading-[1.8] text-based-card">
-                  Johan är den som ser till att allt faktiskt fungerar i
-                  praktiken. Han tar systemet från idé till vardag, utbildar
-                  teamet och finns kvar tills det sitter. Med ett öga för
-                  detaljer och ett genuint intresse för att hitta den smartaste
-                  lösningen är Johan personen du vill ha vid din sida när
-                  förändringen väl sätter igång.
                 </p>
                 <div
                   className="mt-6 border-t pt-6"
