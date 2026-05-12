@@ -160,11 +160,11 @@ export default function KontaktPage() {
                   style={{ borderColor: "var(--based-border)" }}
                 >
                   <a
-                    href="tel:0733017339"
+                    href="tel:0733017374"
                     className="mb-4 flex items-center gap-2.5 font-b text-[1.05rem] font-light text-based-body transition hover:text-aurora-teal"
                   >
                     <IconPhone14 className="shrink-0 text-aurora-teal" />
-                    073-301 73 39
+                    073-301 73 74
                   </a>
                   <a
                     href="mailto:johan.adamsson@basedtech.se"
